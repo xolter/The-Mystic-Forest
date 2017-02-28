@@ -9,7 +9,7 @@ public class character_Atk : MonoBehaviour
 	void Start ()
     {
         float damage = 15;
-        float range = 
+		float range = 10;               //ca compilait pas a cause de ca mais la range je sais pas a cb faut mettre
 	}
 	
 	// Update is called once per frame
@@ -23,6 +23,6 @@ public class character_Atk : MonoBehaviour
 
     private void Attack()
     {
-        Enemy
+
     }
 }
