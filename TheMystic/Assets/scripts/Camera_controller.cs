@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControl : MonoBehaviour
-{
+public class Camera_controller : MonoBehaviour {
+
     public Transform target;
     public float lookSmooth = 0.09f;
     public Vector3 offsetFromTarget = new Vector3(0, 6, -8);
@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour
     {
         SetCamertaTarget(target);
     }
-    void SetCamertaTarget (Transform t)
+    void SetCamertaTarget(Transform t)
     {
         target = t;
         if (target != null)
@@ -28,7 +28,7 @@ public class CameraControl : MonoBehaviour
             }
             else
             {
-                Debug.LogError("The camera's target must be a character controller!")
+                Debug.LogError("The camera's target must be a character controller!");
             }
         }
         else
@@ -37,7 +37,7 @@ public class CameraControl : MonoBehaviour
         }
     }
 
-    void LateUpdate ()
+    void LateUpdate()
     {
         //moving
         MoveToTarget();
