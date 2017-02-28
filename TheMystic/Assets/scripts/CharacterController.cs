@@ -74,7 +74,7 @@ public class CharacterController : MonoBehaviour {
 	void FixedUpdate()
 	{
 		Run ();
-		Jump ();
+		//Jump ();
 
 		rBody.velocity = transform.TransformDirection (velocity);
 	}
@@ -103,7 +103,7 @@ public class CharacterController : MonoBehaviour {
 			transform.rotation = targetRotation;
 		}
 	}
-	void Jump()
+	/*void Jump()
 	{
 		if (jumpInput > 0 && Grounded())
 		{
@@ -117,5 +117,5 @@ public class CharacterController : MonoBehaviour {
 		{
 			velocity.y -= physSettings.downAccel;
 		}
-	}
+	}*/
 }
