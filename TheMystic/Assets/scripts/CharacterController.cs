@@ -10,7 +10,7 @@ public class CharacterController : MonoBehaviour {
 		public float forwardVel = 12;
 		public float rotateVel = 100;
 		public float jumpvel = 25;
-		public float distToGrounded = 2f;   //askip c la qu'il faut changer mais le tuto etait pas prevu pour terrain non plat (décu)
+		public float distToGrounded = 2f;   //askip c la qu'il faut changer mais le tuto etait pas prevu pour terrain non plat (décu)z
 		public LayerMask ground;
 	}
 
