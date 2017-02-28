@@ -85,13 +85,13 @@ public class CharacterController : MonoBehaviour
         if (Mathf.Abs(forwardInput) > inputSettings.inputDelay)
         {
             //move
-            //rBody.velocity = transform.forward * forwardInput * movesettings.forwardVel;
+            rBody.velocity = transform.forward * forwardInput * moveSettings.forwardVel;
             velocity.z = moveSettings.forwardVel * forwardInput;
         }
         else
         {
             //zero velocity
-            //rBody.velocity = Vector3.zero;
+            rBody.velocity = Vector3.zero;
             velocity.z = 0;
         }
     }
@@ -101,8 +101,9 @@ public class CharacterController : MonoBehaviour
         if (Mathf.Abs(turnInput) > inputSettings.inputDelay)
         {
             targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVel * turnInput * Time.deltaTime, Vector3.up);
-            transform.rotation = targetRotation;
         }
+            transform.rotation = targetRotation;
+        
     }
     /*void Jump()
 	{
