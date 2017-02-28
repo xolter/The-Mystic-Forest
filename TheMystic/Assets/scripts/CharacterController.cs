@@ -96,6 +96,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     void Turn()
     {
         if (Mathf.Abs(turnInput) > inputSettings.inputDelay)
@@ -105,6 +106,17 @@ public class CharacterController : MonoBehaviour
             transform.rotation = targetRotation;
         
     }
+=======
+	void Turn()
+	{
+		if (Mathf.Abs (turnInput) > inputSettings.inputDelay)
+		{
+			targetRotation *= Quaternion.AngleAxis (moveSettings.rotateVel * turnInput * Time.deltaTime, Vector3.up);
+			transform.rotation = targetRotation;
+		}
+	}
+
+>>>>>>> 01e2c2e8f6a29b7d75dc8c0509357faf5017502b
     /*void Jump()
 	{
 		if (jumpInput > 0 && Grounded())
