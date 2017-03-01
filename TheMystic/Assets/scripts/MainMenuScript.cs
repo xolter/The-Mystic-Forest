@@ -6,7 +6,7 @@ public class MainMenuScript : MonoBehaviour {
 
 	public void LOAD_SCENE()
 	{
-		Application.LoadLevel ("ScenePrincipale");
+		Application.LoadLevel ("1");
 	}
 	public void QUIT_GAME()
 	{
