@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
         public float forwardVel = 12;
         public float rotateVel = 100;
         public float jumpvel = 25;
-        public float distToGrounded = 2f;   //askip c la qu'il faut changer mais le tuto etait pas prevu pour terrain non plat (décu)z
+        public float distToGrounded = 0.1f;   //askip c la qu'il faut changer mais le tuto etait pas prevu pour terrain non plat (décu)z
         public LayerMask ground;
     }
 
@@ -75,7 +75,7 @@ public class CharacterController : MonoBehaviour
     void FixedUpdate()
     {
         Run();
-        //Jump ();
+        Jump ();
 
         rBody.velocity = transform.TransformDirection(velocity);
     }
@@ -106,7 +106,7 @@ public class CharacterController : MonoBehaviour
         
     }
 
-    /*void Jump()
+    void Jump()
 	{
 		if (jumpInput > 0 && Grounded())
 		{
@@ -120,5 +120,5 @@ public class CharacterController : MonoBehaviour
 		{
 			velocity.y -= physSettings.downAccel;
 		}
-	}*/
+	}
 }
