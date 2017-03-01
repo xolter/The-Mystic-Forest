@@ -3,64 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class Player_Atk : MonoBehaviour
 {
-    public Image spell_1;
-    public Image spell_2;
-    public Image spell_3;
-    public Image spell_4;
-    public bool CoolingDown_1;
-    public bool CoolingDown_2;
-    public bool CoolingDown_3;
-    public bool CoolingDown_4;
-    public float waitTime_1 = 5.0f;
-    public float waitTime_2 = 10.0f;
-    public float waitTime_3 = 15.0f;
-    public float waitTime_4 = 20.0f;
-    // Use this for initialization
-    void Start()
+    public List<Skill> skills;
+    void FixedUpdate()
     {
-        CoolingDown_1 = false;
-        CoolingDown_2 = false;
-        CoolingDown_3 = false;
-        CoolingDown_4 = false;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (skills[0].currentCoolDown >= skills[0].cooldown)
+            {
+                //cast a spell
+                skills[0].currentCoolDown = 0;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (skills[1].currentCoolDown >= skills[1].cooldown)
+            {
+                //cast a spell
+                skills[1].currentCoolDown = 0;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (skills[2].currentCoolDown >= skills[2].cooldown)
+            {
+                //cast a spell
+                skills[2].currentCoolDown = 0;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (skills[3].currentCoolDown >= skills[3].cooldown)
+            {
+                //cast a spell
+                skills[3].currentCoolDown = 0;
+            }
+        }
     }
-
-    // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyUp(KeyCode.A) && !CoolingDown_1)
+        foreach(Skill s in skills)
         {
-            spell_1.fillAmount = 0;
-        }
-        if (Input.GetKeyUp(KeyCode.E) && !CoolingDown_2)
-        {
-            spell_2.fillAmount = 0;
-        }
-        if (Input.GetKeyUp(KeyCode.R) && !CoolingDown_3)
-        {
-            spell_3.fillAmount = 0;
-        }
-        if (Input.GetKeyUp(KeyCode.F) && !CoolingDown_4)
-        {
-            spell_4.fillAmount = 0;
-        }
-        if(CoolingDown_1)
-        {
-            spell_1.fillAmount += 1.0f / waitTime_1 * Time.deltaTime;
-        }
-        if (CoolingDown_2)
-        {
-            spell_2.fillAmount += 1.0f / waitTime_2 * Time.deltaTime;
-        }
-        if (CoolingDown_3)
-        {
-            spell_3.fillAmount += 1.0f / waitTime_3 * Time.deltaTime;
-        }
-        if (CoolingDown_4)
-        {
-            spell_4.fillAmount += 1.0f / waitTime_4 * Time.deltaTime;
+            if (s.currentCoolDown<s.cooldown)
+            {
+                s.currentCoolDown += Time.deltaTime;
+                s.skillIcon.fillAmount = s.currentCoolDown / s.cooldown;
+            }
         }
     }
+}
+
+[System.Serializable]
+public class Skill
+{
+    public float cooldown;
+    public Image skillIcon;
+    public float currentCoolDown;
 }
