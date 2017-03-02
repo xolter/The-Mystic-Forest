@@ -35,6 +35,7 @@ public class Player_Atk : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
+            
             if (skills[3].currentCoolDown >= skills[3].cooldown)
             {
                 //cast a spell
