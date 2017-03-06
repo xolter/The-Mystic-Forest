@@ -22,4 +22,8 @@ public class MainMenuScript : MonoBehaviour {
 	{
 		Application.LoadLevel ("OptionMenu");
 	}
+	public void TO_MENU()
+	{
+		Application.LoadLevel ("MainMenu");
+	}
 }
