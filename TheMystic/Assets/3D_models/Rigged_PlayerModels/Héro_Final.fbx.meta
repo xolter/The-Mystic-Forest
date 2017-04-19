@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: f912a373583cd844290c6746371f30b6
+timeCreated: 1492603671
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Group19696
+    100002: Group19970
+    100004: Group25958
+    100006: Group26154
+    100008: Group26502
+    100010: Group26700
+    100012: Group27244
+    100014: Group27403
+    100016: Group28336
+    100018: Group29804
+    100020: Group30237
+    100022: Group39445
+    100024: Group40419
+    100026: Group45663
+    100028: Group46428
+    100030: Group47717
+    100032: Group48136
+    100034: Group48272
+    100036: Group48445
+    100038: Group50117
+    100040: Group50211
+    100042: //RootNode
+    100044: mixamorig:Head
+    100046: mixamorig:HeadTop_End
+    100048: mixamorig:Hips
+    100050: mixamorig:LeftArm
+    100052: mixamorig:LeftFoot
+    100054: mixamorig:LeftForeArm
+    100056: mixamorig:LeftHand
+    100058: mixamorig:LeftLeg
+    100060: mixamorig:LeftShoulder
+    100062: mixamorig:LeftToe_End
+    100064: mixamorig:LeftToeBase
+    100066: mixamorig:LeftUpLeg
+    100068: mixamorig:Neck
+    100070: mixamorig:RightArm
+    100072: mixamorig:RightFoot
+    100074: mixamorig:RightForeArm
+    100076: mixamorig:RightHand
+    100078: mixamorig:RightLeg
+    100080: mixamorig:RightShoulder
+    100082: mixamorig:RightToe_End
+    100084: mixamorig:RightToeBase
+    100086: mixamorig:RightUpLeg
+    100088: mixamorig:Spine
+    100090: mixamorig:Spine1
+    100092: mixamorig:Spine2
+    400000: Group19696
+    400002: Group19970
+    400004: Group25958
+    400006: Group26154
+    400008: Group26502
+    400010: Group26700
+    400012: Group27244
+    400014: Group27403
+    400016: Group28336
+    400018: Group29804
+    400020: Group30237
+    400022: Group39445
+    400024: Group40419
+    400026: Group45663
+    400028: Group46428
+    400030: Group47717
+    400032: Group48136
+    400034: Group48272
+    400036: Group48445
+    400038: Group50117
+    400040: Group50211
+    400042: //RootNode
+    400044: mixamorig:Head
+    400046: mixamorig:HeadTop_End
+    400048: mixamorig:Hips
+    400050: mixamorig:LeftArm
+    400052: mixamorig:LeftFoot
+    400054: mixamorig:LeftForeArm
+    400056: mixamorig:LeftHand
+    400058: mixamorig:LeftLeg
+    400060: mixamorig:LeftShoulder
+    400062: mixamorig:LeftToe_End
+    400064: mixamorig:LeftToeBase
+    400066: mixamorig:LeftUpLeg
+    400068: mixamorig:Neck
+    400070: mixamorig:RightArm
+    400072: mixamorig:RightFoot
+    400074: mixamorig:RightForeArm
+    400076: mixamorig:RightHand
+    400078: mixamorig:RightLeg
+    400080: mixamorig:RightShoulder
+    400082: mixamorig:RightToe_End
+    400084: mixamorig:RightToeBase
+    400086: mixamorig:RightUpLeg
+    400088: mixamorig:Spine
+    400090: mixamorig:Spine1
+    400092: mixamorig:Spine2
+    4300000: Group19696
+    4300002: Group26154
+    4300004: Group19970
+    4300006: Group25958
+    4300008: Group26502
+    4300010: Group46428
+    4300012: Group50211
+    4300014: Group26700
+    4300016: Group47717
+    4300018: Group28336
+    4300020: Group29804
+    4300022: Group30237
+    4300024: Group48136
+    4300026: Group48272
+    4300028: Group48445
+    4300030: Group27403
+    4300032: Group27244
+    4300034: Group40419
+    4300036: Group45663
+    4300038: Group39445
+    4300040: Group50117
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: Group19696
+    13700002: Group19970
+    13700004: Group25958
+    13700006: Group26154
+    13700008: Group26502
+    13700010: Group26700
+    13700012: Group27244
+    13700014: Group27403
+    13700016: Group28336
+    13700018: Group29804
+    13700020: Group30237
+    13700022: Group39445
+    13700024: Group40419
+    13700026: Group45663
+    13700028: Group46428
+    13700030: Group47717
+    13700032: Group48136
+    13700034: Group48272
+    13700036: Group48445
+    13700038: Group50117
+    13700040: Group50211
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
