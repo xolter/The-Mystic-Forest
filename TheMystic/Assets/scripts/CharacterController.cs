@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
         public float forwardVel = 12;
         public float rotateVel = 100;
         public float jumpvel = 25;
-        public float distToGrounded = 0.1f;   //askip c la qu'il faut changer mais le tuto etait pas prevu pour terrain non plat (décu)z
+        public float distToGrounded = 0.1f;
         public LayerMask ground;
     }
 
@@ -26,7 +26,8 @@ public class CharacterController : MonoBehaviour
     {
         public float inputDelay = 0.1f;
         public string FORWARD_AXIS = "Vertical";
-        public string TURN_AXIS = "Horizontal";
+        public string TURN_AXIS = "Horizotal";
+        public string ROTATE_AXIS = "Mouse X";
         public string JUMP_AXIS = "Jump";
     }
 
@@ -37,7 +38,7 @@ public class CharacterController : MonoBehaviour
     Vector3 velocity = Vector3.zero;
     Quaternion targetRotation;
     Rigidbody rBody;
-    float forwardInput, turnInput, jumpInput;
+    float forwardInput, turnInput, rotateInput, jumpInput;
 
     public Quaternion TargetRotation
     {
@@ -63,18 +64,20 @@ public class CharacterController : MonoBehaviour
     {
         forwardInput = Input.GetAxis(inputSettings.FORWARD_AXIS);
         turnInput = Input.GetAxis(inputSettings.TURN_AXIS);
+        rotateInput = Input.GetAxis(inputSettings.ROTATE_AXIS);
         jumpInput = Input.GetAxisRaw(inputSettings.JUMP_AXIS);
     }
 
     void Update()
     {
         GetInput();
-        Turn();
+        Rotate();
     }
 
     void FixedUpdate()
     {
         Run();
+        Turn();
         Jump ();
 
         rBody.velocity = transform.TransformDirection(velocity);
@@ -100,7 +103,23 @@ public class CharacterController : MonoBehaviour
     {
         if (Mathf.Abs(turnInput) > inputSettings.inputDelay)
         {
-            targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVel * turnInput * Time.deltaTime, Vector3.up);
+            //move
+            rBody.velocity = transform.right * turnInput * moveSettings.forwardVel;
+            velocity.x = moveSettings.forwardVel * turnInput;
+        }
+        else
+        {
+            //zero velocity
+            rBody.velocity = Vector3.zero;
+            velocity.x = 0;
+        }
+    }
+
+    void Rotate()
+    {
+        if (Mathf.Abs(rotateInput) > inputSettings.inputDelay)
+        {
+            targetRotation *= Quaternion.AngleAxis(moveSettings.rotateVel * rotateInput * Time.deltaTime, Vector3.up);
         }
             transform.rotation = targetRotation;
         
