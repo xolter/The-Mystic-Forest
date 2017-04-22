@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour {
 			Time.timeScale = 1;
 		}
 
-		if (optionActive)
+		/*if (optionActive)
 		{
 			optionObjet.SetActive (true);
 		} 
@@ -44,8 +44,8 @@ public class PauseMenu : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape) && optionActive)
 		{
 			optionActive = !optionActive;
-		}
-		else if (Input.GetKeyDown(KeyCode.Escape))
+		}*/
+		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			isActive = !isActive;
 		}
