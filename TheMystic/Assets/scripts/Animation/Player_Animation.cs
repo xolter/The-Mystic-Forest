@@ -24,7 +24,7 @@ public class Player_Animation : MonoBehaviour
 
     void Update()
     {
-        Skill1 = (Input.GetKeyDown(KeyCode.A));
+        Skill1 = Input.GetKeyDown(KeyCode.A);        
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
         inputJ = Input.GetAxis("Jump");

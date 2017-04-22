@@ -37,11 +37,6 @@ public class OptionsSettingManager : MonoBehaviour {
 		{
 			resolutionDropdown.options.Add(new Dropdown.OptionData(resolutoin.ToString()));
 		}
-		qualitylvl = QualitySettings.names;
-		foreach (string quality in qualitylvl)
-		{
-			textureQualityDropdown.options.Add(new Dropdown.OptionData(quality));
-		}
 	}
 
 	public void OnFullscreenToggle()
