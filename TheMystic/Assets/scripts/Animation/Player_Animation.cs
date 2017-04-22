@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Animation : MonoBehaviour
 {
     public Animator anim;
+    public Player_Atk attack;
     private float inputH;
     private float inputV;
     private float inputJ;
@@ -14,6 +15,7 @@ public class Player_Animation : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        attack = GetComponent<Player_Atk>();
         anim.SetFloat("InputH", 0);
         anim.SetFloat("InputV", 0);
         anim.SetFloat("InputJ", 0);
@@ -24,7 +26,11 @@ public class Player_Animation : MonoBehaviour
 
     void Update()
     {
-        Skill1 = Input.GetKeyDown(KeyCode.A);        
+        //Skill1 = Input.GetKeyDown(KeyCode.A);        
+        foreach (Skill S in attack.skills)
+        {
+            anim.SetBool(S.name, S.currentCoolDown > 0.1f && S.currentCoolDown < 0.2f);
+        }
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
         inputJ = Input.GetAxis("Jump");
@@ -32,7 +38,6 @@ public class Player_Animation : MonoBehaviour
         anim.SetFloat("InputH", inputH);
         anim.SetFloat("InputV", inputV);
         anim.SetFloat("InputJ", inputJ);
-        anim.SetFloat("InputAA", inputAutoAttack);
-        anim.SetBool("Skill1", Skill1);
+        anim.SetFloat("InputAA", inputAutoAttack);        
     }
 }
