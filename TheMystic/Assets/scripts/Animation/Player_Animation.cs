@@ -10,7 +10,6 @@ public class Player_Animation : MonoBehaviour
     private float inputV;
     private float inputJ;
     private float inputAutoAttack;
-    private bool Skill1;
 
     void Start()
     {
@@ -20,16 +19,25 @@ public class Player_Animation : MonoBehaviour
         anim.SetFloat("InputV", 0);
         anim.SetFloat("InputJ", 0);
         anim.SetFloat("InputAA", 0);
-        anim.SetBool("Skill1", false);        
+        foreach (Skill s in attack.skills)
+        {
+            anim.SetBool(s.name, false);
+        }                
     }
 
 
     void Update()
-    {
-        //Skill1 = Input.GetKeyDown(KeyCode.A);        
-        foreach (Skill S in attack.skills)
+    {    
+        foreach (Skill s in attack.skills)
         {
-            anim.SetBool(S.name, S.currentCoolDown > 0.1f && S.currentCoolDown < 0.2f);
+            if (anim.IsInTransition(0))
+            {
+                anim.SetBool(s.name, false);
+            }
+            if (Input.GetKeyDown(s.bind) && !anim.GetBool(s.name))
+            {                               
+                    anim.SetTrigger(s.name);                
+            }
         }
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
