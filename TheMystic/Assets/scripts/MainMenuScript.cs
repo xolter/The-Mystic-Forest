@@ -18,10 +18,6 @@ public class MainMenuScript : MonoBehaviour {
 	{
 		Application.LoadLevel (lastscene);
 	}
-	public void TO_OPTION()
-	{
-		Application.LoadLevel ("OptionMenu");
-	}
 	public void TO_MENU()
 	{
 		Application.LoadLevel ("MainMenu");

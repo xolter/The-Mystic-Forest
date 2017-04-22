@@ -5,6 +5,8 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour {
 
 	public GameObject menuObject;
+	public GameObject optionObjet;
+	bool optionActive = false;
 	bool isActive = false;
 
 	// Update is called once per frame
@@ -30,7 +32,20 @@ public class PauseMenu : MonoBehaviour {
 			Time.timeScale = 1;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (optionActive)
+		{
+			optionObjet.SetActive (true);
+		} 
+		else
+		{
+			optionObjet.SetActive (false);
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape) && optionActive)
+		{
+			optionActive = !optionActive;
+		}
+		else if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			isActive = !isActive;
 		}
@@ -38,5 +53,9 @@ public class PauseMenu : MonoBehaviour {
 	public void RESUME_BUTTON()
 	{
 		isActive = !isActive;
+	}
+	public void OPTION_SETTINGS_OPEN_CLOSE()
+	{
+		optionActive = !optionActive;
 	}
 }
