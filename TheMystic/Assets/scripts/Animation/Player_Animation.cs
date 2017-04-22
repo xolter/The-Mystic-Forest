@@ -7,25 +7,32 @@ public class Player_Animation : MonoBehaviour
     public Animator anim;
     private float inputH;
     private float inputV;
+    private float inputJ;
+    private float inputAutoAttack;
+    private bool Skill1;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.SetFloat("inputH", 0);
-        anim.SetFloat("inputV", 0);
+        anim.SetFloat("InputH", 0);
+        anim.SetFloat("InputV", 0);
+        anim.SetFloat("InputJ", 0);
+        anim.SetFloat("InputAA", 0);
+        anim.SetBool("Skill1", false);        
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            anim.Play("Skill1", -1, 0f);
-        }
+        Skill1 = (Input.GetKeyDown(KeyCode.A));
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
+        inputJ = Input.GetAxis("Jump");
+        inputAutoAttack = Input.GetAxis("Fire1");
         anim.SetFloat("InputH", inputH);
         anim.SetFloat("InputV", inputV);
-        Debug.Log(inputH + "~~" +inputV);        
+        anim.SetFloat("InputJ", inputJ);
+        anim.SetFloat("InputAA", inputAutoAttack);
+        anim.SetBool("Skill1", Skill1);
     }
 }

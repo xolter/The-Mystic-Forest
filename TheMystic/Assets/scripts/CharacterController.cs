@@ -38,7 +38,7 @@ public class CharacterController : MonoBehaviour
     Vector3 velocity = Vector3.zero;
     Quaternion targetRotation;
     Rigidbody rBody;
-    float forwardInput, turnInput, rotateInput, jumpInput;
+    private float forwardInput, turnInput, rotateInput, jumpInput;    
 
     public Quaternion TargetRotation
     {
@@ -57,7 +57,7 @@ public class CharacterController : MonoBehaviour
             rBody = GetComponent<Rigidbody>();
         else
             Debug.LogError("character needs rigidbody");
-        forwardInput = turnInput = jumpInput = 0;
+        forwardInput = turnInput = jumpInput = 0;       
     }
 
     void GetInput()
@@ -78,7 +78,7 @@ public class CharacterController : MonoBehaviour
     {
         Run();
         Turn();
-        Jump ();
+        Jump();           
 
         rBody.velocity = transform.TransformDirection(velocity);
     }
@@ -129,7 +129,7 @@ public class CharacterController : MonoBehaviour
 	{
 		if (jumpInput > 0 && Grounded())
 		{
-			velocity.y = moveSettings.jumpvel;
+			velocity.y = moveSettings.jumpvel;            
 		}
 		else if (jumpInput == 0 && Grounded())
 		{
