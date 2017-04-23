@@ -7,17 +7,26 @@ using UnityEngine.UI;
 public class Player_Atk : MonoBehaviour
 {
     public List<Skill> skills;
+    public Player_Health health;
+
+    void Start()
+    {
+        health = GetComponent<Player_Health>();        
+    }
+
     void FixedUpdate()
-    {       
-        foreach (Skill s in skills)
+    {   if (health.current_health > 0 )
         {
-            if (Input.GetKeyDown(s.bind))
+            foreach (Skill s in skills)
             {
-                if(s.currentCoolDown >= s.cooldown)
-                {                              
-                    s.currentCoolDown = 0;                    
-                    GameObject particle = s.particle;
-                    Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);                                                            
+                if (Input.GetKeyDown(s.bind))
+                {
+                    if (s.currentCoolDown >= s.cooldown)
+                    {
+                        s.currentCoolDown = 0;
+                        GameObject particle = s.particle;
+                        Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
+                    }
                 }
             }
         }
@@ -44,5 +53,6 @@ public class Skill
     public Image skillIcon;
     public float currentCoolDown;
     public KeyCode bind;
-    public GameObject particle;    
+    public GameObject particle;
+    public float manaCost;      
 }

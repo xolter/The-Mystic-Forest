@@ -75,7 +75,10 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         GetInput();
-        Rotate();
+        if (CanRotate())
+        {
+            Rotate();
+        }
     }
 
     void FixedUpdate()
@@ -150,11 +153,15 @@ public class CharacterController : MonoBehaviour
 
     public bool CanMove()
     {
-        bool res = !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee2");
+        bool res = !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee2") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Death");
         for (int i = 0; i <attack.skills.Count; i++)
         {
             res = res && !anim.GetCurrentAnimatorStateInfo(0).IsName(attack.skills[i].name);
         }
         return res;
+    }
+    public bool CanRotate()
+    {
+        return !anim.GetCurrentAnimatorStateInfo(0).IsName("Death");
     }
 }
