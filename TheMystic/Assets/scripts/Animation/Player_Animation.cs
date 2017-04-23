@@ -36,7 +36,7 @@ public class Player_Animation : MonoBehaviour
             }
             if (Input.GetKeyDown(s.bind) && !anim.GetBool(s.name))
             {                               
-                    anim.SetTrigger(s.name);                
+                    anim.SetBool(s.name, true);                
             }
         }
         inputH = Input.GetAxis("Horizontal");

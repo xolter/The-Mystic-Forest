@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class Player_Stamina : MonoBehaviour
 {
     public Image staminaBar;
+    public Player_Atk attack;
     public int max_stamina;
-    public float current_stamina;
+    private float current_stamina;
+    public float Current_Stamina { get { return current_stamina; } set { current_stamina = value; } }
     public float regen_stamina;
+    bool access; 
 
     // Use this for initialization
     void Start ()
@@ -17,29 +20,16 @@ public class Player_Stamina : MonoBehaviour
         regen_stamina = 0.5f;
         current_stamina = max_stamina;
         staminaBar.fillAmount = (float)current_stamina/max_stamina;
+        attack = GetComponent<Player_Atk>();
+        access = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
-    {
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            current_stamina -= 10;
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            current_stamina -= 20;
-        }
-        if(Input.GetKeyUp(KeyCode.R))
-        {
-            current_stamina -= 50;
-        }
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            current_stamina -= 90;
-        }
+    {        
         Update_currentStamina(regen_stamina);
-	}
+        staminaBar.fillAmount = current_stamina / max_stamina;
+    }
 
     public void Update_currentStamina(float n)
     {
@@ -55,7 +45,6 @@ public class Player_Stamina : MonoBehaviour
         if(max_stamina<1)
         {
             max_stamina = 1;
-        }
-        staminaBar.fillAmount = current_stamina / max_stamina;
+        }        
     }
 }

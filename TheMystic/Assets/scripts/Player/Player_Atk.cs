@@ -8,10 +8,14 @@ public class Player_Atk : MonoBehaviour
 {
     public List<Skill> skills;
     public Player_Health health;
+    public Player_Stamina stamina;
+    public Animator anim;
 
     void Start()
     {
-        health = GetComponent<Player_Health>();        
+        health = GetComponent<Player_Health>();
+        stamina = GetComponent<Player_Stamina>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -26,6 +30,7 @@ public class Player_Atk : MonoBehaviour
                         s.currentCoolDown = 0;
                         GameObject particle = s.particle;
                         Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
+                        stamina.Current_Stamina -= s.manaCost;
                     }
                 }
             }
@@ -52,7 +57,7 @@ public class Skill
     public float cooldown;
     public Image skillIcon;
     public float currentCoolDown;
-    public KeyCode bind;
+    public KeyCode bind;    
     public GameObject particle;
     public float manaCost;      
 }

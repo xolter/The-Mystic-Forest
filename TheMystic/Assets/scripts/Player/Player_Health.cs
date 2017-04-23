@@ -53,7 +53,7 @@ public class Player_Health : MonoBehaviour
         }
         if (isDead && !particlePlayed)
         {
-            Destroy(Instantiate(particle, transform.position, /*transform.rotation*/ Quaternion.Euler(-90, 0, 0)), 5f);
+            Destroy(Instantiate(particle, transform.position, Quaternion.Euler(-90, 0, 0)), 5f);
             particlePlayed = true;
         }
         Update_currentHealth(regen_health);
