@@ -153,7 +153,8 @@ public class CharacterController : MonoBehaviour
 
     public bool CanMove()
     {
-        bool res = !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee2") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Death");
+        //bool res = !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee2") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Death");
+        bool res = anim.GetCurrentAnimatorStateInfo(0).IsName("Walk") || anim.GetCurrentAnimatorStateInfo(0).IsName("WAIT0");
         for (int i = 0; i <attack.skills.Count; i++)
         {
             res = res && !anim.GetCurrentAnimatorStateInfo(0).IsName(attack.skills[i].name);

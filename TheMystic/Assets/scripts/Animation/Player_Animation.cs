@@ -9,7 +9,8 @@ public class Player_Animation : MonoBehaviour
     private float inputH;
     private float inputV;
     private float inputJ;
-    private float inputAutoAttack;
+    private float inputAutoAttackL;
+    private float inputAutoAttackR;
 
     void Start()
     {
@@ -42,10 +43,12 @@ public class Player_Animation : MonoBehaviour
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
         inputJ = Input.GetAxis("Jump");
-        inputAutoAttack = Input.GetAxis("Fire1");
+        inputAutoAttackL = Input.GetAxis("Fire1");
+        inputAutoAttackR = Input.GetAxis("Fire2");
         anim.SetFloat("InputH", inputH);
         anim.SetFloat("InputV", inputV);
         anim.SetFloat("InputJ", inputJ);
-        anim.SetFloat("InputAA", inputAutoAttack);             
+        anim.SetFloat("InputAA", inputAutoAttackL);
+        anim.SetFloat("InputAA2", inputAutoAttackR);            
     }
 }
