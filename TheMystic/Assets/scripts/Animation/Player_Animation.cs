@@ -46,6 +46,6 @@ public class Player_Animation : MonoBehaviour
         anim.SetFloat("InputH", inputH);
         anim.SetFloat("InputV", inputV);
         anim.SetFloat("InputJ", inputJ);
-        anim.SetFloat("InputAA", inputAutoAttack);        
+        anim.SetFloat("InputAA", inputAutoAttack);             
     }
 }

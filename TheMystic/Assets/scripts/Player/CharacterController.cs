@@ -38,7 +38,9 @@ public class CharacterController : MonoBehaviour
     Vector3 velocity = Vector3.zero;
     Quaternion targetRotation;
     Rigidbody rBody;
-    private float forwardInput, turnInput, rotateInput, jumpInput;    
+    Player_Atk attack;
+    public Animator anim;
+    private float forwardInput, turnInput, rotateInput, jumpInput;
 
     public Quaternion TargetRotation
     {
@@ -57,7 +59,9 @@ public class CharacterController : MonoBehaviour
             rBody = GetComponent<Rigidbody>();
         else
             Debug.LogError("character needs rigidbody");
-        forwardInput = turnInput = jumpInput = 0;       
+        anim = GetComponent<Animator>();
+        attack = GetComponent<Player_Atk>();
+        forwardInput = turnInput = jumpInput = 0;  
     }
 
     void GetInput()
@@ -76,11 +80,14 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Run();
-        Turn();
-        Jump();           
-
-        rBody.velocity = transform.TransformDirection(velocity);
+        //anim.GetCurrentAnimatorStateInfo(0).IsName("Walk");
+        if (CanMove())
+        {
+            Run();
+            Turn();
+            Jump();
+            rBody.velocity = transform.TransformDirection(velocity);
+        }
     }
 
     void Run()
@@ -140,4 +147,14 @@ public class CharacterController : MonoBehaviour
 			velocity.y -= physSettings.downAccel;
 		}
 	}
+
+    public bool CanMove()
+    {
+        bool res = !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee1") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Melee2");
+        for (int i = 0; i <attack.skills.Count; i++)
+        {
+            res = res && !anim.GetCurrentAnimatorStateInfo(0).IsName(attack.skills[i].name);
+        }
+        return res;
+    }
 }
