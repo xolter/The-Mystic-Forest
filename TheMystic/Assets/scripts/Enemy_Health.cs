@@ -8,6 +8,7 @@ public class Enemy_Health : MonoBehaviour
     public Image healthbar;
     public int max_health = 100;
     public int current_health = 100;
+    //public int Current_Health { get { return current_health; } set { current_health = value; } }
     public int regen_health = 0;
 
     // Use this for initialization
@@ -20,6 +21,7 @@ public class Enemy_Health : MonoBehaviour
     void Update()
     {
         Update_currentHealth(regen_health);
+        healthbar.fillAmount = (float)current_health / max_health;
     }
 
     public void Update_currentHealth(int n)
@@ -37,7 +39,5 @@ public class Enemy_Health : MonoBehaviour
         {
             max_health = 1;
         }
-
-        healthbar.fillAmount = (float)current_health / max_health;
     }
 }

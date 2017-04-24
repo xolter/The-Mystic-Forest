@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour {
     public GameObject target;
+    public Player_Health target_health;
     public float attTimer;
     public float cooldown;
     // Use this for initialization
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
+        target_health = target.GetComponent<Player_Health>();
         attTimer = 0;
         cooldown = 1.0f;
     }
@@ -40,9 +43,9 @@ public class EnemyAttack : MonoBehaviour {
         if (distance < 2.5f)
         {
             if (direction > 0)
-            {
-                Player_Health eh = (Player_Health)target.GetComponent("PlayerHealth");
-                eh.Update_currentHealth(-10);
+            {                
+                target_health.Update_currentHealth(-10);
+                Debug.Log("HIT HERO");
             }
         }
     }

@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttk : MonoBehaviour {
+public class PlayerAttk : MonoBehaviour
+{
     public GameObject target;
+    public Enemy_Health target_health;
     public float attTimer;
     public float cooldown;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         attTimer = 0;
         cooldown = 0.8f;
-	}
+        target_health = target.GetComponent<Enemy_Health>();
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (attTimer > 0)
         {
             attTimer -= Time.deltaTime;
@@ -22,7 +27,7 @@ public class PlayerAttk : MonoBehaviour {
         {
             attTimer = 0;
         }
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetAxis("Fire1") > 0)
         {
             if (attTimer == 0)
             {
@@ -43,8 +48,9 @@ public class PlayerAttk : MonoBehaviour {
         {
             if (direction > 0)
             {
-                Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
-                eh.Update_currentHealth(-10);
+                // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
+                target_health.current_health -= 10;
+                Debug.Log("HIT TARGET");
             }
         }
     }
