@@ -17,7 +17,7 @@ public class IA : MonoBehaviour
     void Start () {
         GameObject go = GameObject.FindGameObjectWithTag("Player");
         target = go.transform;
-        difdistance = 2;
+        difdistance = 6;
 	}
 	
 	// Update is called once per frame
