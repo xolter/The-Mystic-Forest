@@ -22,7 +22,7 @@ public class PlayerAttk : MonoBehaviour {
         {
             attTimer = 0;
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.F))
         {
             if (attTimer == 0)
             {
