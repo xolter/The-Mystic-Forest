@@ -3,29 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameOverScene : MonoBehaviour {
+public class GameOverScene : MonoBehaviour
+{
 
     public Player_Health health;
-    bool GameOverisActive = false;
+    public GameObject gameOverObjet;
+    private bool gameOverisActive;
+    public bool GameOverisActive { get { return gameOverisActive; } }
+    private bool trigger;
 
     void Start()
     {
-        health = GetComponent<Player_Health>();
+        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
+        gameOverObjet = GameObject.FindGameObjectWithTag("GameOverMenu");
+        gameOverisActive = false;
+        trigger = true;
     }
     void Update()
     {
-        /*if (health.current_health <= 0)
+        gameOverisActive = health.current_health <= 0;
+        if (gameOverisActive)
         {
-            GameOverisActive = true;
-        }*/
-        if (GameOverisActive)
-        {
-            gameObject.SetActive(true);
+            if (trigger)
+            {
+                gameOverObjet.SetActive(true);                
+                trigger = false;
+            }            
         }
         else
         {
-            gameObject.SetActive(false);
+            gameOverObjet.SetActive(false);           
         }
-        
+        CursorPreset();
+    }
+
+    void CursorPreset()
+    {
+        if (GameOverisActive)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
