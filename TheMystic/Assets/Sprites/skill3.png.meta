@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 09d2352d6f457854a81500747dd51033
-timeCreated: 1492974219
+timeCreated: 1493125085
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Skill3_0
-    21300002: Skill3_1
+    21300000: skill3_0
+    21300002: skill3_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -30,7 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -72,7 +72,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skill3_0
+      name: skill3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -85,7 +85,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Skill3_1
+      name: skill3_1
       rect:
         serializedVersion: 2
         x: 721

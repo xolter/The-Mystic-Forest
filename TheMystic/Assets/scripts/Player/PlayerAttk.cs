@@ -11,6 +11,7 @@ public class PlayerAttk : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        target = GameObject.FindGameObjectWithTag("Enemy");
         attTimer = 0;
         cooldown = 0.8f;
         target_health = target.GetComponent<Enemy_Health>();
