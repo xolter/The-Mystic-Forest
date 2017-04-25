@@ -6,48 +6,27 @@ using UnityEngine.UI;
 public class GameOverScene : MonoBehaviour
 {
 
-    public Player_Health health;
-    public GameObject gameOverObjet;
-    private bool gameOverisActive;
-    public bool GameOverisActive { get { return gameOverisActive; } }
-    private bool trigger;
+    Player_Health health;
+    GameObject gameOverObject;
+    private bool gameOverisActive = false;
 
     void Start()
     {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
-        gameOverObjet = GameObject.FindGameObjectWithTag("GameOverMenu");
-        gameOverisActive = false;
-        trigger = true;
+        gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
     }
     void Update()
     {
         gameOverisActive = health.current_health <= 0;
         if (gameOverisActive)
         {
-            if (trigger)
-            {
-                gameOverObjet.SetActive(true);                
-                trigger = false;
-            }            
+            gameOverObject.SetActive(true);            
         }
         else
         {
-            gameOverObjet.SetActive(false);           
+            gameOverObject.SetActive(false);           
         }
-        CursorPreset();
+        //L'affichage du curseur est géré par CurseurManager
     }
 
-    void CursorPreset()
-    {
-        if (GameOverisActive)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
-        }
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
 }
