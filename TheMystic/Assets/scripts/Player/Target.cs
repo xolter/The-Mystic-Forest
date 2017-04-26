@@ -59,7 +59,7 @@ public class Target : MonoBehaviour {
     private void SelectTarget()
     {
         PlayerAttk pa = (PlayerAttk)GetComponent("PlayerAttack");
-        pa.target = selectedTarget.gameObject;
+        pa.closest = selectedTarget.gameObject;
     }
     private void DeselectTarget()
     {

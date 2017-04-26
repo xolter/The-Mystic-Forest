@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerAttk : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject[] targets;
+    public GameObject closest;
     public Enemy_Health target_health;
     public float attTimer;
     public float cooldown;
 	// Use this for initialization
 	void Start ()
     {
-        target = GameObject.FindGameObjectWithTag("Enemy");
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
+        closest = FindClosestEnemy();
         attTimer = 0;
         cooldown = 0.8f;
-        target_health = target.GetComponent<Enemy_Health>();
+       //---- target_health = target.GetComponent<Enemy_Health>();
     }
 	
 	// Update is called once per frame
@@ -36,13 +38,31 @@ public class PlayerAttk : MonoBehaviour
                 attTimer = cooldown;
             }
         }
-               
-	}
+        FindClosestEnemy();
+        target_health = closest.GetComponent<Enemy_Health>();
+    }
+
+    GameObject FindClosestEnemy()
+    {
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject target in targets)
+        {
+            Vector3 diff = target.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = target;
+                distance = curDistance;
+            }
+        }
+        return closest;
+    }
 
     private void Attack()
     {
-        float distance = Vector3.Distance(target.transform.position, transform.position);
-        Vector3 dir = (target.transform.position - transform.position).normalized;
+        float distance = Vector3.Distance(closest.transform.position, transform.position);
+        Vector3 dir = (closest.transform.position - transform.position).normalized;
         float direction = Vector3.Dot(dir, transform.forward);
 
         if (distance < 2.5f)

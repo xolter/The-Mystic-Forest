@@ -6,6 +6,7 @@ public class IA : MonoBehaviour
 {
     public Transform target;
     public Enemy_Health health;
+    public GameObject self;
     public int moveSpeed;
     public int rotationSpeed;
     public Transform myTransform;
@@ -16,11 +17,13 @@ public class IA : MonoBehaviour
         myTransform = transform;
     }
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         player_health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
         health = GetComponent<Enemy_Health>();        
-        difdistance = 2.5f;        
+        difdistance = 2.5f;
+        self = GetComponent<GameObject>();
 	}
 	
 	// Update is called once per frame
@@ -37,5 +40,5 @@ public class IA : MonoBehaviour
                 myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
             }
         }
-	}
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Map_Generator : MonoBehaviour
 {
     public List<Chunk> Chunks;
-    Chunk[,] map;    
+    public Chunk[,] map;    
     public int Length;
     public int Width;
 
