@@ -9,6 +9,7 @@ public class GameOverScene : MonoBehaviour
     Player_Health health;
     GameObject gameOverObject;
     private bool gameOverisActive = false;
+    public AudioSource music;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class GameOverScene : MonoBehaviour
         gameOverisActive = health.current_health <= 0;
         if (gameOverisActive)
         {
-            gameOverObject.SetActive(true);            
+            gameOverObject.SetActive(true);
+            music.mute = true;
         }
         else
         {
