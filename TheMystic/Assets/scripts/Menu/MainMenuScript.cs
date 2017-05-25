@@ -22,4 +22,8 @@ public class MainMenuScript : MonoBehaviour {
 	{
 		Application.LoadLevel ("MainMenu");
 	}
+    public void TO_RANDOM()
+    {
+        Application.LoadLevel("ForestDugeon");
+    }
 }
