@@ -8,17 +8,21 @@ public class Player_Health : MonoBehaviour
     public Image health_bar;
     public Animator anim;
     public GameObject particle;
-    public int max_health = 100;
-    public float current_health = 100;
-    public float regen_health = 0.1f;
+    //public int max_health = 100;
+    //public float current_health = 100;
+    //public float regen_health = 0.1f;
+    public int max_health;
+    public float current_health;
+    public float regen_health;
     private bool isDead, particlePlayed;
 	// Use this for initialization
 	void Start ()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
-        current_health = max_health;
-        health_bar.fillAmount = current_health / max_health;
+        current_health = max_health = PlayerStats.MaxHealth;
+        health_bar.fillAmount = PlayerStats.CurrentHealth / PlayerStats.MaxHealth;
+        regen_health = PlayerStats.RegenHealth;
         isDead = particlePlayed = false;
 	}
 	
@@ -34,30 +38,19 @@ public class Player_Health : MonoBehaviour
         {
             current_health -= 90;
         }
-        if (current_health <=40)
-        {
-            regen_health = 1;
-        }
-        else
-        {
-            regen_health = 0.3f;
-        }
-        if(current_health == max_health)
-        {
-            regen_health = 0;
-        }
         if (current_health <= 0)
         {
+            isDead = true;
             regen_health = 0;
-            isDead = true;            
         }
         if (isDead && !particlePlayed)
         {
             Destroy(Instantiate(particle, transform.position, Quaternion.Euler(-90, 0, 0)), 5f);
             particlePlayed = true;
         }
+        PlayerStats.CurrentHealth = current_health;
         Update_currentHealth(regen_health);
-        health_bar.fillAmount = current_health / max_health;
+        health_bar.fillAmount = PlayerStats.CurrentHealth / PlayerStats.MaxHealth;
     }
 
     public void Update_currentHealth(float n)
@@ -71,9 +64,6 @@ public class Player_Health : MonoBehaviour
         {
             current_health = max_health;
         }
-        if (max_health<1)
-        {
-            max_health = 1;
-        }        
+        PlayerStats.CurrentHealth = current_health;
     }
 }

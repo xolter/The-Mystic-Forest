@@ -10,11 +10,16 @@ public class Enemy_Health : MonoBehaviour
     public int current_health = 100;
     //public int Current_Health { get { return current_health; } set { current_health = value; } }
     public int regen_health = 0;
+    private bool xpGiven = false;
+    public GameObject target;
+    Player_Exp target_xp;
 
     // Use this for initialization
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         healthbar.fillAmount = (float)current_health / max_health;
+        target_xp = target.GetComponent<Player_Exp>();
     }
 
     // Update is called once per frame
@@ -27,9 +32,14 @@ public class Enemy_Health : MonoBehaviour
     public void Update_currentHealth(int n)
     {
         current_health += n;
-        if (current_health < 0)
+        if (current_health <= 0)
         {
             current_health = 0;
+            if (!xpGiven)
+            {
+                target_xp.Update_EXP();
+                xpGiven = true;
+            }
         }
         if (current_health > max_health)
         {
