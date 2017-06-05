@@ -20,7 +20,7 @@ public class Player_Health : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
-        current_health = max_health = PlayerStats.maxHealth;
+        //current_health = max_health = PlayerStats.maxHealth;
         health_bar.fillAmount = PlayerStats.currentHealth / PlayerStats.maxHealth;
         //regen_health = PlayerStats.regenHealth;
         isDead = particlePlayed = false;
@@ -29,8 +29,8 @@ public class Player_Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        anim.SetBool("isDead", current_health <= 0);        
-        if (current_health <= 0)
+        anim.SetBool("isDead", PlayerStats.currentHealth <= 0);        
+        if (PlayerStats.currentHealth <= 0)
         {
             isDead = true;
             PlayerStats.regenHealth = 0;
@@ -43,6 +43,7 @@ public class Player_Health : MonoBehaviour
         //PlayerStats.currentHealth = current_health;
         Update_currentHealth(PlayerStats.regenHealth);
         health_bar.fillAmount =(float)PlayerStats.currentHealth / (float)PlayerStats.maxHealth;
+        Debug.Log("Gur LIFE = " + PlayerStats.currentHealth);
     }
 
     public void Update_currentHealth(float n)
@@ -53,9 +54,9 @@ public class Player_Health : MonoBehaviour
         {
             current_health = PlayerStats.currentHealth = 0;            
         }         
-        if (current_health>max_health)
+        if (PlayerStats.currentHealth>PlayerStats.maxHealth)
         {
-            current_health = max_health;
+            PlayerStats.currentHealth = PlayerStats.maxHealth;
         }
         //PlayerStats.CurrentHealth = current_health;
     }

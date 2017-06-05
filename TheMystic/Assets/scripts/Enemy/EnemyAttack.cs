@@ -19,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-        target_health = target.GetComponent<Player_Health>();
+        //target_health = target.GetComponent<Player_Health>();
         own = GetComponent<Enemy_Health>();
         attTimer = 0;
         cooldown = 1.0f;
@@ -31,7 +31,7 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stop = own.current_health <= 0 || target_health.current_health <= 0;
+        stop = own.current_health <= 0 || PlayerStats.currentHealth <= 0;
         if (!stop)
         {
             if (attTimer > 0)

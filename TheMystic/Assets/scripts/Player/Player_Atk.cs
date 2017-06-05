@@ -32,6 +32,7 @@ public class Player_Atk : MonoBehaviour
                         Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
                         //stamina.Current_Stamina -= s.manaCost;
                         PlayerStats.currentMana -= s.manaCost;
+                        s.trigered = true;
                     }
                 }
             }
@@ -62,7 +63,11 @@ public class Player_Atk : MonoBehaviour
                 PlayerStats.regenHealth = 0.2f;
                 break;
             case ("Skill2"):
-                PlayerStats.damage += 2* PlayerStats.damage/100;
+                if (skill.trigered)
+                {
+                    PlayerStats.damage *= 3;
+                    skill.trigered = false;
+                }
                 break;
             case ("Skill3"):
                 break;
@@ -102,4 +107,5 @@ public class Skill
     public KeyCode bind;    
     public GameObject particle;
     public float manaCost;
+    public bool trigered = false; 
 }
