@@ -64,7 +64,7 @@ public class Player_Atk : MonoBehaviour
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    Debug.Log();
+                    //Debug.Log();
                     PlayerStats.damage = 3 * PlayerStats.damage;
                     //skill.trigered = false;
                 }
