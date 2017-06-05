@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player_Exp : MonoBehaviour {
 
     public Image ExpBar;
+    public Text ScoreText;
     public int xp;
 
     void Start ()
@@ -18,6 +19,7 @@ public class Player_Exp : MonoBehaviour {
     {
         ExpBar.fillAmount = (float)xp / PlayerStats.maxXp;
         PlayerStats.xp = xp;
+        ScoreText.text = PlayerStats.Lvl.ToString();
     }
     public void Update_EXP()
     {
