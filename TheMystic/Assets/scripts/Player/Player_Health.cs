@@ -13,57 +13,50 @@ public class Player_Health : MonoBehaviour
     //public float regen_health = 0.1f;
     public int max_health;
     public float current_health;
-    public float regen_health;
+    //public float regen_health;
     private bool isDead, particlePlayed;
 	// Use this for initialization
 	void Start ()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
-        current_health = max_health = PlayerStats.MaxHealth;
-        health_bar.fillAmount = PlayerStats.CurrentHealth / PlayerStats.MaxHealth;
-        regen_health = PlayerStats.RegenHealth;
+        current_health = max_health = PlayerStats.maxHealth;
+        health_bar.fillAmount = PlayerStats.currentHealth / PlayerStats.maxHealth;
+        //regen_health = PlayerStats.regenHealth;
         isDead = particlePlayed = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        anim.SetBool("isDead", current_health <= 0);
-        if (Input.GetKeyUp (KeyCode.Keypad1))
-        {
-            current_health -= 10;
-        }
-        if(Input.GetKeyUp (KeyCode.Keypad2))
-        {
-            current_health -= 90;
-        }
+        anim.SetBool("isDead", current_health <= 0);        
         if (current_health <= 0)
         {
             isDead = true;
-            regen_health = 0;
+            PlayerStats.regenHealth = 0;
         }
         if (isDead && !particlePlayed)
         {
             Destroy(Instantiate(particle, transform.position, Quaternion.Euler(-90, 0, 0)), 5f);
             particlePlayed = true;
         }
-        PlayerStats.CurrentHealth = current_health;
-        Update_currentHealth(regen_health);
-        health_bar.fillAmount = PlayerStats.CurrentHealth / PlayerStats.MaxHealth;
+        //PlayerStats.currentHealth = current_health;
+        Update_currentHealth(PlayerStats.regenHealth);
+        health_bar.fillAmount =(float)PlayerStats.currentHealth / (float)PlayerStats.maxHealth;
     }
 
     public void Update_currentHealth(float n)
     {
-        current_health += n;
+        PlayerStats.currentHealth += n;
+        Debug.Log("REGEN= " + n);
         if (current_health <=0)
         {
-            current_health = 0;            
+            current_health = PlayerStats.currentHealth = 0;            
         }         
         if (current_health>max_health)
         {
             current_health = max_health;
         }
-        PlayerStats.CurrentHealth = current_health;
+        //PlayerStats.CurrentHealth = current_health;
     }
 }

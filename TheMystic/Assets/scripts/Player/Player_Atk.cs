@@ -31,7 +31,7 @@ public class Player_Atk : MonoBehaviour
                         GameObject particle = s.particle;
                         Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
                         //stamina.Current_Stamina -= s.manaCost;
-                        PlayerStats.CurrentMana -= s.manaCost;
+                        PlayerStats.currentMana -= s.manaCost;
                     }
                 }
             }
@@ -39,14 +39,55 @@ public class Player_Atk : MonoBehaviour
     }
     void Update()
     {
-        foreach(Skill s in skills)
+        foreach (Skill s in skills)
         {
-            if (s.currentCoolDown<s.cooldown)
+            if (s.currentCoolDown < s.cooldown)
             {
                 s.currentCoolDown += Time.deltaTime;
                 s.skillIcon.fillAmount = s.currentCoolDown / s.cooldown;
-                
-            }
+                Buff(s);            
+            }           
+            else if (s.currentCoolDown >= s.cooldown)
+            {
+                Debuff(s);
+            } 
+        }        
+    }
+
+    public void Buff(Skill skill)
+    {
+        switch (skill.name)
+        {
+            case ("Skill1"):
+                PlayerStats.regenHealth = 0.2f;
+                break;
+            case ("Skill2"):
+                PlayerStats.damage += 2* PlayerStats.damage/100;
+                break;
+            case ("Skill3"):
+                break;
+            case ("Skill4"):
+                break;
+            default:
+                break;
+        }
+    }
+    public void Debuff(Skill skill)
+    {
+        switch (skill.name)
+        {
+            case ("Skill1"):
+                PlayerStats.regenHealth = 0f;
+                break;
+            case ("Skill2"):
+                PlayerStats.damage = PlayerStats.default_damages;
+                break;
+            case ("Skill3"):
+                break;
+            case ("Skill4"):
+                break;
+            default:
+                break;
         }
     }
 }
@@ -60,5 +101,5 @@ public class Skill
     public float currentCoolDown;
     public KeyCode bind;    
     public GameObject particle;
-    public float manaCost;      
+    public float manaCost;
 }

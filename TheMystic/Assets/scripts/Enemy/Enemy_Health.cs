@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Enemy_Health : MonoBehaviour
 {
     public Image healthbar;
-    public int max_health = 100;
-    public int current_health = 100;
+    public float max_health = 100;
+    public float current_health = 100;
     //public int Current_Health { get { return current_health; } set { current_health = value; } }
     public int regen_health = 0;
     private bool xpGiven = false;

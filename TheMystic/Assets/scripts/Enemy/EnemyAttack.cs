@@ -13,6 +13,8 @@ public class EnemyAttack : MonoBehaviour
     public bool IsAttacking { get { return isAttacking; } set { isAttacking = value; } }
     private bool stop;
     public bool Stop { get { return stop; } set { stop = value; } }
+    private int damage;
+    public int Damage { set { damage = value; } }
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,7 @@ public class EnemyAttack : MonoBehaviour
         cooldown = 1.0f;
         isAttacking = false;
         stop = false;
+        damage = 10;
     }
 
     // Update is called once per frame
@@ -56,8 +59,8 @@ public class EnemyAttack : MonoBehaviour
         if (distance < 2.5f)
         {
             if (direction > 0)
-            {                
-                target_health.Update_currentHealth(-10);
+            {
+                PlayerStats.currentHealth -= damage;
                 isAttacking = true;
             }
         }

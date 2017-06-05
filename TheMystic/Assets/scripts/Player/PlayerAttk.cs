@@ -22,6 +22,7 @@ public class PlayerAttk : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        Debug.Log("Damage:" + PlayerStats.damage);
         if (attTimer > 0)
         {
             attTimer -= Time.deltaTime;
@@ -70,8 +71,8 @@ public class PlayerAttk : MonoBehaviour
             if (direction > 0)
             {
                 // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
-                target_health.current_health -= 10;
-                Debug.Log("HIT TARGET");
+                Debug.Log("DEAL" + PlayerStats.damage);
+                target_health.current_health -= PlayerStats.damage;
             }
         }
     }

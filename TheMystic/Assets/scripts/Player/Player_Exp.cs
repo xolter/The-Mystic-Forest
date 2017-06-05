@@ -10,19 +10,19 @@ public class Player_Exp : MonoBehaviour {
 
     void Start ()
     {
-        ExpBar.fillAmount = (float)PlayerStats.Xp / PlayerStats.MaxXp;
-        xp = PlayerStats.Xp;
+        ExpBar.fillAmount = (float)PlayerStats.xp / PlayerStats.maxXp;
+        xp = PlayerStats.xp;
     }
 	
 	void Update ()
     {
-        ExpBar.fillAmount = (float)xp / PlayerStats.MaxXp;
-        PlayerStats.Xp = xp;
+        ExpBar.fillAmount = (float)xp / PlayerStats.maxXp;
+        PlayerStats.xp = xp;
     }
     public void Update_EXP()
     {
         xp += PlayerStats.addXp;
-        if (xp >= PlayerStats.MaxXp)
+        if (xp >= PlayerStats.maxXp)
         {
             UP_LVL();
         }
@@ -30,8 +30,8 @@ public class Player_Exp : MonoBehaviour {
     public void UP_LVL()
     {
         PlayerStats.Lvl += 1;
-        PlayerStats.CurrentHealth = PlayerStats.MaxHealth;
-        PlayerStats.CurrentMana = PlayerStats.MaxMana;
+        PlayerStats.currentHealth = PlayerStats.maxHealth;
+        PlayerStats.currentMana = PlayerStats.maxMana;
         xp = 0;
 
     }

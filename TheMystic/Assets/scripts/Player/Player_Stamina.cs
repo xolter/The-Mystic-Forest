@@ -20,7 +20,7 @@ public class Player_Stamina : MonoBehaviour
         //regen_stamina = PlayerStats.RegenStamina;
         //staminaBar.fillAmount = (float)current_stamina/max_stamina;
         //current_stamina = PlayerStats.CurrentMana;
-        staminaBar.fillAmount = (float)PlayerStats.CurrentMana/PlayerStats.MaxMana;
+        staminaBar.fillAmount = (float)PlayerStats.currentMana/PlayerStats.maxMana;
         //attack = GetComponent<Player_Atk>();
         access = false;
 	}
@@ -29,23 +29,23 @@ public class Player_Stamina : MonoBehaviour
 	void Update ()
     {
         //Update_currentStamina(regen_stamina);
-        Update_currentStamina(PlayerStats.RegenMana);
+        Update_currentStamina(PlayerStats.regenMana);
         //staminaBar.fillAmount = current_stamina / max_stamina;
-        staminaBar.fillAmount = PlayerStats.CurrentMana / PlayerStats.MaxMana;
+        staminaBar.fillAmount = PlayerStats.currentMana / PlayerStats.maxMana;
     }
 
     public void Update_currentStamina(float n)
     {
-        PlayerStats.CurrentMana += n;
-        if (PlayerStats.CurrentMana < 0)
+        PlayerStats.currentMana += n;
+        if (PlayerStats.currentMana < 0)
         {
             //current_stamina = 0;
-            PlayerStats.CurrentMana = 0;
+            PlayerStats.currentMana = 0;
         }
-        if(PlayerStats.CurrentMana > PlayerStats.MaxMana)//current_stamina>max_stamina
+        if(PlayerStats.currentMana > PlayerStats.maxMana)//current_stamina>max_stamina
         {
             //current_stamina = max_stamina;
-            PlayerStats.CurrentMana = PlayerStats.MaxMana;
+            PlayerStats.currentMana = PlayerStats.maxMana;
         }
     }
 }
