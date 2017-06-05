@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class GameOverScene : MonoBehaviour
 {
 
-    Player_Health health;
+    //Player_Health health;
     GameObject gameOverObject;
     private bool gameOverisActive = false;
     public AudioSource music;
 
     void Start()
     {
-        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
+        //health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
         gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
     }
     void Update()
     {
-        gameOverisActive = health.current_health <= 0;
+        gameOverisActive = PlayerStats.currentHealth <= 0;
         if (gameOverisActive)
         {
             gameOverObject.SetActive(true);
