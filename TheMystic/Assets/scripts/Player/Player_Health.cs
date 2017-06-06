@@ -43,13 +43,11 @@ public class Player_Health : MonoBehaviour
         //PlayerStats.currentHealth = current_health;
         Update_currentHealth(PlayerStats.regenHealth);
         health_bar.fillAmount =(float)PlayerStats.currentHealth / (float)PlayerStats.maxHealth;
-        Debug.Log("Gur LIFE = " + PlayerStats.currentHealth);
     }
 
     public void Update_currentHealth(float n)
     {
         PlayerStats.currentHealth += n;
-        Debug.Log("REGEN= " + n);
         if (current_health <=0)
         {
             current_health = PlayerStats.currentHealth = 0;            

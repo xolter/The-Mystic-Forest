@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy_spawner : MonoBehaviour
 {
     public GameObject enemy;
-    float coolDown = 15f;
-    float currentCoolDown = 0f;
+    public float coolDown = 15f;
+    public float currentCoolDown = 0f;
 	void Start ()
     {
         InvokeRepeating("Spawn", currentCoolDown, coolDown);               

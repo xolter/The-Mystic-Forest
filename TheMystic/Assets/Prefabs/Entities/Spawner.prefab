@@ -52,5 +52,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1958656354155350, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
-  health: {fileID: 114172777575623016, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
-  spawntime: 3

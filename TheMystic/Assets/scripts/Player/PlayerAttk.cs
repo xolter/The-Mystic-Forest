@@ -24,6 +24,8 @@ public class PlayerAttk : MonoBehaviour
 	void Update ()
     {
         targets = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < targets.Length; i++)
+            Debug.Log("target: " + targets[i].name);
         if (attTimer > 0)
         {
             attTimer -= Time.deltaTime;
@@ -36,12 +38,12 @@ public class PlayerAttk : MonoBehaviour
         {
             if (attTimer == 0)
             {
-                    Attack();
+                Attack();
                 attTimer = cooldown;
             }
         }
         //FindClosestEnemy();
-        target_health = closest.GetComponent<Enemy_Health>();
+        //target_health = closest.GetComponent<Enemy_Health>();
     }
 
     GameObject FindClosestEnemy()
@@ -66,6 +68,7 @@ public class PlayerAttk : MonoBehaviour
         for (int i = 0; i < targets.Length; i++)
         {
             float distance = Vector3.Distance(targets[i].transform.position, transform.position);
+            Debug.Log("type; distance:" + targets[i].name +"; "+distance);
             Vector3 dir = (targets[i].transform.position - transform.position).normalized;
             float direction = Vector3.Dot(dir, transform.forward);
             if (distance < 2.5f)
