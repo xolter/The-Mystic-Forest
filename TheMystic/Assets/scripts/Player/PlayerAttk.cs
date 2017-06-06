@@ -13,7 +13,8 @@ public class PlayerAttk : MonoBehaviour
 	void Start ()
     {
         targets = GameObject.FindGameObjectsWithTag("Enemy");
-        closest = FindClosestEnemy();
+        Debug.Log(targets.Length);
+        //closest = FindClosestEnemy();
         attTimer = 0;
         cooldown = 0.8f;
        //---- target_health = target.GetComponent<Enemy_Health>();
@@ -22,7 +23,7 @@ public class PlayerAttk : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log("Damage:" + PlayerStats.damage);
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
         if (attTimer > 0)
         {
             attTimer -= Time.deltaTime;
@@ -35,11 +36,11 @@ public class PlayerAttk : MonoBehaviour
         {
             if (attTimer == 0)
             {
-                Attack();
+                    Attack();
                 attTimer = cooldown;
             }
         }
-        FindClosestEnemy();
+        //FindClosestEnemy();
         target_health = closest.GetComponent<Enemy_Health>();
     }
 
@@ -62,17 +63,19 @@ public class PlayerAttk : MonoBehaviour
 
     private void Attack()
     {
-        float distance = Vector3.Distance(closest.transform.position, transform.position);
-        Vector3 dir = (closest.transform.position - transform.position).normalized;
-        float direction = Vector3.Dot(dir, transform.forward);
-
-        if (distance < 2.5f)
+        for (int i = 0; i < targets.Length; i++)
         {
-            if (direction > 0)
+            float distance = Vector3.Distance(targets[i].transform.position, transform.position);
+            Vector3 dir = (targets[i].transform.position - transform.position).normalized;
+            float direction = Vector3.Dot(dir, transform.forward);
+            if (distance < 2.5f)
             {
-                // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
-                Debug.Log("DEAL" + PlayerStats.damage);
-                target_health.current_health -= PlayerStats.damage;
+                if (direction > 0)
+                {
+                    // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
+                    Debug.Log("DEAL" + PlayerStats.damage);
+                    targets[i].GetComponent<Enemy_Health>().current_health -= PlayerStats.damage;
+                }
             }
         }
     }

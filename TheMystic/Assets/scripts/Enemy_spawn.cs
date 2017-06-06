@@ -18,10 +18,10 @@ public class Enemy_spawn : MonoBehaviour
 	void Update ()
     {
         Debug.Log("cur life [SPAWN]= " + health.current_health);
-        if (health.current_health == 0)
-        {
-            Debug.Log("DEAD");
-            Destroy(enemy, 5f);
-        }
+        //if (health.current_health == 0)
+        //{
+        //    Debug.Log("DEAD");
+        //    Destroy(enemy, 5f);
+        //}
     }
 }
