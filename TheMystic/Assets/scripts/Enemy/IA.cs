@@ -10,8 +10,8 @@ public class IA : MonoBehaviour
     public int moveSpeed;
     public int rotationSpeed;
     public Transform myTransform;
-    private Player_Health player_health;
     public float difdistance;
+    PlayerStats playerstats;
     private void Awake()
     {
         myTransform = transform;
@@ -20,7 +20,7 @@ public class IA : MonoBehaviour
     void Start ()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        player_health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
+        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         health = GetComponent<Enemy_Health>();        
         difdistance = 2.5f;
         self = GetComponent<GameObject>();
@@ -29,7 +29,7 @@ public class IA : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (health.current_health > 0 && player_health.current_health > 0)
+        if (health.current_health > 0 && playerstats.currentHealth > 0)
         {
             Vector3 b = Vector3.zero;
             b.x = (target.position.x - myTransform.position.x);

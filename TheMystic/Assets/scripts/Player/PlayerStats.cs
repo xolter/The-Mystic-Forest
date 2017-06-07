@@ -4,21 +4,43 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static float currentHealth = 100;
-    public static int maxHealth = 100;
-    public static int minHealth = 0;
-    public static float regenHealth = 0;
+    public float currentHealth { get; set; }
+    public int maxHealth { get; set; }
+    public int minHealth { get; set; }
+    public float regenHealth { get; set; }
 
-    public static float currentMana = 100;
-    public static int maxMana = 100;
-    public static int minMana = 0;
-    public static float regenMana = 0.02f;
+    public float currentMana { get; set; }
+    public int maxMana { get; set; }
+    public int minMana { get; set; }
+    public float regenMana { get; set; }
 
-    public static int xp = 0;
-    public static int maxXp = 100;
-    public static int addXp = 50;
+    public int xp { get; set; }
+    public int maxXp { get; set; }
+    public int addXp { get; set; }
+    public int Lvl { get; set; }
 
-    public static float default_damages = 10f;
-    public static float damage = 10f;
-    public static int Lvl = 1;
+    public float default_damages { get; set; }
+    public float damage { get; set; }
+
+
+    public PlayerStats()
+    {
+        currentHealth = 100;
+        maxHealth = 100;
+        minHealth = 0;
+        regenHealth = 0;
+
+        currentMana = 100;
+        maxMana = 100;
+        minMana = 100;
+        regenMana = 0.02f;
+
+        xp = 0;
+        maxXp = 100;
+        addXp = 50;
+        Lvl = 1;
+
+        default_damages = 10f;
+        damage = 10f;
+    }
 }

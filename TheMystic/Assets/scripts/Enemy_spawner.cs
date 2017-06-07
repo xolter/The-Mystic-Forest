@@ -7,13 +7,15 @@ public class Enemy_spawner : MonoBehaviour
     public GameObject enemy;
     public float coolDown = 15f;
     public float currentCoolDown = 0f;
-	void Start ()
+    PlayerStats playerstats;
+    void Start ()
     {
+        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         InvokeRepeating("Spawn", currentCoolDown, coolDown);               
     }   
     void Spawn()
     {
-        if (PlayerStats.currentHealth <= 0f)
+        if (playerstats.currentHealth <= 0f)
             return;
         Instantiate(enemy, transform.position, transform.rotation);                     
     }

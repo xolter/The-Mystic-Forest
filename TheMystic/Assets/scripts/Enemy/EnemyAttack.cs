@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public GameObject target;
-    public Player_Health target_health;
     public Enemy_Health own;
     public float attTimer;
     public float cooldown;
@@ -15,11 +14,12 @@ public class EnemyAttack : MonoBehaviour
     public bool Stop { get { return stop; } set { stop = value; } }
     private int damage;
     public int Damage { set { damage = value; } }
+    PlayerStats playerstats;
     // Use this for initialization
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-        //target_health = target.GetComponent<Player_Health>();
+        playerstats = target.GetComponent<PlayerStats>();
         own = GetComponent<Enemy_Health>();
         attTimer = 0;
         cooldown = 1.0f;
@@ -31,7 +31,7 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stop = own.current_health <= 0 || PlayerStats.currentHealth <= 0;
+        stop = own.current_health <= 0 || playerstats.currentHealth <= 0;
         if (!stop)
         {
             if (attTimer > 0)
@@ -60,7 +60,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (direction > 0)
             {
-                PlayerStats.currentHealth -= damage;
+                playerstats.currentHealth -= damage;
                 isAttacking = true;
             }
         }

@@ -7,19 +7,17 @@ using UnityEngine.UI;
 public class Player_Atk : MonoBehaviour
 {
     public List<Skill> skills;
-    public Player_Health health;
-    public Player_Stamina stamina;
     public Animator anim;
+    public PlayerStats playerstats;
 
     void Start()
     {
-        health = GetComponent<Player_Health>();
-        stamina = GetComponent<Player_Stamina>();
+        playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
-    {   if (health.current_health > 0 )
+    {   if (playerstats.currentHealth > 0 )
         {
             foreach (Skill s in skills)
             {
@@ -30,8 +28,7 @@ public class Player_Atk : MonoBehaviour
                         s.currentCoolDown = 0;
                         GameObject particle = s.particle;
                         Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
-                        //stamina.Current_Stamina -= s.manaCost;
-                        PlayerStats.currentMana -= s.manaCost;
+                        playerstats.currentMana -= s.manaCost;
                     }
                 }
             }
@@ -59,13 +56,15 @@ public class Player_Atk : MonoBehaviour
         switch (skill.name)
         {
             case ("Skill1"):
-                PlayerStats.regenHealth = 0.2f;
+                playerstats.regenHealth = 0.2f;
+                //health.regen_health = 0.2f; //
+                //health.Update_currentHealth(20); // 
                 break;
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
                     //Debug.Log();
-                    PlayerStats.damage = 3 * PlayerStats.damage;
+                    playerstats.damage = 3 * playerstats.damage;
                     //skill.trigered = false;
                 }
                 break;
@@ -82,10 +81,11 @@ public class Player_Atk : MonoBehaviour
         switch (skill.name)
         {
             case ("Skill1"):
-                PlayerStats.regenHealth = 0f;
+                playerstats.regenHealth = 0f;
+                //health.regen_health = 0f;
                 break;
             case ("Skill2"):
-                PlayerStats.damage = PlayerStats.default_damages;
+                playerstats.damage = playerstats.default_damages;
                 break;
             case ("Skill3"):
                 break;

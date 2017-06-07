@@ -7,12 +7,14 @@ public class PlayerAttk : MonoBehaviour
     public GameObject[] targets;
     public GameObject closest;
     public Enemy_Health target_health;
+    PlayerStats playerstats;
     public float attTimer;
     public float cooldown;
 	// Use this for initialization
 	void Start ()
     {
         targets = GameObject.FindGameObjectsWithTag("Enemy");
+        playerstats = GetComponent<PlayerStats>();
         Debug.Log(targets.Length);
         //closest = FindClosestEnemy();
         attTimer = 0;
@@ -76,8 +78,8 @@ public class PlayerAttk : MonoBehaviour
                 if (direction > 0)
                 {
                     // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
-                    Debug.Log("DEAL" + PlayerStats.damage);
-                    targets[i].GetComponent<Enemy_Health>().current_health -= PlayerStats.damage;
+                    Debug.Log("DEAL" + playerstats.damage);
+                    targets[i].GetComponent<Enemy_Health>().current_health -= playerstats.damage;
                 }
             }
         }

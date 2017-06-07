@@ -10,15 +10,16 @@ public class GameOverScene : MonoBehaviour
     GameObject gameOverObject;
     private bool gameOverisActive = false;
     public AudioSource music;
+    PlayerStats playerstats;
 
     void Start()
     {
-        //health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
+        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
     }
     void Update()
     {
-        gameOverisActive = PlayerStats.currentHealth <= 0;
+        gameOverisActive = playerstats.currentHealth <= 0;
         if (gameOverisActive)
         {
             gameOverObject.SetActive(true);
