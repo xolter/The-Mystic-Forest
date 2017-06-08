@@ -35,7 +35,7 @@ public class Player_Animation : MonoBehaviour
             {
                 anim.SetBool(s.name, false);
             }
-            if (Input.GetKeyDown(s.bind) && !anim.GetBool(s.name))
+            else if (Input.GetKeyDown(s.bind) && !anim.GetBool(s.name) && s.currentCoolDown <= 0.1f)
             {                               
                     anim.SetBool(s.name, true);                
             }

@@ -21,6 +21,7 @@ public class PlayerStats : MonoBehaviour
 
     public float default_damages { get; set; }
     public float damage { get; set; }
+    public float autoattack_timer_default { get; set; }    
 
 
     public PlayerStats()
@@ -42,5 +43,8 @@ public class PlayerStats : MonoBehaviour
 
         default_damages = 10f;
         damage = 10f;
+        autoattack_timer_default = 0.8f;
+
+
     }
 }

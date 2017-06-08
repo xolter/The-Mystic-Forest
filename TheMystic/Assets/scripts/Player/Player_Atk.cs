@@ -9,11 +9,13 @@ public class Player_Atk : MonoBehaviour
     public List<Skill> skills;
     public Animator anim;
     public PlayerStats playerstats;
+    public PlayerAttk basicAtk;
 
     void Start()
     {
         playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
+        basicAtk = GetComponent<PlayerAttk>();
     }
 
     void FixedUpdate()
@@ -27,7 +29,7 @@ public class Player_Atk : MonoBehaviour
                     {
                         s.currentCoolDown = 0;
                         GameObject particle = s.particle;
-                        Destroy(Instantiate(particle, transform.position, transform.rotation), s.cooldown);
+                        Destroy(Instantiate(particle, transform.position, transform.rotation, transform), s.timeEffect);
                         playerstats.currentMana -= s.manaCost;
                     }
                 }
@@ -63,10 +65,12 @@ public class Player_Atk : MonoBehaviour
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    //Debug.Log();
-                    playerstats.damage = 3 * playerstats.damage;
-                    //skill.trigered = false;
+                    playerstats.damage = 1.5f * playerstats.damage;
+                    basicAtk.cooldown = playerstats.autoattack_timer_default / 2;                    
+                    Debug.Log("HERE");
                 }
+                else
+                    Debuff(skill);
                 break;
             case ("Skill3"):
                 break;
@@ -85,7 +89,10 @@ public class Player_Atk : MonoBehaviour
                 //health.regen_health = 0f;
                 break;
             case ("Skill2"):
-                playerstats.damage = playerstats.default_damages;
+                {
+                    playerstats.damage = playerstats.default_damages;
+                    basicAtk.cooldown = playerstats.autoattack_timer_default;
+                }
                 break;
             case ("Skill3"):
                 break;

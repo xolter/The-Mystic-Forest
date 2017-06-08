@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3804,6 +3804,10 @@ Prefab:
         type: 2}
       propertyPath: currentCoolDown
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1662559400778692, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
@@ -20261,6 +20265,42 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[0].currentCoolDown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].cooldown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].currentCoolDown
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].manaCost
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].particle
+      value: 
+      objectReference: {fileID: 1430430527085734, guid: f0e6f58d63958b74ba2fedc9cbec1532,
+        type: 2}
+    - target: {fileID: 114346003944710964, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: cooldown
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].timeEffect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cf17e3b494ea445a32b030ae1aead8, type: 2}
   m_IsPrefabParent: 0
@@ -22191,27 +22231,27 @@ Prefab:
     - target: {fileID: 224031027220699624, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224031027220699624, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224424994389968828, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224424994389968828, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224424994389968828, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d216c90999e9d814dac2d7df1d3c486a, type: 2}
