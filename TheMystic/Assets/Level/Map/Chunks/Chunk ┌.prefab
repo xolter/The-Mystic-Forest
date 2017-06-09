@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1095192064827474}
+  m_RootGameObject: {fileID: 1095780243055572}
   m_IsPrefabParent: 1
---- !u!1 &1095192064827474
+--- !u!1 &1095780243055572
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4813206549075054}
-  - component: {fileID: 114034811947101250}
+  - component: {fileID: 4582503066221132}
+  - component: {fileID: 114136209316855988}
   m_Layer: 0
-  m_Name: "Chunk \u2502"
+  m_Name: "Chunk \u250C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4813206549075054
+--- !u!4 &4582503066221132
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1095192064827474}
+  m_GameObject: {fileID: 1095780243055572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40, y: 3.4059696, z: -49.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,22 +40,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114034811947101250
+--- !u!114 &114136209316855988
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1095192064827474}
+  m_GameObject: {fileID: 1095780243055572}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9f141c11d19f5746baede64bd90b4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
-  chunk: {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
+  type: 2
+  chunk: {fileID: 218502031701929616, guid: 73676412d65cf4d4dadb37fba7a44bcb, type: 2}
   wallL: 1
-  WallR: 1
-  WallU: 0
+  WallR: 0
+  WallU: 1
   WallD: 0
   neighboorsL:
   - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
@@ -63,20 +63,23 @@ MonoBehaviour:
   - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
   - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
   - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
+  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
   neighboorsR:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218502031701929616, guid: 73676412d65cf4d4dadb37fba7a44bcb, type: 2}
-  - {fileID: 218298912109689322, guid: 38ff1ca06cf4a5f47a7581912653f1fb, type: 2}
-  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
-  - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
-  neighboorsU:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218502031701929616, guid: 73676412d65cf4d4dadb37fba7a44bcb, type: 2}
+  - {fileID: 218537582908725436, guid: d94c4a3f693448944b69420a5943536a, type: 2}
   - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
-  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
+  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
   - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
   - {fileID: 218888886543610596, guid: 3bc158ef902ab6e44bcb2a47d42bb48c, type: 2}
+  - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
   - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
+  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
+  neighboorsU:
+  - {fileID: 218537582908725436, guid: d94c4a3f693448944b69420a5943536a, type: 2}
+  - {fileID: 218298912109689322, guid: 38ff1ca06cf4a5f47a7581912653f1fb, type: 2}
+  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
+  - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
+  - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
+  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
   neighboorsD:
   - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
   - {fileID: 218298912109689322, guid: 38ff1ca06cf4a5f47a7581912653f1fb, type: 2}
@@ -85,3 +88,4 @@ MonoBehaviour:
   - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
   - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
   - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
+  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}

@@ -29,7 +29,7 @@ public class Player_Atk : MonoBehaviour
                     {
                         s.currentCoolDown = 0;
                         GameObject particle = s.particle;
-                        Destroy(Instantiate(particle, transform.position, transform.rotation, transform), s.timeEffect);
+                        Destroy(Instantiate(particle, transform.position, transform.rotation), s.timeEffect);
                         playerstats.currentMana -= s.manaCost;
                     }
                 }
