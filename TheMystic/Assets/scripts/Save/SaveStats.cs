@@ -12,12 +12,15 @@ public class SaveStats : MonoBehaviour {
 	void Start ()
     {
         playerstats = GetComponent<PlayerStats>();
-        if (PlayerPrefs.GetInt("load") == 1)
+        if (PlayerPrefs.GetInt("load") == 1 || PlayerPrefs.GetInt("save1") == 1)
         {
-            float x = PlayerPrefs.GetFloat("x");
-            float y = PlayerPrefs.GetFloat("y");
-            float z = PlayerPrefs.GetFloat("z");
-            player.transform.position = new Vector3(x, y, z);
+            if (PlayerPrefs.GetInt("load") == 1)
+            {
+                float x = PlayerPrefs.GetFloat("x");
+                float y = PlayerPrefs.GetFloat("y");
+                float z = PlayerPrefs.GetFloat("z");
+                player.transform.position = new Vector3(x, y, z);
+            }
 
             playerstats.currentHealth = PlayerPrefs.GetFloat("CurrentHealth");
             playerstats.maxHealth = PlayerPrefs.GetInt("MaxHealth");
@@ -35,6 +38,7 @@ public class SaveStats : MonoBehaviour {
             playerstats.default_damages = PlayerPrefs.GetFloat("DefaultDamage");
             playerstats.damage = PlayerPrefs.GetFloat("Damage");
         }
+       
 
     }
     public void Save()
@@ -60,4 +64,10 @@ public class SaveStats : MonoBehaviour {
         PlayerPrefs.SetFloat("DefaultDamage", playerstats.default_damages);
         PlayerPrefs.SetFloat("Damage", playerstats.damage);
     }
+    public void ResetSaves()
+    {
+        PlayerPrefs.SetInt("save1", 0);
+        PlayerPrefs.SetInt("load", 0);
+    }
+
 }

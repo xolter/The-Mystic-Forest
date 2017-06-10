@@ -9,6 +9,7 @@ public class LoadSaves : MonoBehaviour {
 	void Start ()
     {
         PlayerPrefs.SetInt("load", 0);
+        PlayerPrefs.SetInt("save1", 0);
     }
     public void loadGame()
     {

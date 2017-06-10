@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Teleportation : MonoBehaviour {
 
-    /*GameObject player;
-    SaveStats savestats;*/
+    GameObject player;
+    SaveStats savestats;
 
     void Start()
     {
-        /*PlayerPrefs.SetInt("save1", 0);
+        PlayerPrefs.SetInt("save1", 0);
+        PlayerPrefs.SetInt("load", 0);
         player = GameObject.FindGameObjectWithTag("Player");
-        savestats = player.GetComponent<SaveStats>();*/
+        savestats = player.GetComponent<SaveStats>();
 
     }
     public void OnTriggerEnter(Collider other)
@@ -20,8 +21,8 @@ public class Teleportation : MonoBehaviour {
         
         if (other.tag == "Player")
         {
-            /*PlayerPrefs.SetInt("save1", 1);
-            savestats.Save();*/
+            PlayerPrefs.SetInt("save1", 1);
+            savestats.Save();
             SceneManager.LoadScene("Base");
         }
     }

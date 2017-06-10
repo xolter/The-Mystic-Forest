@@ -13,6 +13,14 @@ public class Map_Generator2 : MonoBehaviour {
     void Start()
     {
         MapInit();
+        /*if (PlayerPrefs.GetInt("load") == 1)
+        {
+            SetMapSaved();
+        }
+        else
+        {
+            Generator();
+        }*/
         Generator();
         InGameDisplay();
         ConsoleDisplay();
@@ -96,4 +104,25 @@ public class Map_Generator2 : MonoBehaviour {
         }
         Debug.Log(str);
     }
+
+    /*void SetMapSaved()
+    {
+        int ligne = map.GetLength(0);
+        int colonne = map.GetLength(1);
+        string n;
+
+        for (int i = 0; i < ligne; i++)
+        {
+            for (int j = 0; j < colonne; j++)
+            {
+                n = PlayerPrefs.GetString("[" + i + "," + j + "]");
+                switch (n)
+                {
+                    case "0(Clone)":
+                        map[i,j] = bound;
+                        break;
+                }
+            }
+        }
+    }*/
 }

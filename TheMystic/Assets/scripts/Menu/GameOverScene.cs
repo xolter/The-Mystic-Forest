@@ -9,7 +9,9 @@ public class GameOverScene : MonoBehaviour
     //Player_Health health;
     GameObject gameOverObject;
     private bool gameOverisActive = false;
-    public AudioSource music;
+    public AudioSource Mainmusic;
+    public AudioSource DeathMusic;
+    bool already_played = false;
     PlayerStats playerstats;
 
     void Start()
@@ -23,7 +25,12 @@ public class GameOverScene : MonoBehaviour
         if (gameOverisActive)
         {
             gameOverObject.SetActive(true);
-            music.mute = true;
+            Mainmusic.mute = true;
+            if (!already_played)
+            {
+                DeathMusic.Play();
+                already_played = true;
+            }
         }
         else
         {

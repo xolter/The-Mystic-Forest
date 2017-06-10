@@ -12,7 +12,8 @@ public class OptionsSettingManager : MonoBehaviour {
 	public Slider musicVolumeSlider;
 
 	public AudioSource musicSource;
-	public Resolution[] resolutions;
+    public AudioSource DeathMusic;
+    public Resolution[] resolutions;
 	public string[] qualitylvl;
 	OptionsSettings gameSettings;
 
@@ -150,5 +151,6 @@ public class OptionsSettingManager : MonoBehaviour {
 	public void OnMusicVolumeChange()
 	{
 		musicSource.volume = gameSettings.musicvolume = musicVolumeSlider.value;
-	}
+        DeathMusic.volume = gameSettings.musicvolume = musicVolumeSlider.value;
+    }
 }

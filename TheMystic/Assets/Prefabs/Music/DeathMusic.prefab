@@ -9,51 +9,51 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1094389258369368}
+  m_RootGameObject: {fileID: 1732855073731936}
   m_IsPrefabParent: 1
---- !u!1 &1094389258369368
+--- !u!1 &1732855073731936
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4901967361130276}
-  - component: {fileID: 82131253274407430}
+  - component: {fileID: 4828475915195658}
+  - component: {fileID: 82547571775196296}
   m_Layer: 0
-  m_Name: MusicTheme
+  m_Name: DeathMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4901967361130276
+--- !u!4 &4828475915195658
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1094389258369368}
+  m_GameObject: {fileID: 1732855073731936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268, y: 84.5, z: 0}
+  m_LocalPosition: {x: 183.70348, y: 4.6136317, z: 312.63232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82131253274407430
+--- !u!82 &82547571775196296
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1094389258369368}
+  m_GameObject: {fileID: 1732855073731936}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c914a3fc938777d4bbdeab2e0164ff25, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 4ae98d93dbe9dbe4aa6dab339f99cb03, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
