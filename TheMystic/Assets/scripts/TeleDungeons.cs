@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class TeleDungeons : MonoBehaviour {
 
-    /*GameObject player;
-    SaveStats savestats;*/
+    GameObject player;
+    //SaveStats savestats;//
 
     void Start()
     {
-        /*player = GameObject.FindGameObjectWithTag("Player");
-        savestats = player.GetComponent<SaveStats>();*/
+        player = GameObject.FindGameObjectWithTag("Player");
+        /*savestats = player.GetComponent<SaveStats>();*/
 
     }
     public void OnTriggerEnter(Collider other)
