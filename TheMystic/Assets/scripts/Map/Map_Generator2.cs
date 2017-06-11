@@ -7,12 +7,18 @@ public class Map_Generator2 : MonoBehaviour {
     public List<Chunk> chunks;
     public Chunk[,] map;
     public Chunk bound;
+    public GameObject spawner;
+    public GameObject portal;
     public int Length;
     public int Width;
+    private bool once = true;
 
     void Start()
     {
-        MapInit();
+        MapInit();       
+        Generator();
+        InGameDisplay();
+        SetPortal();
         /*if (PlayerPrefs.GetInt("load") == 1)
         {
             SetMapSaved();
@@ -21,9 +27,15 @@ public class Map_Generator2 : MonoBehaviour {
         {
             Generator();
         }*/
-        Generator();
-        InGameDisplay();
-        ConsoleDisplay();
+    }
+    void Update()
+    {
+        if (PortalCount() == 0 && once)
+        {
+            Instantiate(portal, new Vector3(-40, 0, -40), new Quaternion());
+            once = false;
+        }
+        Debug.Log("Nb portal: " + PortalCount());
     }
 
     void MapInit()
@@ -103,6 +115,54 @@ public class Map_Generator2 : MonoBehaviour {
             str += "\n";
         }
         Debug.Log(str);
+    }
+
+    void SetPortal()
+    {
+        Debug.Log("0");
+        int rate = Length * Width / 5;
+        bool[,] hasPortal = new bool[Length, Width];
+        for (int i = 0; i < Length; i++)
+            for (int j = 0; j < Width; j++)
+                hasPortal[i, j] = false;
+        Quaternion rotation = Quaternion.Euler(120, 0, 0);
+        Debug.Log("1");
+        int curr_rate = 0;
+        Debug.Log("2");
+        while (curr_rate < rate)
+            for (int i = 0; i < Length; i++)
+            {
+                Debug.Log("3");
+                for (int j = 0; j < Width; j++)
+                {
+                    Debug.Log("4");
+                    if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i,j])
+                    {
+                        Debug.Log("5");                   
+                        Instantiate(spawner, new Vector3(i * -80, 1, j - 80 -40), rotation);
+                        Debug.Log("6");
+                        curr_rate += 1;
+                        Debug.Log("7");
+                        hasPortal[i, j] = true;
+                    }
+                    Debug.Log("8");
+                }
+                Debug.Log("9");
+            }
+        Debug.Log("10");
+    }
+    int PortalCount()
+    {
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("Enemy");
+        int rate = Length * Width / 10 + 1;
+        int curr_rate = 0;
+        for (int i = 0; i < temp.Length; i++)
+        {
+            Debug.Log(temp[i].name);
+            if (temp[i].name == "Portal(Clone)")
+                curr_rate += 1;
+        }
+        return curr_rate;
     }
 
     /*void SetMapSaved()

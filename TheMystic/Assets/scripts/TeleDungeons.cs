@@ -21,6 +21,7 @@ public class TeleDungeons : MonoBehaviour {
             PlayerPrefs.SetInt("load", 0);
             PlayerPrefs.SetInt("save1", 1);
             savestats.Save();
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
             SceneManager.LoadScene("ForestDugeon");
         }
     }
