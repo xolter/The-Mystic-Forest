@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1449,7 +1449,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1583103548}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6d3392c7b19394b88abb3fa4093f03, type: 2}
   m_IsPrefabParent: 0
@@ -2376,12 +2376,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c891f32a543e8b04a9248bc9af70f8f7, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &166093400 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114154775944695606, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &173870395
 Prefab:
   m_ObjectHideFlags: 0
@@ -3599,6 +3593,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4123388384257584, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
   m_IsPrefabParent: 0
@@ -3620,23 +3618,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
---- !u!1 &316559989 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1356347128275242, guid: c1cf17e3b494ea445a32b030ae1aead8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1587621026}
---- !u!114 &316559990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 316559989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036c71ca5465d90479ea9a8b613eca9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 316559989}
 --- !u!82 &320953435 stripped
 AudioSource:
   m_PrefabParentObject: {fileID: 82131253274407430, guid: 1773507fe0547034bb5161211ff97fe7,
@@ -4078,12 +4059,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
---- !u!114 &353782327 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114130508874936756, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &354862216
 Prefab:
   m_ObjectHideFlags: 0
@@ -4538,6 +4513,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: ef70c4e5dbd17834f8b11eb9a9703cf0, type: 3}
+--- !u!114 &385362755 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114326628733852516, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &386840350
 Prefab:
   m_ObjectHideFlags: 0
@@ -5474,6 +5455,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444211570 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114956917725076218, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &446557438 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c891f32a543e8b04a9248bc9af70f8f7, type: 3}
@@ -6755,11 +6742,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}
---- !u!20 &566809240 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20736216716032766, guid: c1cf17e3b494ea445a32b030ae1aead8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1587621026}
 --- !u!1 &569999248
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,7 +7367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036c71ca5465d90479ea9a8b613eca9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 316559989}
+  player: {fileID: 0}
 --- !u!114 &629336724 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114597290900637900, guid: d216c90999e9d814dac2d7df1d3c486a,
@@ -8410,6 +8392,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7ac2de8fbdb842e419727d09c0416ea6, type: 3}
+--- !u!114 &738347547 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114318694567001886, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &745786585
 Prefab:
   m_ObjectHideFlags: 0
@@ -10111,6 +10099,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7ac2de8fbdb842e419727d09c0416ea6, type: 3}
+--- !u!114 &951150563 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114669465327506996, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &951460500
 Prefab:
   m_ObjectHideFlags: 0
@@ -11880,12 +11874,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
---- !u!114 &1078908206 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114179899371178732, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1079259788
 Prefab:
   m_ObjectHideFlags: 0
@@ -12937,12 +12925,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &1150523617 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114041421483557194, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1150594047
 Prefab:
   m_ObjectHideFlags: 0
@@ -13879,6 +13861,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &1227279379 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114682636769518136, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1232472374
 Prefab:
   m_ObjectHideFlags: 0
@@ -16070,10 +16058,15 @@ Prefab:
         type: 2}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 566809240}
+      objectReference: {fileID: 0}
     - target: {fileID: 114041421483557194, guid: 46a379ebb2ccd70438417c17c216508a,
         type: 2}
       propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224766233905168102, guid: 46a379ebb2ccd70438417c17c216508a,
+        type: 2}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16097,12 +16090,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
---- !u!114 &1424050912 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114409595441614714, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1433485429 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 7ac2de8fbdb842e419727d09c0416ea6, type: 3}
@@ -18389,12 +18376,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d4f42247e4fd5aa469325fdd13e321b1, type: 3}
---- !u!114 &1545971561 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114634733371197200, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1547612765
 Prefab:
   m_ObjectHideFlags: 0
@@ -19051,11 +19032,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7d072f2e0bba7a47a11f52d57eb3b78, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1583103548 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4295321458414504, guid: c1cf17e3b494ea445a32b030ae1aead8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1587621026}
 --- !u!1001 &1585782811
 Prefab:
   m_ObjectHideFlags: 0
@@ -19139,6 +19115,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114250156036650280, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: targets.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4295321458414504, guid: c1cf17e3b494ea445a32b030ae1aead8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 188.92
@@ -19175,42 +19156,42 @@ Prefab:
         type: 2}
       propertyPath: health_bar
       value: 
-      objectReference: {fileID: 2147304165}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[0].skillIcon
       value: 
-      objectReference: {fileID: 2029264177}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[1].skillIcon
       value: 
-      objectReference: {fileID: 1424050912}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[2].skillIcon
       value: 
-      objectReference: {fileID: 166093400}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[3].skillIcon
       value: 
-      objectReference: {fileID: 1545971561}
+      objectReference: {fileID: 0}
     - target: {fileID: 114456733158454294, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 1150523617}
+      objectReference: {fileID: 0}
     - target: {fileID: 114435467989002392, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: ExpBar
       value: 
-      objectReference: {fileID: 353782327}
+      objectReference: {fileID: 0}
     - target: {fileID: 114435467989002392, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: ScoreText
       value: 
-      objectReference: {fileID: 1078908206}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: m_Enabled
@@ -19268,6 +19249,41 @@ Prefab:
       propertyPath: skills.Array.data[0].timeEffect
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114490784469964962, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: health_bar
+      value: 
+      objectReference: {fileID: 1868065700}
+    - target: {fileID: 114073410441524480, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: staminaBar
+      value: 
+      objectReference: {fileID: 385362755}
+    - target: {fileID: 114728347556808308, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[0].skillIcon
+      value: 
+      objectReference: {fileID: 738347547}
+    - target: {fileID: 114728347556808308, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[1].skillIcon
+      value: 
+      objectReference: {fileID: 444211570}
+    - target: {fileID: 114728347556808308, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[2].skillIcon
+      value: 
+      objectReference: {fileID: 1692491994}
+    - target: {fileID: 114728347556808308, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: skills.Array.data[3].skillIcon
+      value: 
+      objectReference: {fileID: 951150563}
+    - target: {fileID: 114744442812477118, guid: c1cf17e3b494ea445a32b030ae1aead8,
+        type: 2}
+      propertyPath: ExpBar
+      value: 
+      objectReference: {fileID: 1227279379}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cf17e3b494ea445a32b030ae1aead8, type: 2}
   m_IsPrefabParent: 0
@@ -20424,6 +20440,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
+--- !u!114 &1692491994 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114108605708017902, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1703702174
 Prefab:
   m_ObjectHideFlags: 0
@@ -21008,7 +21030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e21e712dd3f93b4abd229869573eade, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e21e712dd3f93b4abd229869573eade, type: 3}
       propertyPath: m_LocalScale.x
@@ -21138,7 +21160,7 @@ Prefab:
     - target: {fileID: 224691303000906758, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224691303000906758, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
@@ -21204,7 +21226,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 316559990}
+      objectReference: {fileID: 0}
     - target: {fileID: 224031027220699624, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_AnchorMax.x
@@ -21304,7 +21326,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 316559990}
+      objectReference: {fileID: 0}
     - target: {fileID: 114094034801773424, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -22662,6 +22684,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
+--- !u!114 &1868065700 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114788763833209544, guid: 46a379ebb2ccd70438417c17c216508a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1421674375}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1881956681
 Prefab:
   m_ObjectHideFlags: 0
@@ -24168,12 +24196,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
   m_IsPrefabParent: 0
---- !u!114 &2029264177 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114342294268513002, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &2032161828
 Prefab:
   m_ObjectHideFlags: 0
@@ -26408,9 +26430,3 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 312121b19474e374f94d70b7835b75a5, type: 3}
---- !u!114 &2147304165 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114943009201203768, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421674375}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
