@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ChunkType { BLcorner, BRcorner, TLcorner, TRcorner, VPipe, HPipe, Cross, VLt, VRt, HLt, HRt, Default, Fix1, Bound } // { └, ┘, ┌, ┐, │, ─, ┼, ├, ┤, ┬, ┴, 0, O}
+public enum ChunkType { BLcorner, BRcorner, TLcorner, TRcorner, VPipe, HPipe, Cross, VLt, VRt, HLt, HRt, Default, Fix1, Cross2, Bound } // { └, ┘, ┌, ┐, │, ─, ┼, ├, ┤, ┬, ┴, 0, ┼-2, O}
 public class Chunk : MonoBehaviour
 {
     public ChunkType type;

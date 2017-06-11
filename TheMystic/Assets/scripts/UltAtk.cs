@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class UltAtk : MonoBehaviour
 {
-    public GameObject[] targets;
+    public List<GameObject> targets;
     public GameObject closest;
-    public GameObject target;   
+    public GameObject target;
     public Enemy_Health own;
     public float attTimer;
     public float cooldown;
@@ -16,25 +16,27 @@ public class EnemyAttack : MonoBehaviour
     public bool Stop { get { return stop; } set { stop = value; } }
     private int damage;
     public int Damage { set { damage = value; } }
-    PlayerStats playerstats;
-    // Use this for initialization
+
     void Start()
     {
-        targets = GameObject.FindGameObjectsWithTag("Player");
-        target = FindClosestEnemy();
-        playerstats = target.GetComponent<PlayerStats>();
+        targets = FindTargets();
+        target = FindClosestEnemy();        
         own = GetComponent<Enemy_Health>();
         attTimer = 0;
         cooldown = 1.0f;
         isAttacking = false;
         stop = false;
         damage = 10;
+        for (int i = 0; i < targets.Count; i++)
+            Debug.Log("name: " + targets[i].name);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        stop = own.current_health <= 0 || playerstats.currentHealth <= 0;
+        targets = FindTargets();
+        target = FindClosestEnemy();
+        stop = own.current_health <= 0 || target.GetComponent<Enemy_Health>().current_health <= 0;
         if (!stop)
         {
             if (attTimer > 0)
@@ -50,29 +52,32 @@ public class EnemyAttack : MonoBehaviour
                 Attack();
                 attTimer = cooldown;
             }
-        }   
+        }
         else
         {
-            if (playerstats.currentHealth <= 0)
+            if (target.GetComponent<Enemy_Health>().current_health <= 0)
             {
+                targets = FindTargets();
                 target = FindClosestEnemy();
-                playerstats = target.GetComponent<PlayerStats>();
             }
         }
     }
 
     private void Attack()
     {
-        float distance = Vector3.Distance(target.transform.position, transform.position);
-        Vector3 dir = (target.transform.position - transform.position).normalized;
-        float direction = Vector3.Dot(dir, transform.forward);
-
-        if (distance < 2.5f)
+        foreach(GameObject target in targets)
         {
-            if (direction > 0)
+            float distance = Vector3.Distance(target.transform.position, transform.position);
+            Vector3 dir = (target.transform.position - transform.position).normalized;
+            float direction = Vector3.Dot(dir, transform.forward);
+            if (distance < 2.5f)
             {
-                playerstats.currentHealth -= damage;
-                isAttacking = true;
+                if (direction > 0)
+                {
+                    // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");                    
+                    target.GetComponent<Enemy_Health>().current_health -= 10;
+                    isAttacking = true;
+                }
             }
         }
     }
@@ -91,5 +96,16 @@ public class EnemyAttack : MonoBehaviour
             }
         }
         return closest;
+    }
+    private List<GameObject> FindTargets()
+    {
+        GameObject[] temp = GameObject.FindGameObjectsWithTag("Enemy");
+        targets = new List<GameObject>();
+        for(int i=0; i < temp.Length; i++)
+        {
+            if (temp[i].name != "Portal")
+                targets.Add(temp[i]);
+        }
+        return targets;
     }
 }

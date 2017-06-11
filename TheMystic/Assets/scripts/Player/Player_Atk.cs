@@ -65,7 +65,7 @@ public class Player_Atk : MonoBehaviour
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    playerstats.damage = 1.5f * playerstats.damage;
+                    playerstats.damage = 1.5f * playerstats.default_damages;
                     basicAtk.cooldown = playerstats.autoattack_timer_default / 2;                    
                     Debug.Log("HERE");
                 }
@@ -96,7 +96,7 @@ public class Player_Atk : MonoBehaviour
                 break;
             case ("Skill3"):
                 break;
-            case ("Skill4"):
+            case ("Skill4"):               
                 break;
             default:
                 break;

@@ -1342,6 +1342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba788573025c16b4084b34db945ef84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
+  closest: {fileID: 0}
   target: {fileID: 0}
   health: {fileID: 0}
   self: {fileID: 1958656354155350}
@@ -1508,8 +1510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa58af986bfe2e84c9fe5da14c64cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targets: []
+  closest: {fileID: 0}
   target: {fileID: 0}
-  target_health: {fileID: 0}
   own: {fileID: 0}
   attTimer: 0
   cooldown: 0

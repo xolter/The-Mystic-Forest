@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IA : MonoBehaviour
 {
+    public GameObject[] players;
+    public GameObject closest;
     public Transform target;
     public Enemy_Health health;
     public GameObject self;
@@ -19,8 +21,10 @@ public class IA : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        players = GameObject.FindGameObjectsWithTag("Player");
+        closest = FindClosestPlayer();
+        target = closest.transform;
+        playerstats =closest.GetComponent<PlayerStats>();
         health = GetComponent<Enemy_Health>();        
         difdistance = 2.5f;
         self = GetComponent<GameObject>();
@@ -40,5 +44,27 @@ public class IA : MonoBehaviour
                 myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
             }
         }
+        else if (playerstats.currentHealth <= 0)
+        {
+            closest = FindClosestPlayer();
+            target = closest.transform;
+            playerstats = closest.GetComponent<PlayerStats>();
+        }
+    }
+    GameObject FindClosestPlayer()
+    {
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject player in players)
+        {
+            Vector3 diff = player.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = player;
+                distance = curDistance;
+            }
+        }
+        return closest;
     }
 }

@@ -9,7 +9,7 @@ public class Enemy_Health : MonoBehaviour
     public float max_health = 100;
     public float current_health = 100;
     //public int Current_Health { get { return current_health; } set { current_health = value; } }
-    public int regen_health = 0;
+    public float regen_health = 0f;
     private bool xpGiven = false;
     public GameObject target;
     Player_Exp target_xp;
@@ -29,7 +29,7 @@ public class Enemy_Health : MonoBehaviour
         healthbar.fillAmount = (float)current_health / max_health;
     }
 
-    public void Update_currentHealth(int n)
+    public void Update_currentHealth(float n)
     {
         current_health += n;
         if (current_health <= 0)
