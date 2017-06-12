@@ -11,8 +11,10 @@ public class Player_Atk : MonoBehaviour
     public PlayerStats playerstats;
     public PlayerAttk basicAtk;
 
+
     void Start()
     {
+
         playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
         basicAtk = GetComponent<PlayerAttk>();
@@ -31,6 +33,7 @@ public class Player_Atk : MonoBehaviour
                         GameObject particle = s.particle;
                         Destroy(Instantiate(particle, transform.position, transform.rotation), s.timeEffect);
                         playerstats.currentMana -= s.manaCost;
+                        s.audiosource.Play();
                     }
                 }
             }
@@ -115,4 +118,6 @@ public class Skill
     public GameObject particle;
     public float manaCost;
     public float timeEffect;
+    public AudioSource audiosource;
+
 }

@@ -34,6 +34,7 @@ public class Player_Exp : MonoBehaviour {
         playerstats.currentHealth = playerstats.maxHealth;
         playerstats.currentMana = playerstats.maxMana;
         playerstats.xp = 0;
+        playerstats.maxXp += 50;
 
     }
 }

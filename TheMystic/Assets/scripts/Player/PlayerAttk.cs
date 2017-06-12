@@ -10,15 +10,23 @@ public class PlayerAttk : MonoBehaviour
     PlayerStats playerstats;
     public float attTimer;
     public float cooldown;
-	// Use this for initialization
-	void Start ()
+    public AudioClip sound;
+    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+
+    // Use this for initialization
+    void Start ()
     {
+        gameObject.AddComponent<AudioSource>();
+        source.clip = sound;
+        source.playOnAwake = false;
+        source.volume = 0.5f;
         targets = GameObject.FindGameObjectsWithTag("Enemy");
         playerstats = GetComponent<PlayerStats>();
         //closest = FindClosestEnemy();
         attTimer = 0;
         cooldown = 0.8f;
        //---- target_health = target.GetComponent<Enemy_Health>();
+
     }
 	
 	// Update is called once per frame
@@ -71,9 +79,11 @@ public class PlayerAttk : MonoBehaviour
             float direction = Vector3.Dot(dir, transform.forward);
             if (distance < 2.5f)
             {
-                if (direction > 0)
+                if (playerstats.currentHealth > 0 && direction > 0)
                 {
-                    // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");                    
+                    // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
+                    source.PlayOneShot(sound);
+
                     targets[i].GetComponent<Enemy_Health>().current_health -= playerstats.damage;
                 }
             }
