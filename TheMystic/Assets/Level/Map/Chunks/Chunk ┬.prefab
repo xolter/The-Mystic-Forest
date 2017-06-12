@@ -54,6 +54,7 @@ MonoBehaviour:
   type: 9
   chunksVariants:
   - {fileID: 218888886543610596, guid: 3bc158ef902ab6e44bcb2a47d42bb48c, type: 2}
+  - {fileID: 218868543655763916, guid: f6549c8b6e5bc884d9cd84ef93e48769, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114615417245742988, guid: cb9d4a0a18b2bfe4f8d7afcda4daacad, type: 2}

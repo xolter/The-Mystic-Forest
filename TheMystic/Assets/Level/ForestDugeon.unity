@@ -286,8 +286,9 @@ MonoBehaviour:
   bound: {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}
   spawner: {fileID: 1998047258116098, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
   portal: {fileID: 1901390088475742, guid: 804b52f1debdaeb45a4ee681abeb1198, type: 2}
-  Length: 6
-  Width: 6
+  Length: 4
+  Width: 4
+  rate: 2
 --- !u!114 &592070149
 MonoBehaviour:
   m_ObjectHideFlags: 0
