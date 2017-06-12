@@ -52,11 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  chunk: {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
-  wallL: 0
-  WallR: 0
-  WallU: 0
-  WallD: 0
+  chunksVariants:
+  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
   neighboorsL: []
   neighboorsR: []
   neighboorsU: []

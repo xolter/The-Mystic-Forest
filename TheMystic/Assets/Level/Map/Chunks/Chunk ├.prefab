@@ -52,46 +52,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 7
-  chunk: {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
-  wallL: 1
-  WallR: 0
-  WallU: 0
-  WallD: 0
+  chunksVariants:
+  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
+  - {fileID: 218421779628414786, guid: 18b85b7f2b6a9114dbf234fdc343b883, type: 2}
   neighboorsL:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
-  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
-  - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
-  - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
-  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}
+  - {fileID: 114034811947101250, guid: 5352dc12b0adcd842b1d0b3a8300ddec, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
+  - {fileID: 114088480962172066, guid: 80e4c5ac576961b449c13c5fbec09c31, type: 2}
+  - {fileID: 114053827857732258, guid: 801269da13a6ab345a4b44d56f2b1a0b, type: 2}
   neighboorsR:
-  - {fileID: 218537582908725436, guid: d94c4a3f693448944b69420a5943536a, type: 2}
-  - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
-  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
-  - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
-  - {fileID: 218888886543610596, guid: 3bc158ef902ab6e44bcb2a47d42bb48c, type: 2}
-  - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
-  - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
-  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
-  - {fileID: 218364480469068560, guid: 28829a692e86ff84e8edd0cdd0e536d6, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114615417245742988, guid: cb9d4a0a18b2bfe4f8d7afcda4daacad, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
+  - {fileID: 114088480962172066, guid: 80e4c5ac576961b449c13c5fbec09c31, type: 2}
+  - {fileID: 114053827857732258, guid: 801269da13a6ab345a4b44d56f2b1a0b, type: 2}
+  - {fileID: 114397322415265656, guid: 045f38cb07f28da47b07844652fcbac0, type: 2}
+  - {fileID: 114214035658558980, guid: 30ae383cc0356b347b28ce65e0e50c19, type: 2}
+  - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   neighboorsU:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218502031701929616, guid: 73676412d65cf4d4dadb37fba7a44bcb, type: 2}
-  - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
-  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
-  - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
-  - {fileID: 218888886543610596, guid: 3bc158ef902ab6e44bcb2a47d42bb48c, type: 2}
-  - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
-  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
-  - {fileID: 218289709695144118, guid: e19dfabf81f68924094d0716b1b68f50, type: 2}
-  - {fileID: 218364480469068560, guid: 28829a692e86ff84e8edd0cdd0e536d6, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114034811947101250, guid: 5352dc12b0adcd842b1d0b3a8300ddec, type: 2}
+  - {fileID: 114136209316855988, guid: 2028a3b631363224aab7892826f1e638, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
+  - {fileID: 114493732793068970}
+  - {fileID: 114053827857732258, guid: 801269da13a6ab345a4b44d56f2b1a0b, type: 2}
+  - {fileID: 114397322415265656, guid: 045f38cb07f28da47b07844652fcbac0, type: 2}
+  - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   neighboorsD:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218298912109689322, guid: 38ff1ca06cf4a5f47a7581912653f1fb, type: 2}
-  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
-  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
-  - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
-  - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
-  - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
-  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
-  - {fileID: 218364480469068560, guid: 28829a692e86ff84e8edd0cdd0e536d6, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114034811947101250, guid: 5352dc12b0adcd842b1d0b3a8300ddec, type: 2}
+  - {fileID: 114136209316855988, guid: 2028a3b631363224aab7892826f1e638, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
+  - {fileID: 114493732793068970}
+  - {fileID: 114053827857732258, guid: 801269da13a6ab345a4b44d56f2b1a0b, type: 2}
+  - {fileID: 114214035658558980, guid: 30ae383cc0356b347b28ce65e0e50c19, type: 2}
+  - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}

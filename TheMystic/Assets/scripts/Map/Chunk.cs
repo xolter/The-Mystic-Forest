@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ChunkType { BLcorner, BRcorner, TLcorner, TRcorner, VPipe, HPipe, Cross, VLt, VRt, HLt, HRt, Default, Fix1, Cross2, Bound } // { └, ┘, ┌, ┐, │, ─, ┼, ├, ┤, ┬, ┴, 0, ┼-2, O}
+public enum ChunkType { BLcorner, BRcorner, TLcorner, TRcorner, VPipe, HPipe, Cross, VLt, VRt, HLt, HRt, Default, Fix1, Bound } // { └, ┘, ┌, ┐, │, ─, ┼, ├, ┤, ┬, ┴, 0, ┼-2, |-2, ─-2, O}
 public class Chunk : MonoBehaviour
 {
     public ChunkType type;
-    public Terrain chunk;
-    public bool wallL;
-    public bool WallR;
-    public bool WallU;
-    public bool WallD;
-    public List<Terrain> neighboorsL;
-    public List<Terrain> neighboorsR;
-    public List<Terrain> neighboorsU;
-    public List<Terrain> neighboorsD;
+    public List<Terrain> chunksVariants;
+    //public Terrain chunk;
+    public List<Chunk> neighboorsL;
+    public List<Chunk> neighboorsR;
+    public List<Chunk> neighboorsU;
+    public List<Chunk> neighboorsD;
 }

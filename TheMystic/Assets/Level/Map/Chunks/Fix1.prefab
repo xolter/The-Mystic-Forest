@@ -52,18 +52,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 12
-  chunk: {fileID: 218289709695144118, guid: e19dfabf81f68924094d0716b1b68f50, type: 2}
-  wallL: 0
-  WallR: 0
-  WallU: 0
-  WallD: 0
+  chunksVariants:
+  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
+  - {fileID: 218369547029762938, guid: 93de326b2eb5ab04580aec8055fec285, type: 2}
   neighboorsL:
-  - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
-  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   neighboorsR:
-  - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
+  - {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}
   neighboorsU:
-  - {fileID: 218110646815712438, guid: 92a6abdc80de10446bd36a5beabc0f4f, type: 2}
+  - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
   neighboorsD:
-  - {fileID: 218361722983867050, guid: 053616d72ea849d48985460ce90d08f8, type: 2}
-  - {fileID: 218751101312474244, guid: 1cca043214bfdd44d9c1ade3a59cb1c7, type: 2}
+  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114088480962172066, guid: 80e4c5ac576961b449c13c5fbec09c31, type: 2}
