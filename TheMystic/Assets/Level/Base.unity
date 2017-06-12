@@ -418,12 +418,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}
---- !u!114 &182938601 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114179899371178732, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &191776894
 Prefab:
   m_ObjectHideFlags: 0
@@ -1493,37 +1487,37 @@ Prefab:
         type: 2}
       propertyPath: ExpBar
       value: 
-      objectReference: {fileID: 1374765863}
+      objectReference: {fileID: 0}
     - target: {fileID: 114435467989002392, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: ScoreText
       value: 
-      objectReference: {fileID: 182938601}
+      objectReference: {fileID: 0}
     - target: {fileID: 114456733158454294, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 2141439540}
+      objectReference: {fileID: 0}
     - target: {fileID: 114296694006600636, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: health_bar
       value: 
-      objectReference: {fileID: 2084439275}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[0].skillIcon
       value: 
-      objectReference: {fileID: 1234554897}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[1].skillIcon
       value: 
-      objectReference: {fileID: 1350499765}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[2].skillIcon
       value: 
-      objectReference: {fileID: 1435202069}
+      objectReference: {fileID: 0}
     - target: {fileID: 114028541012586584, guid: c1cf17e3b494ea445a32b030ae1aead8,
         type: 2}
       propertyPath: skills.Array.data[2].particle
@@ -1533,7 +1527,7 @@ Prefab:
         type: 2}
       propertyPath: skills.Array.data[3].skillIcon
       value: 
-      objectReference: {fileID: 808036218}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cf17e3b494ea445a32b030ae1aead8, type: 2}
   m_IsPrefabParent: 0
@@ -1827,12 +1821,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &808036218 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114634733371197200, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &841607509
 Prefab:
   m_ObjectHideFlags: 0
@@ -2611,12 +2599,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}
---- !u!114 &1234554897 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114342294268513002, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1242834629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,18 +2735,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0d390c947ceb79940aa697ab6e3a3542, type: 3}
---- !u!114 &1350499765 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114409595441614714, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1374765863 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114130508874936756, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1386910753
 Prefab:
   m_ObjectHideFlags: 0
@@ -3008,12 +2978,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 9cc52a258e82a754abef0f48ee8e199c, type: 3}
---- !u!114 &1435202069 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114154775944695606, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1442040875
 Prefab:
   m_ObjectHideFlags: 0
@@ -3138,6 +3102,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 82547571775196296, guid: cf298b152a7910f4aabfaa2ad7b105ee,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 65ed26ab832adda44b9880960b7e7e47, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf298b152a7910f4aabfaa2ad7b105ee, type: 2}
   m_IsPrefabParent: 0
@@ -3305,28 +3274,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d4f42247e4fd5aa469325fdd13e321b1, type: 3}
---- !u!1 &1698501343 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1356347128275242, guid: c1cf17e3b494ea445a32b030ae1aead8,
-    type: 2}
-  m_PrefabInternal: {fileID: 668968244}
---- !u!114 &1698501344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1698501343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036c71ca5465d90479ea9a8b613eca9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1698501343}
---- !u!4 &1698501345 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4295321458414504, guid: c1cf17e3b494ea445a32b030ae1aead8,
-    type: 2}
-  m_PrefabInternal: {fileID: 668968244}
 --- !u!1001 &1770318511
 Prefab:
   m_ObjectHideFlags: 0
@@ -3789,7 +3736,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1698501344}
+      objectReference: {fileID: 0}
     - target: {fileID: 114094034801773424, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3834,7 +3781,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1698501344}
+      objectReference: {fileID: 0}
     - target: {fileID: 114094034801773424, guid: d216c90999e9d814dac2d7df1d3c486a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -3948,12 +3895,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 901490205d4d95e4d8fd461462b7c61a, type: 3}
---- !u!114 &2084439275 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114943009201203768, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &2094599566
 Prefab:
   m_ObjectHideFlags: 0
@@ -3997,13 +3938,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1698501345}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6d3392c7b19394b88abb3fa4093f03, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &2141439540 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114041421483557194, guid: 46a379ebb2ccd70438417c17c216508a,
-    type: 2}
-  m_PrefabInternal: {fileID: 885282309}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
