@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Map_Generator2 : MonoBehaviour {
+public class Map_Generator2 : MonoBehaviour
+{
 
     public List<Chunk> chunks;
     public Chunk[,] map;
@@ -15,10 +16,10 @@ public class Map_Generator2 : MonoBehaviour {
 
     void Start()
     {
-        MapInit();       
+        MapInit();
         Generator();
         InGameDisplay();
-        SetPortal();
+        //SetPortal();
         /*if (PlayerPrefs.GetInt("load") == 1)
         {
             SetMapSaved();
@@ -35,18 +36,17 @@ public class Map_Generator2 : MonoBehaviour {
             Instantiate(portal, new Vector3(-40, 0, -40), new Quaternion());
             once = false;
         }
-        Debug.Log("Nb portal: " + PortalCount());
     }
 
     void MapInit()
     {
-        map = new Chunk[Length+2, Width+2];
+        map = new Chunk[Length + 2, Width + 2];
         for (int j = 0; j < Width + 2; j++)
         {
             map[0, j] = bound;
             map[Length + 1, j] = bound;
-        } 
-        for(int i =0; i < Length +2; i++)
+        }
+        for (int i = 0; i < Length + 2; i++)
         {
             map[i, 0] = bound;
             map[i, Width + 1] = bound;
@@ -54,7 +54,7 @@ public class Map_Generator2 : MonoBehaviour {
         for (int i = 1; i < Length + 1; i++)
             for (int j = 1; j < Width + 1; j++)
             {
-                map[i, j] = chunks[(int)ChunkType.Default];                
+                map[i, j] = chunks[(int)ChunkType.Default];
             }
     }
 
@@ -66,21 +66,21 @@ public class Map_Generator2 : MonoBehaviour {
         map[Length, 1] = chunks[(int)ChunkType.BLcorner];
         map[Length, Width] = chunks[(int)ChunkType.BRcorner];
         for (int i = 1; i < Length + 1; i++)
-        {            
+        {
             possible = new List<Chunk>();
             for (int j = 1; j < Width + 1; j++)
-            {                
-                possible = new List<Chunk>();                
-                if (map[i, j].chunk.name == chunks[(int)ChunkType.Default].name)
-                {                    
+            {
+                possible = new List<Chunk>();
+                if (map[i, j].name == chunks[(int)ChunkType.Default].name)
+                {
                     foreach (Chunk c in chunks)
                     {
-                        if (c.neighboorsU.Contains(map[i - 1, j].chunk)
-                            && c.neighboorsD.Contains(map[i + 1, j].chunk)
-                            && c.neighboorsL.Contains(map[i, j - 1].chunk)
-                            && c.neighboorsR.Contains(map[i, j + 1].chunk))
+                        if (c.neighboorsU.Contains(map[i - 1, j])
+                            && c.neighboorsD.Contains(map[i + 1, j])
+                            && c.neighboorsL.Contains(map[i, j - 1])
+                            && c.neighboorsR.Contains(map[i, j + 1]))
                         {
-                            possible.Add(c);                            
+                            possible.Add(c);
                         }
 
                     }
@@ -96,11 +96,13 @@ public class Map_Generator2 : MonoBehaviour {
     void InGameDisplay()
     {
         Vector3 pos = Vector3.zero;
-        for (int i = 0; i < Length+2; i++)
+        for (int i = 0; i < Length + 2; i++)
         {
-            for (int j = 0; j < Width+2; j++)
+            for (int j = 0; j < Width + 2; j++)
             {
-                Instantiate(map[i, j].chunk, new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
+                int rdm = Random.Range(0, map[i, j].chunksVariants.Count);
+                Debug.Log("type: " + map[i, j].name + " Variants: " + map[i, j].chunksVariants.Count + " Choosen: " + rdm);
+                Instantiate(map[i, j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
             }
         }
     }
@@ -136,10 +138,10 @@ public class Map_Generator2 : MonoBehaviour {
                 for (int j = 0; j < Width; j++)
                 {
                     Debug.Log("4");
-                    if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i,j])
+                    if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i, j])
                     {
-                        Debug.Log("5");                   
-                        Instantiate(spawner, new Vector3(i * -80, 1, j - 80 -40), rotation);
+                        Debug.Log("5");
+                        Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);
                         Debug.Log("6");
                         curr_rate += 1;
                         Debug.Log("7");
