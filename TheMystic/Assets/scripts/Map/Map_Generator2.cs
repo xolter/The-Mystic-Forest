@@ -12,6 +12,7 @@ public class Map_Generator2 : MonoBehaviour
     public GameObject portal;
     public int Length;
     public int Width;
+    public int rate;
     private bool once = true;
 
     void Start()
@@ -19,7 +20,7 @@ public class Map_Generator2 : MonoBehaviour
         MapInit();
         Generator();
         InGameDisplay();
-        //SetPortal();
+        SetPortal();
         /*if (PlayerPrefs.GetInt("load") == 1)
         {
             SetMapSaved();
@@ -100,8 +101,7 @@ public class Map_Generator2 : MonoBehaviour
         {
             for (int j = 0; j < Width + 2; j++)
             {
-                int rdm = Random.Range(0, map[i, j].chunksVariants.Count);
-                Debug.Log("type: " + map[i, j].name + " Variants: " + map[i, j].chunksVariants.Count + " Choosen: " + rdm);
+                int rdm = Random.Range(0, map[i, j].chunksVariants.Count);                
                 Instantiate(map[i, j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
             }
         }
@@ -120,38 +120,27 @@ public class Map_Generator2 : MonoBehaviour
     }
 
     void SetPortal()
-    {
-        Debug.Log("0");
-        int rate = Length * Width / 5;
+    {        
+        //int rate = Length * Width / 10;
         bool[,] hasPortal = new bool[Length, Width];
         for (int i = 0; i < Length; i++)
             for (int j = 0; j < Width; j++)
                 hasPortal[i, j] = false;
-        Quaternion rotation = Quaternion.Euler(120, 0, 0);
-        Debug.Log("1");
-        int curr_rate = 0;
-        Debug.Log("2");
+        Quaternion rotation = Quaternion.Euler(120, 0, 0);     
+        int curr_rate = 0;        
         while (curr_rate < rate)
             for (int i = 0; i < Length; i++)
-            {
-                Debug.Log("3");
+            {                
                 for (int j = 0; j < Width; j++)
                 {
-                    Debug.Log("4");
                     if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i, j])
-                    {
-                        Debug.Log("5");
+                    {                        
                         Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);
-                        Debug.Log("6");
                         curr_rate += 1;
-                        Debug.Log("7");
                         hasPortal[i, j] = true;
                     }
-                    Debug.Log("8");
                 }
-                Debug.Log("9");
             }
-        Debug.Log("10");
     }
     int PortalCount()
     {

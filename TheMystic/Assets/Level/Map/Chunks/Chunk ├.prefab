@@ -72,14 +72,13 @@ MonoBehaviour:
   - {fileID: 114214035658558980, guid: 30ae383cc0356b347b28ce65e0e50c19, type: 2}
   - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   neighboorsU:
-  - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
+  - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   - {fileID: 114034811947101250, guid: 5352dc12b0adcd842b1d0b3a8300ddec, type: 2}
   - {fileID: 114136209316855988, guid: 2028a3b631363224aab7892826f1e638, type: 2}
   - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
   - {fileID: 114493732793068970}
   - {fileID: 114053827857732258, guid: 801269da13a6ab345a4b44d56f2b1a0b, type: 2}
   - {fileID: 114397322415265656, guid: 045f38cb07f28da47b07844652fcbac0, type: 2}
-  - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   neighboorsD:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114034811947101250, guid: 5352dc12b0adcd842b1d0b3a8300ddec, type: 2}
