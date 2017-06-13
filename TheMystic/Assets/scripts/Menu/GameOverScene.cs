@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class GameOverScene : MonoBehaviour
+public class GameOverScene : NetworkBehaviour
 {
 
     //Player_Health health;
@@ -16,25 +17,33 @@ public class GameOverScene : MonoBehaviour
 
     void Start()
     {
+        if (!isLocalPlayer)
+            return;
         playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
     }
     void Update()
     {
-        gameOverisActive = playerstats.currentHealth <= 0;
-        if (gameOverisActive)
+        if (!isLocalPlayer)
+            return;
+        Debug.Log("localPlayer: " + PlayerStats.localPlayer);
+        if (PlayerStats.localPlayer == null)
         {
-            gameOverObject.SetActive(true);
-            Mainmusic.mute = true;
-            if (!already_played)
+            gameOverisActive = playerstats.currentHealth <= 0;
+            if (gameOverisActive)
             {
-                DeathMusic.Play();
-                already_played = true;
+                gameOverObject.SetActive(true);
+                Mainmusic.mute = true;
+                if (!already_played)
+                {
+                    DeathMusic.Play();
+                    already_played = true;
+                }
             }
-        }
-        else
-        {
-            gameOverObject.SetActive(false);           
+            else
+            {
+                gameOverObject.SetActive(false);
+            }
         }
         //L'affichage du curseur est géré par CurseurManager
     }

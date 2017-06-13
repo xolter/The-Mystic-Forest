@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : NetworkBehaviour
 {
     public float currentHealth { get; set; }
     public int maxHealth { get; set; }
@@ -27,7 +28,8 @@ public class PlayerStats : MonoBehaviour
 
     public float default_damages { get; set; }
     public float damage { get; set; }
-    public float autoattack_timer_default { get; set; }    
+    public float autoattack_timer_default { get; set; }
+    public static PlayerStats localPlayer;   
 
 
     public PlayerStats()
@@ -56,7 +58,11 @@ public class PlayerStats : MonoBehaviour
         default_damages = 10f;
         damage = 10f;
         autoattack_timer_default = 0.8f;
+        
+    }
 
-
+    public override void OnStartLocalPlayer()
+    {
+        localPlayer = this;
     }
 }
