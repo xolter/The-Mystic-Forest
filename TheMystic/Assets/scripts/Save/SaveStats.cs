@@ -35,6 +35,12 @@ public class SaveStats : MonoBehaviour {
             playerstats.maxXp = PlayerPrefs.GetInt("MaxXp");
             playerstats.Lvl = PlayerPrefs.GetInt("Lvl");
 
+            playerstats.SkillPoint = PlayerPrefs.GetInt("SkillPoints");
+            playerstats.Skill1Points = PlayerPrefs.GetInt("Skill1Points");
+            playerstats.Skill2Points = PlayerPrefs.GetInt("Skill2Points");
+            playerstats.Skill3Points = PlayerPrefs.GetInt("Skill3Points");
+            playerstats.Skill4Points = PlayerPrefs.GetInt("Skill4Points");
+
             playerstats.default_damages = PlayerPrefs.GetFloat("DefaultDamage");
             playerstats.damage = PlayerPrefs.GetFloat("Damage");
         }
@@ -60,6 +66,12 @@ public class SaveStats : MonoBehaviour {
         PlayerPrefs.SetInt("MaxXp", playerstats.maxXp);
         PlayerPrefs.SetInt("addXp", playerstats.addXp);
         PlayerPrefs.SetInt("Lvl", playerstats.Lvl);
+
+        PlayerPrefs.SetInt("SkillPoints", playerstats.SkillPoint);
+        PlayerPrefs.SetInt("Skill1Points", playerstats.Skill1Points);
+        PlayerPrefs.SetInt("Skill2Points", playerstats.Skill2Points);
+        PlayerPrefs.SetInt("Skill3Points", playerstats.Skill3Points);
+        PlayerPrefs.SetInt("Skill4Points", playerstats.Skill4Points);
 
         PlayerPrefs.SetFloat("DefaultDamage", playerstats.default_damages);
         PlayerPrefs.SetFloat("Damage", playerstats.damage);

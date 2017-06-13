@@ -19,6 +19,12 @@ public class PlayerStats : MonoBehaviour
     public int addXp { get; set; }
     public int Lvl { get; set; }
 
+    public int SkillPoint { get; set; }
+    public int Skill1Points { get; set; }
+    public int Skill2Points { get; set; }
+    public int Skill3Points { get; set; }
+    public int Skill4Points { get; set; }
+
     public float default_damages { get; set; }
     public float damage { get; set; }
     public float autoattack_timer_default { get; set; }    
@@ -40,6 +46,12 @@ public class PlayerStats : MonoBehaviour
         maxXp = 100;
         addXp = 50;
         Lvl = 1;
+
+        SkillPoint = 1;
+        Skill1Points = 0;
+        Skill2Points = 0;
+        Skill3Points = 0;
+        Skill4Points = 0;
 
         default_damages = 10f;
         damage = 10f;

@@ -67,14 +67,14 @@ public class Player_Atk : NetworkBehaviour
         switch (skill.name)
         {
             case ("Skill1"):
-                playerstats.regenHealth = 0.2f;
+                playerstats.regenHealth = playerstats.Skill1Points * 0.2f; //j'ai changé la
                 //health.regen_health = 0.2f; //
                 //health.Update_currentHealth(20); // 
                 break;
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    playerstats.damage = 1.5f * playerstats.default_damages;
+                    playerstats.damage = playerstats.Skill1Points * 15 + playerstats.default_damages; // j'ai changé ici 
                     basicAtk.cooldown = playerstats.autoattack_timer_default / 2;                    
                     Debug.Log("HERE");
                 }

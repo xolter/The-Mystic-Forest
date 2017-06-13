@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/MainMenu.unity
   - enabled: 0
     path: Assets/Level/ScenePrincipale.unity
@@ -19,11 +19,11 @@ EditorBuildSettings:
     path: Assets/Map/Base.unity
   - enabled: 0
     path: Assets/Map/ForestDugeon.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/Base.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Level/ForestDugeon.unity
   - enabled: 1
     path: Assets/Level/temp.unity
