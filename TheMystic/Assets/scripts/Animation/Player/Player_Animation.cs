@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Player_Animation : MonoBehaviour
+public class Player_Animation : NetworkBehaviour
 {
     public Animator anim;
     public Player_Atk attack;
@@ -28,7 +29,9 @@ public class Player_Animation : MonoBehaviour
 
 
     void Update()
-    {    
+    {
+        if (!isLocalPlayer)
+            return;
         foreach (Skill s in attack.skills)
         {
             if (anim.IsInTransition(0))

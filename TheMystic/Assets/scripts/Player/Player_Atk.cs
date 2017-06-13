@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 [System.Serializable]
-public class Player_Atk : MonoBehaviour
+public class Player_Atk : NetworkBehaviour
 {
     public List<Skill> skills;
     public Animator anim;
@@ -21,7 +22,10 @@ public class Player_Atk : MonoBehaviour
     }
 
     void FixedUpdate()
-    {   if (playerstats.currentHealth > 0 )
+    {
+        if (!isLocalPlayer)
+            return;
+        if (playerstats.currentHealth > 0 )
         {
             foreach (Skill s in skills)
             {
@@ -41,6 +45,8 @@ public class Player_Atk : MonoBehaviour
     }
     void Update()
     {
+        if (!isLocalPlayer)
+            return;
         foreach (Skill s in skills)
         {
             if (s.currentCoolDown < s.cooldown)

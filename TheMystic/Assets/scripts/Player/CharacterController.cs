@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController : NetworkBehaviour
 {
 
     [System.Serializable]
@@ -66,6 +67,8 @@ public class CharacterController : MonoBehaviour
 
     void GetInput()
     {
+        //if (!isLocalPlayer)
+        //    return;
         forwardInput = Input.GetAxis(inputSettings.FORWARD_AXIS);
         turnInput = Input.GetAxis(inputSettings.TURN_AXIS);
         rotateInput = Input.GetAxis(inputSettings.ROTATE_AXIS);
@@ -74,6 +77,8 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        if (!isLocalPlayer)
+            return;
         GetInput();
         if (CanRotate())
         {

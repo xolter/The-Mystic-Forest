@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Player_Health : MonoBehaviour
-{
-    public Image health_bar;
+public class Player_Health : NetworkBehaviour
+{        
+    public Image health_bar;    
     public Animator anim;
     public GameObject particle;
-
-    private bool isDead, particlePlayed;
     PlayerStats playerstats;
-
+    [SyncVar]
+    private bool isDead, particlePlayed;
 	// Use this for initialization
 	void Start ()
     {
+        if (!isLocalPlayer)
+            return;
         playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
         anim.SetBool("isDead", false);
@@ -25,6 +27,8 @@ public class Player_Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (!isLocalPlayer)
+            return;
         anim.SetBool("isDead", playerstats.currentHealth <= 0);        
         if (playerstats.currentHealth <= 0)
         {

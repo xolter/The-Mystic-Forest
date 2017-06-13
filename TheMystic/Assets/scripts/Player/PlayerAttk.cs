@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerAttk : MonoBehaviour
+public class PlayerAttk : NetworkBehaviour
 {
     public GameObject[] targets;
     public GameObject closest;
@@ -32,6 +33,8 @@ public class PlayerAttk : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (!isLocalPlayer)
+            return;
         targets = GameObject.FindGameObjectsWithTag("Enemy");
         if (attTimer > 0)
         {
