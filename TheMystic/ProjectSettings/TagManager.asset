@@ -11,6 +11,10 @@ TagManager:
   - Chunk
   - Generator
   - PNJ
+  - SoundSkill1
+  - SoundSkill2
+  - SoundSkill3
+  - SoundSkill4
   layers:
   - Default
   - TransparentFX

@@ -12,13 +12,36 @@ public class Player_Atk : NetworkBehaviour
     public PlayerStats playerstats;
     public PlayerAttk basicAtk;
 
-
     void Start()
     {
 
         playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
         basicAtk = GetComponent<PlayerAttk>();
+        InitSounds();
+    }
+    void InitSounds()
+    {
+        foreach (Skill skill in skills)
+        {
+            switch (skill.name)
+            {
+                case ("Skill1"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill1").GetComponent<AudioSource>();
+                    break;
+                case ("Skill2"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill2").GetComponent<AudioSource>();
+                    break;
+                case ("Skill3"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill3").GetComponent<AudioSource>();
+                    break;
+                case ("Skill4"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill4").GetComponent<AudioSource>();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     void FixedUpdate()
