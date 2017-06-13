@@ -30,11 +30,17 @@ public class Player_Exp : MonoBehaviour {
     }
     public void UP_LVL()
     {
-        playerstats.Lvl += 1;
-        playerstats.currentHealth = playerstats.maxHealth;
-        playerstats.currentMana = playerstats.maxMana;
-        playerstats.xp = 0;
-        playerstats.maxXp += 50;
+        if (playerstats.Lvl < 11)
+        {
+            playerstats.Lvl += 1;
+            playerstats.currentHealth = playerstats.maxHealth;
+            playerstats.currentMana = playerstats.maxMana;
+            playerstats.xp = 0;
+            playerstats.maxXp += 50;
+            playerstats.maxHealth += 50;
+            playerstats.maxMana += 20;
+            playerstats.default_damages += 5;
+        }
 
     }
 }

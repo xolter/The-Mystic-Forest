@@ -6,29 +6,50 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject menuObject;
 	public GameObject optionObject;
-    //GameOverScene goScene;    
+    public GameObject SkillsPanelObject;   
 	bool optionActive = false;
 	bool isActive = false;
+    bool skillsActive = false;
 
-    /*void Start()
-    {
-        goScene = GetComponent<GameOverScene>();
-    }*/
-    // Update is called once per frame
     void Update ()
-    {
-		//menu affiché
-		if (isActive)
+    {   
+        if (Input.GetKeyDown(KeyCode.Escape))
+		{
+            if (optionActive)
+            {
+                optionActive = !optionActive;
+            }
+            else if (skillsActive)
+            {
+                skillsActive = !skillsActive;
+            }
+            else
+            {
+                isActive = !isActive;
+            }
+		}
+        if (Input.GetKeyDown(KeyCode.K) && !isActive)
+        {
+            skillsActive = !skillsActive;
+        }
+        //menu affiché
+        if (isActive)
 		{
 			menuObject.SetActive (true);
             //L'affichage du curseur est géré par CurseurManager
             //pause
             Time.timeScale = 0;
         }
+        else if (skillsActive)
+        {
+            SkillsPanelObject.SetActive(true);
+            Time.timeScale = 0;
+        }
 		else
 		{
 			//menu pas affiché
 			menuObject.SetActive (false);
+            SkillsPanelObject.SetActive(false);
             //L'affichage du curseur est géré par CurseurManager
 			//pause
 			Time.timeScale = 1;
@@ -41,14 +62,6 @@ public class PauseMenu : MonoBehaviour {
         {
             optionObject.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && optionActive)
-		{
-			optionActive = !optionActive;
-		}
-        else if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			isActive = !isActive;
-		}
 	}
 	public void RESUME_BUTTON()
 	{

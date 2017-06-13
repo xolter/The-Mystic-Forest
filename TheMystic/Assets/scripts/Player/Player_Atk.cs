@@ -12,13 +12,36 @@ public class Player_Atk : NetworkBehaviour
     public PlayerStats playerstats;
     public PlayerAttk basicAtk;
 
-
     void Start()
     {
 
         playerstats = GetComponent<PlayerStats>();
         anim = GetComponent<Animator>();
         basicAtk = GetComponent<PlayerAttk>();
+        InitSounds();
+    }
+    void InitSounds()
+    {
+        foreach (Skill skill in skills)
+        {
+            switch (skill.name)
+            {
+                case ("Skill1"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill1").GetComponent<AudioSource>();
+                    break;
+                case ("Skill2"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill2").GetComponent<AudioSource>();
+                    break;
+                case ("Skill3"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill3").GetComponent<AudioSource>();
+                    break;
+                case ("Skill4"):
+                    skill.audiosource = GameObject.FindGameObjectWithTag("SoundSkill4").GetComponent<AudioSource>();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -67,14 +90,14 @@ public class Player_Atk : NetworkBehaviour
         switch (skill.name)
         {
             case ("Skill1"):
-                playerstats.regenHealth = 0.2f;
+                playerstats.regenHealth = playerstats.Skill1Points * 0.2f; //j'ai changé la
                 //health.regen_health = 0.2f; //
                 //health.Update_currentHealth(20); // 
                 break;
             case ("Skill2"):
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    playerstats.damage = 1.5f * playerstats.default_damages;
+                    playerstats.damage = playerstats.Skill1Points * 15 + playerstats.default_damages; // j'ai changé ici 
                     basicAtk.cooldown = playerstats.autoattack_timer_default / 2;                    
                     Debug.Log("HERE");
                 }
