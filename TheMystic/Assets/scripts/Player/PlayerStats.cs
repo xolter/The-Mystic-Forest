@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class PlayerStats : NetworkBehaviour
-{
+{           
     public float currentHealth { get; set; }
     public int maxHealth { get; set; }
     public int minHealth { get; set; }
@@ -23,7 +23,8 @@ public class PlayerStats : NetworkBehaviour
     public float default_damages { get; set; }
     public float damage { get; set; }
     public float autoattack_timer_default { get; set; }
-    public static PlayerStats localPlayer;   
+    public static PlayerStats localPlayer;
+    public static List<PlayerStats> players = new List<PlayerStats>();  
 
 
     public PlayerStats()
@@ -52,5 +53,10 @@ public class PlayerStats : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         localPlayer = this;
+    }
+
+    private void Start()
+    {
+        players.Add(this);
     }
 }

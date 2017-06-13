@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 4123388384257584}
   - component: {fileID: 114039881763524292}
   - component: {fileID: 114372837256022650}
+  - component: {fileID: 114323203190759832}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Enemy
@@ -1134,10 +1135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 114523639494344262}
+  target: {fileID: 0}
   max_health: 40
   current_health: 40
   regen_health: 0
-  target: {fileID: 0}
 --- !u!114 &114094277385630318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1150,6 +1151,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   other: {fileID: 0}
+--- !u!114 &114323203190759832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998047258116098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 148
+    i1: 27
+    i2: 108
+    i3: 126
+    i4: 181
+    i5: 226
+    i6: 111
+    i7: 116
+    i8: 41
+    i9: 112
+    i10: 253
+    i11: 31
+    i12: 76
+    i13: 129
+    i14: 119
+    i15: 30
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114372837256022650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1248,6 +1281,7 @@ MonoBehaviour:
   enemy: {fileID: 1958656354155350, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
   coolDown: 15
   currentCoolDown: 0
+  position: {fileID: 0}
 --- !u!114 &114822674667315586
 MonoBehaviour:
   m_ObjectHideFlags: 1

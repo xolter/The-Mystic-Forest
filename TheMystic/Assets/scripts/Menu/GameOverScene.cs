@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Networking;
+//using UnityEngine.Networking;
 
-public class GameOverScene : NetworkBehaviour
+public class GameOverScene : MonoBehaviour//NetworkBehaviour
 {
 
     //Player_Health health;
@@ -17,16 +17,12 @@ public class GameOverScene : NetworkBehaviour
 
     void Start()
     {
-        if (!isLocalPlayer)
-            return;
         playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
+        Debug.Log("playerstats: " + playerstats);
     }
     void Update()
     {
-        if (!isLocalPlayer)
-            return;
-        Debug.Log("localPlayer: " + PlayerStats.localPlayer);
         if (PlayerStats.localPlayer == null)
         {
             gameOverisActive = playerstats.currentHealth <= 0;

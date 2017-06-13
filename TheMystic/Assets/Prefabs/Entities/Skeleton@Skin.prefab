@@ -595,6 +595,10 @@ GameObject:
   - component: {fileID: 114172547199463818}
   - component: {fileID: 114378076388806774}
   - component: {fileID: 114961810020250286}
+  - component: {fileID: 114553950768551678}
+  - component: {fileID: 114552153691671456}
+  - component: {fileID: 114415688062599772}
+  - component: {fileID: 114409656417819518}
   m_Layer: 0
   m_Name: Skeleton@Skin
   m_TagString: Enemy
@@ -1342,15 +1346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba788573025c16b4084b34db945ef84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
   closest: {fileID: 0}
   target: {fileID: 0}
-  health: {fileID: 0}
+  health: {fileID: 114172777575623016}
   self: {fileID: 1958656354155350}
   moveSpeed: 5
   rotationSpeed: 16
   myTransform: {fileID: 0}
-  difdistance: 8
+  difdistance: 2.5
 --- !u!114 &114172777575623016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1363,10 +1366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 114606842879018688}
+  target: {fileID: 0}
   max_health: 100
   current_health: 100
   regen_health: 0
-  target: {fileID: 0}
 --- !u!114 &114183545717118976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1445,6 +1448,36 @@ MonoBehaviour:
   anim: {fileID: 0}
   attack: {fileID: 0}
   health: {fileID: 0}
+--- !u!114 &114409656417819518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958656354155350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574e80f2d7fff444abd6c47088caa38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114415688062599772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958656354155350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95595058767664216}
+  m_ParameterSendBits: 0
+  param0: 
+  param1: 
+  param2: 
+  param3: 
+  param4: 
+  param5: 
 --- !u!114 &114453351971321030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1472,6 +1505,58 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114552153691671456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958656354155350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.033333335
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114553950768551678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958656354155350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 181
+    i1: 11
+    i2: 26
+    i3: 37
+    i4: 52
+    i5: 174
+    i6: 104
+    i7: 212
+    i8: 89
+    i9: 168
+    i10: 162
+    i11: 162
+    i12: 220
+    i13: 54
+    i14: 41
+    i15: 94
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114606842879018688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1510,12 +1595,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa58af986bfe2e84c9fe5da14c64cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets: []
   closest: {fileID: 0}
   target: {fileID: 0}
   own: {fileID: 0}
   attTimer: 0
   cooldown: 0
+  damage: 10
 --- !u!114 &114928078886075554
 MonoBehaviour:
   m_ObjectHideFlags: 1

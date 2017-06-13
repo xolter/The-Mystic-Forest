@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_depop : MonoBehaviour {
-
+public class Enemy_depop : MonoBehaviour
+{
     public GameObject self;
     public Enemy_Health health;
     public float timetopop;

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Enemy_Animation : MonoBehaviour
+public class Enemy_Animation : NetworkBehaviour
 {
     public Animator anim;
     public EnemyAttack attack;
@@ -27,6 +28,8 @@ public class Enemy_Animation : MonoBehaviour
 	
 	void Update ()
     {
+        if (!isServer)
+            return;
         if (!attack.Stop)
         { 
             fwd = oldpos.x - newpos.y;

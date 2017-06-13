@@ -17,6 +17,8 @@ public class PlayerAttk : NetworkBehaviour
     // Use this for initialization
     void Start ()
     {
+        if (!isLocalPlayer)
+            return;
         gameObject.AddComponent<AudioSource>();
         source.clip = sound;
         source.playOnAwake = false;
@@ -72,8 +74,8 @@ public class PlayerAttk : NetworkBehaviour
         }
         return closest;
     }
-
-    private void Attack()
+    [Command]
+    void CmdAttack()
     {
         for (int i = 0; i < targets.Length; i++)
         {
@@ -86,10 +88,13 @@ public class PlayerAttk : NetworkBehaviour
                 {
                     // Enemy_Health eh = (Enemy_Health)target.GetComponent("EnemyHealth");
                     source.PlayOneShot(sound);
-
                     targets[i].GetComponent<Enemy_Health>().current_health -= playerstats.damage;
                 }
             }
         }
+    }
+    private void Attack()
+    {
+        CmdAttack();
     }
 }

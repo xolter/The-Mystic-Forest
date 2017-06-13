@@ -1,22 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Enemy_spawner : MonoBehaviour
+public class Enemy_spawner : NetworkBehaviour
 {
     public GameObject enemy;
     public float coolDown = 15f;
     public float currentCoolDown = 0f;
-    PlayerStats playerstats;
+    GameObject[] players;
+    [SerializeField]
+    Transform position;
     void Start ()
     {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        //players = null; //GameObject.FindGameObjectsWithTag("Player");
         InvokeRepeating("Spawn", currentCoolDown, coolDown);               
     }   
     void Spawn()
-    {
-        if (playerstats.currentHealth <= 0f)
+    {        
+        
+        if (!isServer)
             return;
-        Instantiate(enemy, transform.position, transform.rotation);                     
+
+        if (PlayerStats.players.Find(p => p.currentHealth > 0f) == null)
+            return;
+        var toSpawn = (GameObject)Instantiate(enemy, position.position, position.rotation);
+        NetworkServer.Spawn(toSpawn);
+
     }
 }

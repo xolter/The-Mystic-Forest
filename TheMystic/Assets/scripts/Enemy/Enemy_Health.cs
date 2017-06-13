@@ -2,32 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Enemy_Health : MonoBehaviour
+public class Enemy_Health : NetworkBehaviour
 {
     public Image healthbar;
-    public float max_health = 100;
-    public float current_health = 100;
-    //public int Current_Health { get { return current_health; } set { current_health = value; } }
-    public float regen_health = 0f;
-    private bool xpGiven = false;
     public GameObject target;
     Player_Exp target_xp;
+    [SyncVar]
+    public float max_health = 100;
+    public float current_health = 100;
+    public float regen_health = 0f;
+    private bool xpGiven = false;
 
-    // Use this for initialization
-    void Start()
+    public override void OnStartServer()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        base.OnStartServer();        
         healthbar.fillAmount = (float)current_health / max_health;
-        target_xp = target.GetComponent<Player_Exp>();
     }
-
+    // Use this for initialization
     // Update is called once per frame
     void Update()
     {
+        if (!isServer)
+            return;
         Update_currentHealth(regen_health);
         healthbar.fillAmount = (float)current_health / max_health;
     }
+
 
     public void Update_currentHealth(float n)
     {
