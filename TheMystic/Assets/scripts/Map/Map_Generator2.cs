@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Map_Generator2 : MonoBehaviour
+public class Map_Generator2 : NetworkBehaviour
 {
 
     public List<Chunk> chunks;
-    public Chunk[,] map;
+    static public Chunk[,] map;
     public Chunk bound;
     public GameObject spawner;
     public GameObject portal;
@@ -17,24 +18,31 @@ public class Map_Generator2 : MonoBehaviour
 
     void Start()
     {
-        MapInit();
-        Generator();
-        InGameDisplay();
-        SetPortal();
-        /*if (PlayerPrefs.GetInt("load") == 1)
+        Debug.Log("0");
+        if (!isServer)
         {
-            SetMapSaved();
+            InGameDisplayClient();
+            Debug.Log("Displaying");            
+            return;
         }
-        else
-        {
-            Generator();
-        }*/
+        Debug.Log("1");
+        MapInit();
+        Debug.Log("2");
+        Generator();
+        Debug.Log("3");
+        InGameDisplay();
+        Debug.Log("4");
+        SetPortal();
+        Debug.Log("5");
     }
     void Update()
     {
+        if (!isServer)
+            return;
         if (PortalCount() == 0 && once)
         {
-            Instantiate(portal, new Vector3(-40, 0, -40), new Quaternion());
+            var temp = (GameObject)Instantiate(portal, new Vector3(-40, 0, -40), new Quaternion());
+            NetworkServer.Spawn(temp);
             once = false;
         }
     }
@@ -96,13 +104,34 @@ public class Map_Generator2 : MonoBehaviour
 
     void InGameDisplay()
     {
+        Debug.Log(".0");
         Vector3 pos = Vector3.zero;
         for (int i = 0; i < Length + 2; i++)
         {
+            Debug.Log(".1");
             for (int j = 0; j < Width + 2; j++)
             {
-                int rdm = Random.Range(0, map[i, j].chunksVariants.Count);                
+                int rdm = Random.Range(0, map[i,j].chunksVariants.Count);
+                var temp = (GameObject)Instantiate(map[i,j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
+                NetworkServer.Spawn(temp);
+            }
+        }                    
+    }
+
+    void InGameDisplayClient()
+    {
+        Vector3 pos = Vector3.zero;
+        for (int i = 0; i < Length + 2; i++)
+        {
+            Debug.Log("..1");
+            for (int j = 0; j < Width + 2; j++)
+            {
+                Debug.Log("i,j:" + i + " " + j +" | "+ map[i, j]);
+                Debug.Log("..2");                
+                int rdm = Random.Range(0, map[i, j].chunksVariants.Count);
+                Debug.Log("..3");
                 Instantiate(map[i, j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
+                Debug.Log("..4");
             }
         }
     }
@@ -149,7 +178,6 @@ public class Map_Generator2 : MonoBehaviour
         int curr_rate = 0;
         for (int i = 0; i < temp.Length; i++)
         {
-            Debug.Log(temp[i].name);
             if (temp[i].name == "Portal(Clone)")
                 curr_rate += 1;
         }

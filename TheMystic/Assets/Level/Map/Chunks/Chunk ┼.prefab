@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4742773683213816}
   - component: {fileID: 114850948833391028}
+  - component: {fileID: 114712325278747326}
+  - component: {fileID: 114059168694038336}
   m_Layer: 0
   m_Name: "Chunk \u253C"
   m_TagString: Untagged
@@ -40,6 +42,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114059168694038336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251872944607642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114712325278747326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251872944607642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 228
+    i1: 215
+    i2: 198
+    i3: 10
+    i4: 78
+    i5: 90
+    i6: 61
+    i7: 100
+    i8: 216
+    i9: 15
+    i10: 6
+    i11: 231
+    i12: 157
+    i13: 98
+    i14: 250
+    i15: 214
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114850948833391028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 6
   chunksVariants:
-  - {fileID: 218000445359619174, guid: 446e969253e322043b610783e6609c3f, type: 2}
-  - {fileID: 218364480469068560, guid: 28829a692e86ff84e8edd0cdd0e536d6, type: 2}
+  - {fileID: 1528576756390068, guid: d7435390439a78545bc3d37c07aa9e7e, type: 2}
+  - {fileID: 1807404277567708, guid: 0571e8246d6810445af38ccb91895bb9, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114615417245742988, guid: cb9d4a0a18b2bfe4f8d7afcda4daacad, type: 2}

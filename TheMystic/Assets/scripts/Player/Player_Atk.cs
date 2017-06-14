@@ -104,7 +104,6 @@ public class Player_Atk : NetworkBehaviour
                 s.currentCoolDown += Time.deltaTime;
                 s.skillIcon.fillAmount = s.currentCoolDown / s.cooldown;
                 Buff(s.id);
-                Debug.Log("Buffed");
             }           
             else if (s.currentCoolDown >= s.cooldown)
             {

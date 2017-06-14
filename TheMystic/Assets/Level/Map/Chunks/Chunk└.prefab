@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4028170560716164}
   - component: {fileID: 114078534071890276}
+  - component: {fileID: 114903692682216876}
+  - component: {fileID: 114851600258436476}
   m_Layer: 0
   m_Name: "Chunk\u2514"
   m_TagString: Untagged
@@ -53,8 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   chunksVariants:
-  - {fileID: 218298912109689322, guid: 38ff1ca06cf4a5f47a7581912653f1fb, type: 2}
-  - {fileID: 218570565320821270, guid: fc623eeb6b49da444b2946016e3a3649, type: 2}
+  - {fileID: 1319061911524444, guid: 8858481b602b3c449aef4d7febe1e5be, type: 2}
+  - {fileID: 1278283575732738, guid: 751e0edd5b38ba54cadda981988c9e0d, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}
@@ -87,3 +89,55 @@ MonoBehaviour:
   - {fileID: 114136209316855988, guid: 2028a3b631363224aab7892826f1e638, type: 2}
   - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
   - {fileID: 114397322415265656, guid: 045f38cb07f28da47b07844652fcbac0, type: 2}
+--- !u!114 &114851600258436476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277621913725798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114903692682216876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1277621913725798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 185
+    i1: 156
+    i2: 165
+    i3: 117
+    i4: 133
+    i5: 215
+    i6: 71
+    i7: 4
+    i8: 235
+    i9: 57
+    i10: 169
+    i11: 86
+    i12: 9
+    i13: 3
+    i14: 236
+    i15: 51
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

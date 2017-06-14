@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4024444261604652}
   - component: {fileID: 114779023823999376}
+  - component: {fileID: 114290820640164148}
+  - component: {fileID: 114256063869031952}
   m_Layer: 0
   m_Name: Chunk Bound
   m_TagString: Untagged
@@ -40,6 +42,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114256063869031952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487695047668226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114290820640164148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487695047668226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 159
+    i1: 197
+    i2: 144
+    i3: 228
+    i4: 28
+    i5: 182
+    i6: 180
+    i7: 244
+    i8: 107
+    i9: 1
+    i10: 50
+    i11: 48
+    i12: 234
+    i13: 62
+    i14: 63
+    i15: 70
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114779023823999376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,9 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f141c11d19f5746baede64bd90b4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 11
+  type: 13
   chunksVariants:
-  - {fileID: 218709046991084350, guid: eef52cb70cc7bbb4689993e92fb68e9f, type: 2}
+  - {fileID: 1004523835599790, guid: 873bfe08b30325a4e81c186873763240, type: 2}
   neighboorsL: []
   neighboorsR: []
   neighboorsU: []

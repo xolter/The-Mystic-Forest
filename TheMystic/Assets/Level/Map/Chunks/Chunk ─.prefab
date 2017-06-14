@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4653179602764920}
   - component: {fileID: 114615417245742988}
+  - component: {fileID: 114093393940236282}
+  - component: {fileID: 114245108641290544}
   m_Layer: 0
   m_Name: "Chunk \u2500"
   m_TagString: Untagged
@@ -40,6 +42,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114093393940236282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456707247910576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 203
+    i1: 157
+    i2: 74
+    i3: 10
+    i4: 24
+    i5: 178
+    i6: 191
+    i7: 228
+    i8: 248
+    i9: 215
+    i10: 175
+    i11: 205
+    i12: 164
+    i13: 218
+    i14: 172
+    i15: 173
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114245108641290544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456707247910576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114615417245742988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   chunksVariants:
-  - {fileID: 218537582908725436, guid: d94c4a3f693448944b69420a5943536a, type: 2}
-  - {fileID: 218055455774702150, guid: 0e5cb4e2c0031184a8a9b6094e8f4f73, type: 2}
+  - {fileID: 1649215799860240, guid: f19677fcf150b744caa77e686be169ca, type: 2}
+  - {fileID: 1174232657200024, guid: 30eed7792277f6a47b7f847dc2cf405c, type: 2}
   neighboorsL:
   - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
   - {fileID: 114615417245742988}
