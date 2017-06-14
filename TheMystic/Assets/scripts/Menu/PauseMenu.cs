@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour {
     bool skillsActive = false;
 
     void Update ()
-    {   
+    {    
         if (Input.GetKeyDown(KeyCode.Escape))
 		{
             if (optionActive)

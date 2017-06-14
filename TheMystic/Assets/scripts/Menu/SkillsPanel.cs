@@ -19,7 +19,7 @@ public class SkillsPanel : MonoBehaviour {
 
     void Start()
     {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        //playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
 
         SkillPoint.text = playerstats.SkillPoint.ToString();
 
@@ -37,6 +37,7 @@ public class SkillsPanel : MonoBehaviour {
     }
     void Update ()
     {
+        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         SkillPoint.text = playerstats.SkillPoint.ToString();
 
         Skill1Points.text = playerstats.Skill1Points + "/3";
