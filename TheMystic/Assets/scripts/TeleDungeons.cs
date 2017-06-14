@@ -5,19 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TeleDungeons : MonoBehaviour {
 
-    GameObject player;
     SaveStats savestats;
-
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        savestats = player.GetComponent<SaveStats>();
-
-    }
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            savestats = other.GetComponent<SaveStats>();
             PlayerPrefs.SetInt("load", 0);
             PlayerPrefs.SetInt("save1", 1);
             savestats.Save();

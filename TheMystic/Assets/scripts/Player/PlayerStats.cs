@@ -30,7 +30,8 @@ public class PlayerStats : NetworkBehaviour
     public float damage { get; set; }
     public float autoattack_timer_default { get; set; }
     public static PlayerStats localPlayer;
-    public static List<PlayerStats> players = new List<PlayerStats>();  
+    public static List<PlayerStats> players = new List<PlayerStats>();
+    public static List<PlayerStats> playersAlive = new List<PlayerStats>();
 
 
     public PlayerStats()
@@ -70,5 +71,6 @@ public class PlayerStats : NetworkBehaviour
     private void Start()
     {
         players.Add(this);
+        playersAlive.Add(this);
     }
 }

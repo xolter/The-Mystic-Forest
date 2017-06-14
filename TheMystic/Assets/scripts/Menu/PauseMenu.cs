@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour {
     bool skillsActive = false;
 
     void Update ()
-    {    
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
 		{
             if (optionActive)
@@ -38,11 +38,15 @@ public class PauseMenu : MonoBehaviour {
 			menuObject.SetActive (true);
             //L'affichage du curseur est géré par CurseurManager
             //pause
+            if (PlayerStats.players.Count > 1)
+                return;
             Time.timeScale = 0;
         }
         else if (skillsActive)
         {
             SkillsPanelObject.SetActive(true);
+            if (PlayerStats.players.Count > 1)
+                return;
             Time.timeScale = 0;
         }
 		else

@@ -88,9 +88,10 @@ MonoBehaviour:
   - {fileID: 1430430527085734, guid: f0e6f58d63958b74ba2fedc9cbec1532, type: 2}
   - {fileID: 1107722157527794, guid: 64a08c246eb9eeb46932e87cdb9b3396, type: 2}
   - {fileID: 1600280545211242, guid: 3e9e20ba83c7dc940af9872b6e5c6889, type: 2}
-  - {fileID: 1194496519620750, guid: f3ab47d97970a9b479c7eda79a57896d, type: 2}
   - {fileID: 1998047258116098, guid: 941b6c7eb5e26f742970fd1f4c81771e, type: 2}
   - {fileID: 1901390088475742, guid: 804b52f1debdaeb45a4ee681abeb1198, type: 2}
+  - {fileID: 0}
+  - {fileID: 1012860859230428, guid: ae8a969559a674546b3e148d01b8cf9e, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -120,7 +121,7 @@ MonoBehaviour:
     m_ReactorMaximumReceivedMessages: 1024
     m_ReactorMaximumSentMessages: 1024
     m_MaxPacketSize: 2000
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1

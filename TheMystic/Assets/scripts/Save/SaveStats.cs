@@ -11,7 +11,7 @@ public class SaveStats : MonoBehaviour {
     // Use this for initialization
 	void Start ()
     {
-        playerstats = GetComponent<PlayerStats>();
+        playerstats = PlayerStats.localPlayer;
         if (PlayerPrefs.GetInt("load") == 1 || PlayerPrefs.GetInt("save1") == 1)
         {
             if (PlayerPrefs.GetInt("load") == 1)
