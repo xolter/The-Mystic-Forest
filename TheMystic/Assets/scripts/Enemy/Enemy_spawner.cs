@@ -10,15 +10,22 @@ public class Enemy_spawner : NetworkBehaviour
     public float currentCoolDown = 0f;
     GameObject[] players;
     [SerializeField]
+    float rate;
+    int curr;
+    [SerializeField]
     Transform position;
     void Start ()
     {
         //players = null; //GameObject.FindGameObjectsWithTag("Player");
+        curr = 0;
+        rate = (rate == 0) ? Mathf.Infinity : rate;
         InvokeRepeating("Spawn", currentCoolDown, coolDown);               
     }   
     void Spawn()
-    {        
-        
+    {
+        if (curr >= rate)
+            return;
+        curr += 1;
         if (!isServer)
             return;
         if (PlayerStats.players.Find(p => p.currentHealth > 0f) == null)

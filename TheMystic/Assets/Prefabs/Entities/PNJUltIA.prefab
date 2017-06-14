@@ -1771,7 +1771,7 @@ MonoBehaviour:
   healthbar: {fileID: 114165086830675014}
   target: {fileID: 0}
   max_health: 50
-  current_health: 46.599922
+  current_health: 50
   regen_health: -0.04
 --- !u!114 &114895073239789064
 MonoBehaviour:
