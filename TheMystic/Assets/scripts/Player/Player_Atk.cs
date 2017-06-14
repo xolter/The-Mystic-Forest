@@ -12,6 +12,11 @@ public class Player_Atk : NetworkBehaviour
     public PlayerStats playerstats;
     public PlayerAttk basicAtk;
 
+    private Skill GetSkill(int id)
+    {
+        return skills.Find(skill => skill.id == id);
+    }
+
     void Start()
     {
 
@@ -56,16 +61,38 @@ public class Player_Atk : NetworkBehaviour
                 {
                     if (s.currentCoolDown >= s.cooldown)
                     {
-                        s.currentCoolDown = 0;
-                        GameObject particle = s.particle;
-                        Destroy(Instantiate(particle, transform.position, transform.rotation), s.timeEffect);
+                        s.currentCoolDown = 0;                        
                         playerstats.currentMana -= s.manaCost;
                         s.audiosource.Play();
+                        if(isServer)
+                        {
+                            SpawnParticles(s.id);
+                        }
+                        else
+                        {
+                            CmdSpawnParticles(s.id);
+                        }
+
                     }
                 }
             }
         }
     }
+    [Command]
+    void CmdSpawnParticles(int id)
+    {
+        SpawnParticles(id);
+    }
+    void SpawnParticles(int id)
+    {
+        Skill s = GetSkill(id);
+        GameObject particle = s.particle;
+        var temp = (GameObject)Instantiate(particle, transform.position, transform.rotation);
+        NetworkServer.Spawn(temp);
+        Destroy(temp, s.timeEffect);
+    }
+
+
     void Update()
     {
         if (!isLocalPlayer)
@@ -76,59 +103,57 @@ public class Player_Atk : NetworkBehaviour
             {
                 s.currentCoolDown += Time.deltaTime;
                 s.skillIcon.fillAmount = s.currentCoolDown / s.cooldown;
-                Buff(s);            
+                Buff(s.id);
+                Debug.Log("Buffed");
             }           
             else if (s.currentCoolDown >= s.cooldown)
             {
-                Debuff(s);
+                Debuff(s.id);
             } 
         }        
     }
 
-    public void Buff(Skill skill)
+    private void Buff(int id)
     {
-        switch (skill.name)
+        switch (id)
         {
-            case ("Skill1"):
-                playerstats.regenHealth = playerstats.Skill1Points * 0.2f; //j'ai changé la
-                //health.regen_health = 0.2f; //
-                //health.Update_currentHealth(20); // 
+            case 1:
+                playerstats.regenHealth = playerstats.Skill1Points * 0.2f;
                 break;
-            case ("Skill2"):
+            case 2:
+                Skill skill = GetSkill(id);
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
                     playerstats.damage = playerstats.Skill1Points * 15 + playerstats.default_damages; // j'ai changé ici 
-                    basicAtk.cooldown = playerstats.autoattack_timer_default / 2;                    
-                    Debug.Log("HERE");
+                    basicAtk.cooldown = playerstats.autoattack_timer_default / 2;
                 }
                 else
-                    Debuff(skill);
+                    Debuff(id);
                 break;
-            case ("Skill3"):
+            case 3:
                 break;
-            case ("Skill4"):
+            case 4:
                 break;
             default:
                 break;
         }
     }
-    public void Debuff(Skill skill)
+
+    private void Debuff(int id)
     {
-        switch (skill.name)
+        switch (id)
         {
-            case ("Skill1"):
+            case 1:
                 playerstats.regenHealth = 0f;
                 //health.regen_health = 0f;
                 break;
-            case ("Skill2"):
-                {
-                    playerstats.damage = playerstats.default_damages;
-                    basicAtk.cooldown = playerstats.autoattack_timer_default;
-                }
+            case 2:
+                playerstats.damage = playerstats.default_damages;
+                basicAtk.cooldown = playerstats.autoattack_timer_default;
                 break;
-            case ("Skill3"):
+            case 3:
                 break;
-            case ("Skill4"):               
+            case 4:
                 break;
             default:
                 break;
@@ -140,6 +165,7 @@ public class Player_Atk : NetworkBehaviour
 public class Skill
 {
     public string name;
+    public int id;
     public float cooldown;
     public Image skillIcon;
     public float currentCoolDown;

@@ -31,13 +31,13 @@ public class IA : NetworkBehaviour
     {
         if (!isServer)
             return;
-
         if (closest == null)
         {
             closest = FindClosestPlayer();
             playerstats = closest.GetComponent<PlayerStats>();
             target = closest.transform;
         }
+        Debug.Log("type: " + gameObject + " health: " + health + " playerstat: " + playerstats);
         if (health.current_health > 0 && playerstats.currentHealth > 0)
         {
             Vector3 b = Vector3.zero;

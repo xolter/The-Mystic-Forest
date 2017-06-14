@@ -11,6 +11,7 @@ public class FixCamera : NetworkBehaviour
         if (!isLocalPlayer)
         {
             camera.enabled = false;
+            transform.FindChild("UI 2.0").gameObject.SetActive(false);
         }
     }
     void Update()

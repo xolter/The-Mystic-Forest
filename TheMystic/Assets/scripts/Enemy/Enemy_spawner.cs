@@ -21,11 +21,9 @@ public class Enemy_spawner : NetworkBehaviour
         
         if (!isServer)
             return;
-
         if (PlayerStats.players.Find(p => p.currentHealth > 0f) == null)
             return;
         var toSpawn = (GameObject)Instantiate(enemy, position.position, position.rotation);
         NetworkServer.Spawn(toSpawn);
-
     }
 }
