@@ -1,53 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine.UI;
 public class Inventory : MonoBehaviour {
 
-    public Item[] items;
-    public PlayerStats playerstats;
-    public GameObject Slot1;
-    public Image imageItem1;
+    private RectTransform inventoryRect;
 
-    public Sprite healthpopo;
+    private float inventoryWidth, inventoryHight;
+
+    public int slots;
+
+    public int rows;
+
+    public float slotPaddingLeft, slotPaddingTop;
+
+    public float slotSize;
+
+    public GameObject slotPrefab;
+
+    private List<GameObject> allSlots;
 
     void Start()
     {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        items = new Item[5];
-        Slot1 = GameObject.FindGameObjectWithTag("Slot1");
-        healthpopo = GameObject.FindGameObjectWithTag("Item1").GetComponent<Image>().sprite;
-        imageItem1.sprite = healthpopo;
+        CreateLeyout();
     }
-    
     void Update()
     {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        items = new Item[5];
-        Slot1 = GameObject.FindGameObjectWithTag("Slot1");
-        healthpopo = GameObject.FindGameObjectWithTag("Item1").GetComponent<Image>().sprite;
-        
+            
     }
-
-    public void UpdateDisplay()
+    private void CreateLeyout()
     {
+        allSlots = new List<GameObject>();
+
+        inventoryWidth = (slots / rows) * (slotSize + slotPaddingLeft) + slotPaddingLeft;
+        inventoryHight = rows * (slotSize + slotPaddingTop) + slotPaddingTop;
+        inventoryRect = GetComponent<RectTransform>();
+        inventoryRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, inventoryWidth);
+        inventoryRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, inventoryHight);
     }
 
-    public void Use()
-    {
-    }
-
-    public void addItem(Item item)
-    {
-        
-    }
-
-}
-[System.Serializable]
-public class Item
-{
-    public enum type { ManaPopo, HealthPopo };
-    public Sprite itemIcon;
 }
 
