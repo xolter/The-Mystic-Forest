@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4677387809766740}
   - component: {fileID: 114053827857732258}
+  - component: {fileID: 114651428574176756}
+  - component: {fileID: 114243211894826184}
   m_Layer: 0
   m_Name: "Chunk \u2524"
   m_TagString: Untagged
@@ -53,8 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 8
   chunksVariants:
-  - {fileID: 218333568433913142, guid: 6b0cc52b42ec88640a537460e693952a, type: 2}
-  - {fileID: 218712679302241862, guid: c8019e1d25d053449b9f18342d518dcc, type: 2}
+  - {fileID: 1706878211539610, guid: 500547c64a959b349a669f7248add528, type: 2}
+  - {fileID: 1943384669221100, guid: 61978286b6cd4944d87744ebabf3ed6e, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114615417245742988, guid: cb9d4a0a18b2bfe4f8d7afcda4daacad, type: 2}
@@ -88,3 +90,55 @@ MonoBehaviour:
   - {fileID: 114053827857732258}
   - {fileID: 114214035658558980, guid: 30ae383cc0356b347b28ce65e0e50c19, type: 2}
   - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
+--- !u!114 &114243211894826184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205758455631814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114651428574176756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1205758455631814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 128
+    i1: 18
+    i2: 105
+    i3: 218
+    i4: 19
+    i5: 166
+    i6: 171
+    i7: 52
+    i8: 90
+    i9: 75
+    i10: 68
+    i11: 213
+    i12: 111
+    i13: 43
+    i14: 26
+    i15: 11
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

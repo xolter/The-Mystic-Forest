@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4153625478060488}
   - component: {fileID: 114214035658558980}
+  - component: {fileID: 114073290838351050}
+  - component: {fileID: 114898188594543566}
   m_Layer: 0
   m_Name: "Chunk \u2534"
   m_TagString: Untagged
@@ -40,6 +42,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114073290838351050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851756255732860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 48
+    i1: 174
+    i2: 56
+    i3: 60
+    i4: 192
+    i5: 53
+    i6: 107
+    i7: 52
+    i8: 123
+    i9: 40
+    i10: 206
+    i11: 101
+    i12: 224
+    i13: 229
+    i14: 12
+    i15: 25
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114214035658558980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,8 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 10
   chunksVariants:
-  - {fileID: 218032385479104142, guid: bc4ccaf7bde3d5f46bd806b64166edaf, type: 2}
-  - {fileID: 218416844890901012, guid: 206e0753a1c18bc47aee8be5b027eeee, type: 2}
+  - {fileID: 1951161626339306, guid: baf01568c676e064a9d796c75604347f, type: 2}
+  - {fileID: 1025675913576196, guid: 3bb372e8dead4f6499d1b42f8ae14387, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114615417245742988, guid: cb9d4a0a18b2bfe4f8d7afcda4daacad, type: 2}
@@ -88,3 +122,23 @@ MonoBehaviour:
   - {fileID: 114136209316855988, guid: 2028a3b631363224aab7892826f1e638, type: 2}
   - {fileID: 114889060058936304, guid: f1a5bc99423578d4abaae23cadfdba2b, type: 2}
   - {fileID: 114397322415265656, guid: 045f38cb07f28da47b07844652fcbac0, type: 2}
+--- !u!114 &114898188594543566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851756255732860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4813206549075054}
   - component: {fileID: 114034811947101250}
+  - component: {fileID: 114446328156410644}
+  - component: {fileID: 114921546325153956}
   m_Layer: 0
   m_Name: "Chunk \u2502"
   m_TagString: Untagged
@@ -53,8 +55,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   chunksVariants:
-  - {fileID: 218359161458721552, guid: acb7f8f4718b490449fac21fc27ec117, type: 2}
-  - {fileID: 218369547029762938, guid: 93de326b2eb5ab04580aec8055fec285, type: 2}
+  - {fileID: 1551630795374678, guid: c5bce789458471f4aac6c1ec6a78a4b0, type: 2}
+  - {fileID: 1290820162021806, guid: 6fa353aa4b0d0e946a0eddc4110d2a7a, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}
@@ -86,3 +88,55 @@ MonoBehaviour:
   - {fileID: 114493732793068970, guid: e8bca68596671644d825ccd09038a689, type: 2}
   - {fileID: 114214035658558980, guid: 30ae383cc0356b347b28ce65e0e50c19, type: 2}
   - {fileID: 114850948833391028, guid: e4d7c60a4e5a3d64d80f06e79d62fad6, type: 2}
+--- !u!114 &114446328156410644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095192064827474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 83
+    i1: 82
+    i2: 220
+    i3: 18
+    i4: 176
+    i5: 173
+    i6: 205
+    i7: 132
+    i8: 43
+    i9: 29
+    i10: 11
+    i11: 58
+    i12: 131
+    i13: 0
+    i14: 221
+    i15: 236
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114921546325153956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095192064827474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

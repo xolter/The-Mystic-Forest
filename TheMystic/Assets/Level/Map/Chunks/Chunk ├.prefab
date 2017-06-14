@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4033609023487898}
   - component: {fileID: 114493732793068970}
+  - component: {fileID: 114409331121430892}
+  - component: {fileID: 114089783329565212}
   m_Layer: 0
   m_Name: "Chunk \u251C"
   m_TagString: Untagged
@@ -40,6 +42,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114089783329565212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922031599218474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114409331121430892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922031599218474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 232
+    i1: 188
+    i2: 166
+    i3: 133
+    i4: 150
+    i5: 103
+    i6: 22
+    i7: 68
+    i8: 216
+    i9: 37
+    i10: 204
+    i11: 208
+    i12: 144
+    i13: 56
+    i14: 166
+    i15: 137
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114493732793068970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 7
   chunksVariants:
-  - {fileID: 218328589886925310, guid: c67f68479c0d7124b8ba3a10798132bb, type: 2}
-  - {fileID: 218421779628414786, guid: 18b85b7f2b6a9114dbf234fdc343b883, type: 2}
+  - {fileID: 1277464501514500, guid: 3f7f7c5f36fb86643ba523fd3ab3c82e, type: 2}
+  - {fileID: 1942295592633984, guid: 82c64073246182f4cb399260fe0a8d03, type: 2}
   neighboorsL:
   - {fileID: 114467983098870904, guid: fa3090df0431e7c46a690f6a61b44800, type: 2}
   - {fileID: 114779023823999376, guid: 9fc590e41cb6b4f46b013230ea3e3f46, type: 2}

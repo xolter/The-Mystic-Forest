@@ -16,7 +16,7 @@ public class SaveMap : MonoBehaviour {
     public void Savemap()
     {
         mapgen2 = GetComponent<Map_Generator2>();
-        map = mapgen2.map;
+        map = Map_Generator2.map;
 
         string position;
         string mapname;

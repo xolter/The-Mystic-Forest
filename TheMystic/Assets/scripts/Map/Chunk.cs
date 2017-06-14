@@ -6,7 +6,7 @@ public enum ChunkType { BLcorner, BRcorner, TLcorner, TRcorner, VPipe, HPipe, Cr
 public class Chunk : MonoBehaviour
 {
     public ChunkType type;
-    public List<Terrain> chunksVariants;
+    public List<GameObject> chunksVariants;
     //public Terrain chunk;
     public List<Chunk> neighboorsL;
     public List<Chunk> neighboorsR;
