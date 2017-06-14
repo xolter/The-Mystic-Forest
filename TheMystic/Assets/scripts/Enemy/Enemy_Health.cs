@@ -11,6 +11,7 @@ public class Enemy_Health : NetworkBehaviour
     Player_Exp target_xp;
     [SyncVar]
     public float max_health = 100;
+    [SyncVar]
     public float current_health = 100;
     public float regen_health = 0f;
     private bool xpGiven = false;

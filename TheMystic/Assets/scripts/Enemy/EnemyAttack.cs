@@ -55,11 +55,7 @@ public class EnemyAttack : NetworkBehaviour
             {
                 attTimer -= Time.deltaTime;
             }
-            if (attTimer < 0)
-            {
-                attTimer = 0;
-            }
-            if (attTimer == 0)
+            if (attTimer <= 0)
             {
                 Attack();
                 attTimer = cooldown;
@@ -88,6 +84,7 @@ public class EnemyAttack : NetworkBehaviour
             {
                 isAttacking = true;
                 RpcAttack(playerstats.gameObject);
+                Debug.Log("HIT");
             }
         }
         

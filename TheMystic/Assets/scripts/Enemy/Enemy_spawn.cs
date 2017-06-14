@@ -23,7 +23,7 @@ public class Enemy_spawn : NetworkBehaviour
             {
                 once = false;
                 var temp = (GameObject)Instantiate(toSpawn, transform.position, transform.rotation);
-                NetworkServer.Spawn(temp);
+                NetworkServer.Spawn(temp);                
             }
         }
         else

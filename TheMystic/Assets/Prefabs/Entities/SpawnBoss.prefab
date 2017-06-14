@@ -71,7 +71,7 @@ MonoBehaviour:
     i13: 235
     i14: 114
     i15: 77
-  m_ServerOnly: 0
+  m_ServerOnly: 1
   m_LocalPlayerAuthority: 0
 --- !u!114 &114747124742649938
 MonoBehaviour:
@@ -84,7 +84,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f07c2f87dd7cde469f70556e2864a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPos: {fileID: 4061951484640058}
   toSpawn: {fileID: 1194496519620750, guid: f3ab47d97970a9b479c7eda79a57896d, type: 2}
   delay: 6
   actuaDelay: 0
