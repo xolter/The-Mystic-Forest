@@ -12,20 +12,19 @@ public class GameOverScene : MonoBehaviour//NetworkBehaviour
     private bool gameOverisActive = false;
     public AudioSource Mainmusic;
     public AudioSource DeathMusic;
-    bool already_played = false;
-    PlayerStats playerstats;
+    bool already_played = false;    
 
     void Start()
-    {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
-        Debug.Log("playerstats: " + playerstats);
+    {        
+        gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");         
     }
     void Update()
     {
-        if (PlayerStats.localPlayer == null)
+        Debug.Log("playerstats: " + PlayerStats.localPlayer);
+        if (PlayerStats.localPlayer != null)
         {
-            gameOverisActive = playerstats.currentHealth <= 0;
+            Debug.Log("HERE! " + PlayerStats.localPlayer);
+            gameOverisActive = PlayerStats.localPlayer.currentHealth <= 0;
             if (gameOverisActive)
             {
                 gameOverObject.SetActive(true);
@@ -38,7 +37,7 @@ public class GameOverScene : MonoBehaviour//NetworkBehaviour
             }
             else
             {
-                gameOverObject.SetActive(false);
+                gameOverObject.SetActive(false);                
             }
         }
         //L'affichage du curseur est géré par CurseurManager

@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4407892682128566}
+  - component: {fileID: 114946818654451654}
   m_Layer: 0
   m_Name: Skill2_Particles
   m_TagString: Untagged
@@ -70,6 +71,38 @@ Transform:
   m_Father: {fileID: 4407892682128566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114946818654451654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1430430527085734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 240
+    i1: 230
+    i2: 245
+    i3: 141
+    i4: 99
+    i5: 149
+    i6: 139
+    i7: 116
+    i8: 186
+    i9: 47
+    i10: 237
+    i11: 201
+    i12: 203
+    i13: 236
+    i14: 21
+    i15: 50
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!198 &198996562552602094
 ParticleSystem:
   m_ObjectHideFlags: 1

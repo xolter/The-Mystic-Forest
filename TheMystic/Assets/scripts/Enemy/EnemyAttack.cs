@@ -40,11 +40,8 @@ public class EnemyAttack : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("1");
         if (!isServer)
             return;
-        Debug.Log("2");
-
         if (closest == null)
         {
             target = FindClosestEnemy();
@@ -52,37 +49,28 @@ public class EnemyAttack : NetworkBehaviour
         }
 
         stop = own.current_health <= 0 || playerstats.currentHealth <= 0;
-        Debug.Log("3");
         if (!stop)
         {
-            Debug.Log("4");
             if (attTimer > 0)
             {
                 attTimer -= Time.deltaTime;
-                Debug.Log("5");
             }
             if (attTimer < 0)
             {
                 attTimer = 0;
-                Debug.Log("6");
             }
             if (attTimer == 0)
             {
                 Attack();
                 attTimer = cooldown;
-                Debug.Log("7");
             }
         }   
         else
         {
-            Debug.Log("8");
             if (playerstats.currentHealth <= 0)
             {
-                Debug.Log("9");
                 target = FindClosestEnemy();
-                Debug.Log("10");
                 playerstats = target.GetComponent<PlayerStats>();
-                Debug.Log("11");
             }
         }
     }
@@ -100,7 +88,6 @@ public class EnemyAttack : NetworkBehaviour
             {
                 isAttacking = true;
                 RpcAttack(playerstats.gameObject);
-                Debug.Log("HERE");
             }
         }
         
@@ -108,8 +95,7 @@ public class EnemyAttack : NetworkBehaviour
     [ClientRpc]
     private void RpcAttack(GameObject obj)
     {
-        obj.GetComponent<PlayerStats>().currentHealth = obj.GetComponent<PlayerStats>().currentHealth - damage;
-        Debug.Log("LIFE: " + obj.GetComponent<PlayerStats>().currentHealth);
+        obj.GetComponent<PlayerStats>().currentHealth -= damage;
     }
     private GameObject FindClosestEnemy()
     {
