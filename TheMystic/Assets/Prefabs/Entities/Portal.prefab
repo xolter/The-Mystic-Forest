@@ -111,9 +111,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4697142549140314}
-  - component: {fileID: 114566975264420864}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: SpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +311,7 @@ GameObject:
   - component: {fileID: 114372837256022650}
   - component: {fileID: 114323203190759832}
   - component: {fileID: 114212361083845896}
+  - component: {fileID: 114165760596155526}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Enemy
@@ -456,13 +456,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537401169622402}
-  m_LocalRotation: {x: 0.86292183, y: 0.0211613, z: -0.009323224, w: -0.5048082}
-  m_LocalPosition: {x: -0.093000405, y: 0.12749983, z: -0.06340002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.059062537, y: 0.059062496, z: 0.059062555}
   m_Children: []
   m_Father: {fileID: 4123388384257584}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: -60.555004, y: -175.63, z: -185.361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4763511453187088
 Transform:
   m_ObjectHideFlags: 1
@@ -1151,7 +1151,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b89251b1e32d74f863173e0e8b6442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 0}
+--- !u!114 &114165760596155526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998047258116098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a71a05e4aa58547be4d693f90d97bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1958656354155350, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
+  coolDown: 15
+  currentCoolDown: 0
+  rate: 0
+  position: {fileID: 4123388384257584}
 --- !u!114 &114212361083845896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1288,21 +1303,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114566975264420864
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537401169622402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05a71a05e4aa58547be4d693f90d97bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 1958656354155350, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
-  coolDown: 15
-  currentCoolDown: 0
-  position: {fileID: 0}
 --- !u!114 &114822674667315586
 MonoBehaviour:
   m_ObjectHideFlags: 1

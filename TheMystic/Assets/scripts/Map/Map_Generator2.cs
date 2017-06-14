@@ -8,6 +8,7 @@ public class Map_Generator2 : NetworkBehaviour
 
     public List<Chunk> chunks;
     static public Chunk[,] map;
+    static bool[,] hasPortal;
     public Chunk bound;
     public GameObject spawner;
     public GameObject portal;
@@ -18,22 +19,16 @@ public class Map_Generator2 : NetworkBehaviour
 
     void Start()
     {
-        Debug.Log("0");
         if (!isServer)
         {
             InGameDisplayClient();
-            Debug.Log("Displaying");            
+            SetPortalClient();          
             return;
         }
-        Debug.Log("1");
         MapInit();
-        Debug.Log("2");
         Generator();
-        Debug.Log("3");
         InGameDisplay();
-        Debug.Log("4");
         SetPortal();
-        Debug.Log("5");
     }
     void Update()
     {
@@ -149,9 +144,8 @@ public class Map_Generator2 : NetworkBehaviour
     }
 
     void SetPortal()
-    {        
-        //int rate = Length * Width / 10;
-        bool[,] hasPortal = new bool[Length, Width];
+    {
+        hasPortal = new bool[Length, Width];
         for (int i = 0; i < Length; i++)
             for (int j = 0; j < Width; j++)
                 hasPortal[i, j] = false;
@@ -164,12 +158,23 @@ public class Map_Generator2 : NetworkBehaviour
                 {
                     if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i, j])
                     {                        
-                        Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);
+                        var temp = (GameObject)Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);
+                        NetworkServer.Spawn(temp);
+                        Debug.Log("Portal placed at:" + i + ", " + j);
                         curr_rate += 1;
                         hasPortal[i, j] = true;
                     }
                 }
             }
+    }
+
+    void SetPortalClient()
+    {
+        Quaternion rotation = Quaternion.Euler(120, 0, 0);
+        for (int i = 0; i < Length; i++)        
+            for (int j = 0; j < Width; j++)            
+                if (hasPortal[i, j])
+                    Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);                    
     }
     int PortalCount()
     {

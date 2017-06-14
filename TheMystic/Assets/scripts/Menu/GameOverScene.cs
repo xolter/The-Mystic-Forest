@@ -20,10 +20,8 @@ public class GameOverScene : MonoBehaviour//NetworkBehaviour
     }
     void Update()
     {
-        Debug.Log("playerstats: " + PlayerStats.localPlayer);
         if (PlayerStats.localPlayer != null)
         {
-            Debug.Log("HERE! " + PlayerStats.localPlayer);
             gameOverisActive = PlayerStats.localPlayer.currentHealth <= 0;
             if (gameOverisActive)
             {

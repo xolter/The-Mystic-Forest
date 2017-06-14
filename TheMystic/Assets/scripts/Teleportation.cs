@@ -12,11 +12,16 @@ public class Teleportation : MonoBehaviour
         
         if (other.tag == "Player")
         {
-            savestats = other.GetComponent<SaveStats>();
-            PlayerPrefs.SetInt("load", 0);
-            PlayerPrefs.SetInt("save1", 1);
-            savestats.Save();
-            NetworkManager.singleton.ServerChangeScene("Base");            
+           GameObject[] temp = GameObject.FindGameObjectsWithTag("Player");
+           foreach(GameObject player in temp)
+           {
+              player.GetComponent<SaveStats>().Save();
+                Debug.Log(player + "Saved");
+           }
+           
+           PlayerPrefs.SetInt("load", 0);
+           PlayerPrefs.SetInt("save1", 1);            
+            NetworkManager.singleton.ServerChangeScene("ForestDugeon");            
         }
     }
 }
