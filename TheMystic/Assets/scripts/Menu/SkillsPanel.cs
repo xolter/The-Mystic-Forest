@@ -19,7 +19,7 @@ public class SkillsPanel : MonoBehaviour {
 
     void Start()
     {
-        //playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
 
         SkillPoint.text = playerstats.SkillPoint.ToString();
 
