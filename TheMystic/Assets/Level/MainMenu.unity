@@ -23560,6 +23560,17 @@ Prefab:
       propertyPath: m_CustomConfig
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114214211490898268, guid: d52040ea1eae6d245a6b773d8a87e291,
+        type: 2}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 1234090573530072, guid: 5bc58d3c9b1c0d048be5fdaf49dc9fe8,
+        type: 2}
+    - target: {fileID: 114178989492747784, guid: d52040ea1eae6d245a6b773d8a87e291,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d52040ea1eae6d245a6b773d8a87e291, type: 2}
   m_IsPrefabParent: 0

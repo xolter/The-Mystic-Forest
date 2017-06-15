@@ -9,7 +9,7 @@ public class CharacterController : NetworkBehaviour
     [System.Serializable]
     public class MoveSettings
     {
-        public float forwardVel = 12;
+        public float forwardVel = PlayerStats.localPlayer.defaultMoveSpeed;
         public float rotateVel = 100;
         public float jumpvel = 25;
         public float distToGrounded = 0.1f;
@@ -79,6 +79,7 @@ public class CharacterController : NetworkBehaviour
     {
         if (!isLocalPlayer)
             return;
+        moveSettings.forwardVel = PlayerStats.localPlayer.moveSpeed;
         GetInput();
         if (CanRotate())
         {

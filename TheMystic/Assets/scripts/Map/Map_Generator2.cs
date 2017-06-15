@@ -8,8 +8,7 @@ public class Map_Generator2 : NetworkBehaviour
 
     public List<Chunk> chunks;
     static public Chunk[,] map;
-    static bool[,] hasPortal;
-    [SerializeField] public static int xpos;    
+    static bool[,] hasPortal;  
     public Chunk bound;
     public GameObject spawner;
     public GameObject portal;
@@ -30,13 +29,12 @@ public class Map_Generator2 : NetworkBehaviour
         Generator();
         InGameDisplay();
         SetPortal();
-        xpos += 80 * (Length + 3);
     }
     void Update()
     {
         if (!isServer)
             return;
-        if (PortalCount() == 0 && once)
+        if ((PortalCount() == 0 && once) || Input.GetKeyDown(KeyCode.L))
         {
             var temp = (GameObject)Instantiate(portal, new Vector3(-40, 0, -40), new Quaternion());
             NetworkServer.Spawn(temp);
@@ -109,7 +107,7 @@ public class Map_Generator2 : NetworkBehaviour
             for (int j = 0; j < Width + 2; j++)
             {
                 int rdm = Random.Range(0, map[i,j].chunksVariants.Count);
-                var temp = (GameObject)Instantiate(map[i,j].chunksVariants[rdm], new Vector3(i * -80 + xpos, 0, j * -80), map[i, j].transform.rotation);
+                var temp = (GameObject)Instantiate(map[i,j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
                 NetworkServer.Spawn(temp);
             }
         }                    
@@ -127,7 +125,7 @@ public class Map_Generator2 : NetworkBehaviour
                 Debug.Log("..2");                
                 int rdm = Random.Range(0, map[i, j].chunksVariants.Count);
                 Debug.Log("..3");
-                Instantiate(map[i, j].chunksVariants[rdm], new Vector3(i * -80 + xpos, 0, j * -80), map[i, j].transform.rotation);
+                Instantiate(map[i, j].chunksVariants[rdm], new Vector3(i * -80, 0, j * -80), map[i, j].transform.rotation);
                 Debug.Log("..4");
             }
         }
@@ -160,7 +158,7 @@ public class Map_Generator2 : NetworkBehaviour
                 {
                     if (Random.Range(0, 99) == 4 && curr_rate < rate && !hasPortal[i, j])
                     {                        
-                        var temp = (GameObject)Instantiate(spawner, new Vector3(i * -80 + xpos, 1, j - 80 - 40), rotation);
+                        var temp = (GameObject)Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);
                         NetworkServer.Spawn(temp);
                         Debug.Log("Portal placed at:" + i + ", " + j);
                         curr_rate += 1;
@@ -176,7 +174,7 @@ public class Map_Generator2 : NetworkBehaviour
         for (int i = 0; i < Length; i++)        
             for (int j = 0; j < Width; j++)            
                 if (hasPortal[i, j])
-                    Instantiate(spawner, new Vector3(i * -80 + xpos, 1, j - 80 - 40), rotation);                    
+                    Instantiate(spawner, new Vector3(i * -80, 1, j - 80 - 40), rotation);                    
     }
     int PortalCount()
     {

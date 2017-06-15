@@ -42,6 +42,8 @@ public class EnemyAttack : NetworkBehaviour
     {
         if (!isServer)
             return;
+        if (PlayerStats.players.Count < 1)
+            return;
         if (closest == null)
         {
             target = FindClosestEnemy();

@@ -1200,8 +1200,8 @@ MonoBehaviour:
   healthbar: {fileID: 114879220352529474, guid: 2b4cb26482b08ac4087eb01c34dfc9d5,
     type: 2}
   target: {fileID: 0}
-  max_health: 10000
-  current_health: 10000
+  max_health: 400
+  current_health: 400
   regen_health: 0.017
 --- !u!114 &114865461149334282
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   own: {fileID: 0}
   attTimer: 0
   cooldown: 0
-  damage: 30
+  damage: 20
 --- !u!137 &137066571288640492
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

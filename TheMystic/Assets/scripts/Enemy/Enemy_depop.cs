@@ -9,7 +9,7 @@ public class Enemy_depop : MonoBehaviour
     public float timetopop;
 	void Update ()
     {
-        if (health.current_health <= 0)
+        if (health.current_health <= 2)
             Destroy(self, timetopop);	
 	}
 }

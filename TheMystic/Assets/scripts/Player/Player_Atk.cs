@@ -59,7 +59,7 @@ public class Player_Atk : NetworkBehaviour
             {
                 if (Input.GetKeyDown(s.bind))
                 {
-                    if (s.currentCoolDown >= s.cooldown)
+                    if (s.currentCoolDown >= s.cooldown && (playerstats.currentMana - s.manaCost) >= 0)
                     {
                         s.currentCoolDown = 0;                        
                         playerstats.currentMana -= s.manaCost;
@@ -114,22 +114,26 @@ public class Player_Atk : NetworkBehaviour
 
     private void Buff(int id)
     {
+        Skill skill = GetSkill(id);
         switch (id)
         {
             case 1:
                 playerstats.regenHealth = playerstats.Skill1Points * 0.2f;
                 break;
-            case 2:
-                Skill skill = GetSkill(id);
+            case 2:               
                 if (skill.currentCoolDown <= skill.timeEffect)
                 {
-                    playerstats.damage = playerstats.Skill1Points * 15 + playerstats.default_damages; // j'ai changé ici 
+                    playerstats.damage = playerstats.Skill2Points * 15 + playerstats.default_damages; // j'ai changé ici 
                     basicAtk.cooldown = playerstats.autoattack_timer_default / 2;
                 }
                 else
                     Debuff(id);
                 break;
-            case 3:
+            case 3:                ;
+                if (skill.currentCoolDown <= skill.timeEffect)
+                {
+                    playerstats.moveSpeed = playerstats.Skill3Points * 0.5f * playerstats.defaultMoveSpeed + playerstats.defaultMoveSpeed;
+                }
                 break;
             case 4:
                 break;
@@ -151,6 +155,7 @@ public class Player_Atk : NetworkBehaviour
                 basicAtk.cooldown = playerstats.autoattack_timer_default;
                 break;
             case 3:
+                playerstats.moveSpeed = playerstats.defaultMoveSpeed;
                 break;
             case 4:
                 break;

@@ -14,6 +14,8 @@ public class PlayerStats : NetworkBehaviour
     public int maxMana { get; set; }
     public int minMana { get; set; }
     public float regenMana { get; set; }
+    public float moveSpeed { get; set; }
+    public float defaultMoveSpeed { get; set; }
 
     public int xp { get; set; }
     public int maxXp { get; set; }
@@ -36,10 +38,12 @@ public class PlayerStats : NetworkBehaviour
 
     public PlayerStats()
     {
-        currentHealth = 100;
-        maxHealth = 100;
+        currentHealth = 300;
+        maxHealth = 300;
         minHealth = 0;
         regenHealth = 0;
+        moveSpeed = 12;
+        defaultMoveSpeed = 12;
 
         currentMana = 100;
         maxMana = 100;

@@ -31,6 +31,8 @@ public class IA : NetworkBehaviour
     {
         if (!isServer)
             return;
+        if (PlayerStats.players.Count < 1)
+            return;
         if (closest == null)
         {
             closest = FindClosestPlayer();

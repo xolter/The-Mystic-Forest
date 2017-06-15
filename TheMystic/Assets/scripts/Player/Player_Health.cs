@@ -51,6 +51,7 @@ public class Player_Health : NetworkBehaviour
         if (playerstats.currentHealth <= 0)
         {
             playerstats.currentHealth = 0;
+            PlayerStats.players.Remove(PlayerStats.localPlayer);
         }
         if (playerstats.currentHealth > playerstats.maxHealth)
         {
