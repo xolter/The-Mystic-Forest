@@ -16,12 +16,12 @@ public class Enemy_Health : NetworkBehaviour
     public float regen_health = 0f;
     private bool xpGiven = false;
     //private Item healthpopo;
-    public Inventory inventory; // ici
+    //public Inventory inventory; // ici
 
     public override void OnStartServer()
     {
         //healthpopo.type = ItemType.HEALTH;//la
-        inventory = GameObject.FindGameObjectWithTag("TheInventory").GetComponent<Inventory>();//la
+        //inventory = GameObject.FindGameObjectWithTag("TheInventory").GetComponent<Inventory>();//la
         base.OnStartServer();        
         healthbar.fillAmount = (float)current_health / max_health;
     }
@@ -45,7 +45,7 @@ public class Enemy_Health : NetworkBehaviour
             if (!xpGiven)
             {
                 target_xp.Update_EXP();
-                inventory.AddItem(GameObject.FindGameObjectWithTag("popovie").GetComponent<Item>());//la
+                //inventory.AddItem(GameObject.FindGameObjectWithTag("popovie").GetComponent<Item>());//la
 
                 xpGiven = true;
             }

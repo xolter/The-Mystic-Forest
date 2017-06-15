@@ -6,10 +6,12 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject menuObject;
 	public GameObject optionObject;
-    public GameObject SkillsPanelObject;   
-	bool optionActive = false;
+    public GameObject SkillsPanelObject;
+    public GameObject InventoryObject;
+    bool optionActive = false;
 	bool isActive = false;
     bool skillsActive = false;
+    bool InventoryActive = false;
 
     void Update ()
     {
@@ -23,6 +25,10 @@ public class PauseMenu : MonoBehaviour {
             {
                 skillsActive = !skillsActive;
             }
+            else if (InventoryActive)
+            {
+                InventoryActive = !InventoryActive;
+            }
             else
             {
                 isActive = !isActive;
@@ -31,6 +37,10 @@ public class PauseMenu : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.K) && !isActive)
         {
             skillsActive = !skillsActive;
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            InventoryActive = !InventoryActive;
         }
         //menu affiché
         if (isActive)
@@ -66,7 +76,15 @@ public class PauseMenu : MonoBehaviour {
         {
             optionObject.SetActive(false);
         }
-	}
+        if (InventoryActive)
+        {
+            InventoryObject.SetActive(true);
+        }
+        else
+        {
+            InventoryObject.SetActive(false);
+        }
+    }
 	public void RESUME_BUTTON()
 	{
 		isActive = !isActive;
