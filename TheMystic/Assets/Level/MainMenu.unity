@@ -484,7 +484,7 @@ Transform:
   - {fileID: 214371950}
   - {fileID: 1256690595}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &20669311
 GameObject:
@@ -524,7 +524,7 @@ Transform:
   - {fileID: 565358097}
   - {fileID: 2122636239}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &22269944
 Prefab:
@@ -806,7 +806,7 @@ Transform:
   - {fileID: 581148881}
   - {fileID: 439531884}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 13.530001, z: 0}
 --- !u!1001 &43207458
 Prefab:
@@ -1080,7 +1080,7 @@ Transform:
   - {fileID: 1388006004}
   - {fileID: 351176238}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: -96.983, z: 0}
 --- !u!4 &55806472 stripped
 Transform:
@@ -1178,7 +1178,7 @@ Transform:
   - {fileID: 1408812256}
   - {fileID: 1838196976}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 40.494003, z: 0}
 --- !u!4 &60559613 stripped
 Transform:
@@ -1639,7 +1639,7 @@ Transform:
   - {fileID: 821729142}
   - {fileID: 170531806}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: -154.49901, z: 0}
 --- !u!4 &84974041 stripped
 Transform:
@@ -2340,8 +2340,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1982313924}
-        m_MethodName: LOAD_SCENE
+      - m_Target: {fileID: 963641650}
+        m_MethodName: StartupHost
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3255,7 +3255,7 @@ Transform:
   - {fileID: 1504071074}
   - {fileID: 156019638}
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: -93.969, z: 0}
 --- !u!1001 &198740285
 Prefab:
@@ -4938,7 +4938,7 @@ Transform:
   - {fileID: 1788705495}
   - {fileID: 31922708}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 36.894, z: 0}
 --- !u!1001 &278416854
 Prefab:
@@ -5466,7 +5466,7 @@ Transform:
   - {fileID: 593172383}
   - {fileID: 15777283}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &325528628
 Prefab:
@@ -5626,7 +5626,7 @@ Transform:
   - {fileID: 1933810148}
   - {fileID: 598803193}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -73.768005, z: 0}
 --- !u!1001 &342523885
 Prefab:
@@ -7803,7 +7803,7 @@ Transform:
   - {fileID: 282016600}
   - {fileID: 1875545439}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: -91.296005, z: 0}
 --- !u!1001 &491741332
 Prefab:
@@ -8241,7 +8241,7 @@ Transform:
   - {fileID: 1878397133}
   - {fileID: 302826105}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -73.768005, z: 0}
 --- !u!1 &514597728
 GameObject:
@@ -8372,7 +8372,7 @@ Transform:
   - {fileID: 1775082296}
   - {fileID: 1458650502}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 40.494003, z: 0}
 --- !u!1 &520345566
 GameObject:
@@ -10885,7 +10885,7 @@ Transform:
   - {fileID: 1850895532}
   - {fileID: 1613564666}
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: -157.199, z: 0}
 --- !u!1 &675921198
 GameObject:
@@ -11225,7 +11225,7 @@ Transform:
   - {fileID: 265236991}
   - {fileID: 570359157}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &697042529
 Prefab:
@@ -13017,7 +13017,7 @@ Transform:
   - {fileID: 2045026732}
   - {fileID: 1507859226}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -73.768005, z: 0}
 --- !u!4 &811353496 stripped
 Transform:
@@ -13095,7 +13095,7 @@ Transform:
   - {fileID: 1146194534}
   - {fileID: 1739353523}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &819149016
 Prefab:
@@ -13993,120 +13993,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8003c2632b3157f40b9712a115589d67, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &861040134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 861040136}
-  - component: {fileID: 861040135}
-  - component: {fileID: 861040137}
-  m_Layer: 0
-  m_Name: NetworkHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &861040135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 861040134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NetworkPort: 7777
-  m_ServerBindToIP: 0
-  m_ServerBindAddress: 
-  m_NetworkAddress: localhost
-  m_DontDestroyOnLoad: 1
-  m_RunInBackground: 1
-  m_ScriptCRCCheck: 1
-  m_MaxDelay: 0.01
-  m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1147234867075982, guid: e8da7f04c2580e84997d62df52f8c0f0,
-    type: 2}
-  m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
-  m_OfflineScene: MainMenu
-  m_OnlineScene: multi
-  m_SpawnPrefabs: []
-  m_CustomConfig: 0
-  m_MaxConnections: 4
-  m_ConnectionConfig:
-    m_PacketSize: 1500
-    m_FragmentSize: 500
-    m_ResendTimeout: 1200
-    m_DisconnectTimeout: 2000
-    m_ConnectTimeout: 2000
-    m_MinUpdateTimeout: 10
-    m_PingTimeout: 500
-    m_ReducedPingTimeout: 100
-    m_AllCostTimeout: 20
-    m_NetworkDropThreshold: 5
-    m_OverflowDropThreshold: 5
-    m_MaxConnectionAttempt: 10
-    m_AckDelay: 33
-    m_MaxCombinedReliableMessageSize: 100
-    m_MaxCombinedReliableMessageCount: 10
-    m_MaxSentMessageQueueSize: 128
-    m_IsAcksLong: 0
-    m_UsePlatformSpecificProtocols: 0
-    m_WebSocketReceiveBufferMaxSize: 0
-    m_Channels: []
-  m_GlobalConfig:
-    m_ThreadAwakeTimeout: 1
-    m_ReactorModel: 0
-    m_ReactorMaximumReceivedMessages: 1024
-    m_ReactorMaximumSentMessages: 1024
-    m_MaxPacketSize: 2000
-  m_Channels: 
-  m_UseWebSockets: 0
-  m_UseSimulator: 0
-  m_SimulatedLatency: 1
-  m_PacketLossPercentage: 0
-  m_MaxBufferedPackets: 16
-  m_AllowFragmentation: 1
-  m_MatchHost: mm.unet.unity3d.com
-  m_MatchPort: 443
-  matchName: default
-  matchSize: 4
-  isNetworkActive: 0
-  matchMaker: {fileID: 0}
---- !u!4 &861040136
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 861040134}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.104107, y: 1.9699999, z: 52.3931}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &861040137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 861040134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 227461547, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
 --- !u!1001 &861673021
 Prefab:
   m_ObjectHideFlags: 0
@@ -14510,7 +14396,7 @@ Transform:
   - {fileID: 1158561275}
   - {fileID: 809298472}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &889223381 stripped
 Transform:
@@ -14570,105 +14456,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ac2de8fbdb842e419727d09c0416ea6, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &894128015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 894128017}
-  - component: {fileID: 894128016}
-  m_Layer: 0
-  m_Name: ManagerPerso
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &894128016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894128015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e3840a409490134f9f83fd4ca96291a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NetworkPort: 7777
-  m_ServerBindToIP: 0
-  m_ServerBindAddress: 
-  m_NetworkAddress: localhost
-  m_DontDestroyOnLoad: 1
-  m_RunInBackground: 1
-  m_ScriptCRCCheck: 1
-  m_MaxDelay: 0.01
-  m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1147234867075982, guid: e8da7f04c2580e84997d62df52f8c0f0,
-    type: 2}
-  m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
-  m_OfflineScene: MainMenu
-  m_OnlineScene: multi
-  m_SpawnPrefabs:
-  - {fileID: 0}
-  m_CustomConfig: 0
-  m_MaxConnections: 4
-  m_ConnectionConfig:
-    m_PacketSize: 1500
-    m_FragmentSize: 500
-    m_ResendTimeout: 1200
-    m_DisconnectTimeout: 2000
-    m_ConnectTimeout: 2000
-    m_MinUpdateTimeout: 10
-    m_PingTimeout: 500
-    m_ReducedPingTimeout: 100
-    m_AllCostTimeout: 20
-    m_NetworkDropThreshold: 5
-    m_OverflowDropThreshold: 5
-    m_MaxConnectionAttempt: 10
-    m_AckDelay: 33
-    m_MaxCombinedReliableMessageSize: 100
-    m_MaxCombinedReliableMessageCount: 10
-    m_MaxSentMessageQueueSize: 128
-    m_IsAcksLong: 0
-    m_UsePlatformSpecificProtocols: 0
-    m_WebSocketReceiveBufferMaxSize: 0
-    m_Channels: []
-  m_GlobalConfig:
-    m_ThreadAwakeTimeout: 1
-    m_ReactorModel: 0
-    m_ReactorMaximumReceivedMessages: 1024
-    m_ReactorMaximumSentMessages: 1024
-    m_MaxPacketSize: 2000
-  m_Channels: 
-  m_UseWebSockets: 0
-  m_UseSimulator: 0
-  m_SimulatedLatency: 1
-  m_PacketLossPercentage: 0
-  m_MaxBufferedPackets: 16
-  m_AllowFragmentation: 1
-  m_MatchHost: mm.unet.unity3d.com
-  m_MatchPort: 443
-  matchName: default
-  matchSize: 4
-  isNetworkActive: 0
-  matchMaker: {fileID: 0}
---- !u!4 &894128017
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894128015}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75, y: 0, z: 63}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &895902002 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c891f32a543e8b04a9248bc9af70f8f7, type: 3}
@@ -15042,7 +14829,7 @@ Transform:
   - {fileID: 1014250775}
   - {fileID: 1046351908}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &913018509
 Prefab:
@@ -15596,6 +15383,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960716162}
+--- !u!114 &963641650 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114214211490898268, guid: d52040ea1eae6d245a6b773d8a87e291,
+    type: 2}
+  m_PrefabInternal: {fileID: 1515885084}
+  m_Script: {fileID: 11500000, guid: 10fb0698217a7284dbe35ce8d6516935, type: 3}
 --- !u!1001 &970615013
 Prefab:
   m_ObjectHideFlags: 0
@@ -16416,7 +16209,7 @@ Transform:
   - {fileID: 719777212}
   - {fileID: 1724249354}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 137.09001, z: 0}
 --- !u!4 &1021890480 stripped
 Transform:
@@ -16853,7 +16646,7 @@ GameObject:
   - component: {fileID: 1057786060}
   - component: {fileID: 1057786059}
   m_Layer: 5
-  m_Name: Button Client
+  m_Name: Client
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16928,7 +16721,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057786061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963641650}
+        m_MethodName: JoinGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1057786061
@@ -18115,7 +17919,7 @@ Transform:
   - {fileID: 1144554932}
   - {fileID: 117017464}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -102.969, z: 0}
 --- !u!1001 &1125786986
 Prefab:
@@ -18345,7 +18149,7 @@ Transform:
   - {fileID: 865550465}
   - {fileID: 1623375501}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1132887879 stripped
 Transform:
@@ -18393,7 +18197,7 @@ Transform:
   - {fileID: 1918404000}
   - {fileID: 120251439}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1142639996 stripped
 Transform:
@@ -20988,7 +20792,7 @@ Transform:
   - {fileID: 505940026}
   - {fileID: 526078312}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1362027283
 Prefab:
@@ -21639,7 +21443,7 @@ Transform:
   - {fileID: 1496666878}
   - {fileID: 794306318}
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: -157.199, z: 0}
 --- !u!1001 &1396520701
 Prefab:
@@ -22204,7 +22008,7 @@ Transform:
   - {fileID: 529200542}
   - {fileID: 1876075270}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: -154.49901, z: 0}
 --- !u!4 &1428653711 stripped
 Transform:
@@ -22251,7 +22055,7 @@ Transform:
   - {fileID: 262508897}
   - {fileID: 1601960866}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: -157.199, z: 0}
 --- !u!1001 &1433352171
 Prefab:
@@ -23744,7 +23548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4600440217655434, guid: d52040ea1eae6d245a6b773d8a87e291, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 114178989492747784, guid: d52040ea1eae6d245a6b773d8a87e291,
         type: 2}
@@ -25555,7 +25359,7 @@ Transform:
   - {fileID: 1517039546}
   - {fileID: 1420797476}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1622578929
 Prefab:
@@ -27515,7 +27319,7 @@ Transform:
   - {fileID: 2079099705}
   - {fileID: 1940845292}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1739353523 stripped
 Transform:
@@ -27627,7 +27431,7 @@ Transform:
   - {fileID: 682972229}
   - {fileID: 952848917}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -35.244003, z: 0}
 --- !u!4 &1756870802 stripped
 Transform:
@@ -32754,7 +32558,7 @@ Transform:
   - {fileID: 1984040178}
   - {fileID: 1259311684}
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: -93.969, z: 0}
 --- !u!4 &2003056314 stripped
 Transform:
@@ -32922,7 +32726,7 @@ Transform:
   - {fileID: 670642574}
   - {fileID: 760187543}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -42.575, z: 0}
 --- !u!4 &2008051816 stripped
 Transform:
@@ -33075,7 +32879,7 @@ Transform:
   - {fileID: 1126527765}
   - {fileID: 1336349235}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2010348972 stripped
 Transform:
@@ -33914,7 +33718,7 @@ GameObject:
   - component: {fileID: 2059150682}
   - component: {fileID: 2059150681}
   m_Layer: 5
-  m_Name: Button Host
+  m_Name: Host
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33989,7 +33793,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2059150683}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963641650}
+        m_MethodName: StartupHost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2059150683
@@ -35116,7 +34931,7 @@ Transform:
   - {fileID: 1478427853}
   - {fileID: 84974041}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2140347198 stripped
 Transform:

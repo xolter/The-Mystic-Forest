@@ -20,7 +20,7 @@ public class MyNet : NetworkManager
 
     public void JoinGame()
     {
-        SetIPAddress();
+        //SetIPAddress();
         SetPort();
         NetworkManager.singleton.StartClient();
     }
