@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 114323203190759832}
   - component: {fileID: 114212361083845896}
   - component: {fileID: 114165760596155526}
+  - component: {fileID: 114901944575223246}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Enemy
@@ -1140,6 +1141,7 @@ MonoBehaviour:
   max_health: 40
   current_health: 40
   regen_health: 0
+  inventory: {fileID: 0}
 --- !u!114 &114094277385630318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1351,6 +1353,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114901944575223246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998047258116098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a71a05e4aa58547be4d693f90d97bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1958656354155350, guid: b50b1a2534ae68d459a8a2a2dc36295e, type: 2}
+  coolDown: 15
+  currentCoolDown: 0
+  rate: 0
+  position: {fileID: 4123388384257584}
 --- !u!114 &114910844871821768
 MonoBehaviour:
   m_ObjectHideFlags: 1
